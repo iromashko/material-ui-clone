@@ -40,6 +40,9 @@
     "shared-ui-card": {
       "tags": ["domain:shared", "type:ui"]
     },
+    "shared-ui-material": {
+      "tags": ["domain:shared", "type:ui"]
+    },
     "shared-ui-progress-bar": {
       "tags": ["domain:shared", "type:ui"]
     },

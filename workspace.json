@@ -208,6 +208,51 @@
         }
       }
     },
+    "shared-ui-material": {
+      "projectType": "library",
+      "root": "libs/shared/ui-material",
+      "sourceRoot": "libs/shared/ui-material/src",
+      "prefix": "material",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-material"
+          ],
+          "options": {
+            "project": "libs/shared/ui-material/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-material/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-material/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-material"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-material/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-material/src/**/*.ts",
+              "libs/shared/ui-material/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-progress-bar": {
       "projectType": "library",
       "root": "libs/shared/ui-progress-bar",

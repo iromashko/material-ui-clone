@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/shared/ui-card',
     '<rootDir>/libs/shared/ui-accordion',
     '<rootDir>/libs/shared/ui-progress-bar',
+    '<rootDir>/libs/shared/ui-material',
   ],
 };

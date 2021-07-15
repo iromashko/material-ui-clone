@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 import { SharedUiToolbarModule } from '@material-uiclone/shared/ui-toolbar';
 import { SharedUiCardModule } from '@material-uiclone/shared/ui-card';
 import { SharedUiAccordionModule } from '@material-uiclone/shared/ui-accordion';
+import {
+  SharedUiMaterialModule,
+  StarRatingModule,
+} from '@material-uiclone/shared/ui-material';
 import { SharedUiProgressBarModule } from '@material-uiclone/shared/ui-progress-bar';
 
 @NgModule({
@@ -17,6 +21,8 @@ import { SharedUiProgressBarModule } from '@material-uiclone/shared/ui-progress-
     SharedUiCardModule,
     SharedUiAccordionModule,
     SharedUiProgressBarModule,
+    SharedUiMaterialModule,
+    StarRatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

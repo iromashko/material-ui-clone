@@ -19,6 +19,9 @@
         "libs/shared/ui-accordion/src/index.ts"
       ],
       "@material-uiclone/shared/ui-card": ["libs/shared/ui-card/src/index.ts"],
+      "@material-uiclone/shared/ui-material": [
+        "libs/shared/ui-material/src/index.ts"
+      ],
       "@material-uiclone/shared/ui-progress-bar": [
         "libs/shared/ui-progress-bar/src/index.ts"
       ],
