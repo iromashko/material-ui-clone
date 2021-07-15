@@ -8,7 +8,17 @@
   </ul>
 </toolbar-toolbar>
 
-<card-card iconClasses="fas fa-info-circle" title="Card" subTitle="Component">
-  <p body>Body Content</p>
-  <p footer>Footer Content</p>
-</card-card>
+<main>
+  <card-card
+    iconClasses="fas fa-info-circle"
+    title="Accordion"
+    subTitle="Component"
+  >
+    <accordion-accordion body [items]="accordionItems"></accordion-accordion>
+  </card-card>
+
+  <card-card iconClasses="fas fa-info-circle" title="Card" subTitle="Component">
+    <p body>Body Content</p>
+    <p footer>Footer Content</p>
+  </card-card>
+</main>

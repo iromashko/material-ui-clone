@@ -1,6 +1,51 @@
 {
   "version": 2,
   "projects": {
+    "shared-ui-accordion": {
+      "projectType": "library",
+      "root": "libs/shared/ui-accordion",
+      "sourceRoot": "libs/shared/ui-accordion/src",
+      "prefix": "accordion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-accordion"
+          ],
+          "options": {
+            "project": "libs/shared/ui-accordion/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-accordion/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-accordion/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-accordion"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-accordion/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-accordion/src/**/*.ts",
+              "libs/shared/ui-accordion/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-card": {
       "projectType": "library",
       "root": "libs/shared/ui-card",

@@ -1,0 +1,28 @@
+:host {
+  @apply shadow block;
+
+  header {
+    @apply grid items-center py-3 px-5 bg-gray-100;
+    grid-template-columns: 1fr auto;
+
+    i {
+      @apply text-blue-500 transition-all duration-300;
+
+      &.is-expanded {
+        @apply transform rotate-180;
+      }
+    }
+  }
+
+  .item {
+    @apply border-b;
+  }
+
+  .content {
+    @apply py-3 px-5 hidden;
+
+    &.is-expanded {
+      @apply block;
+    }
+  }
+}

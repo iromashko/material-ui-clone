@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "shared-ui-accordion": {
+      "tags": ["domain:shared", "type:ui"]
+    },
     "shared-ui-card": {
       "tags": ["domain:shared", "type:ui"]
     },

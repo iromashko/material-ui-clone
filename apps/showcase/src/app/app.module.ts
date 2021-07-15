@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { SharedUiToolbarModule } from '@material-uiclone/shared/ui-toolbar';
 import { SharedUiCardModule } from '@material-uiclone/shared/ui-card';
+import { SharedUiAccordionModule } from '@material-uiclone/shared/ui-accordion';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +14,7 @@ import { SharedUiCardModule } from '@material-uiclone/shared/ui-card';
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
     SharedUiToolbarModule,
     SharedUiCardModule,
+    SharedUiAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
