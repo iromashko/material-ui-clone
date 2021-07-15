@@ -1,14 +1,23 @@
-<section class="item" *ngFor="let item of items">
-  <header data-cy="accordion-header" (click)="toggle(item)">
-    <h4>{{ item.title }}</h4>
-    <i class="fas fa-chevron-down" [class.is-expanded]="item.isExpanded"></i>
-  </header>
-
-  <div
-    data-cy="accordion-content"
-    class="content"
-    [class.is-expanded]="item.isExpanded"
+<cdk-accordion [multi]="true">
+  <cdk-accordion-item
+    class="item"
+    *ngFor="let item of items; let i = index"
+    #accordionItem="cdkAccordionItem"
   >
-    <p>{{ item.content }}</p>
-  </div>
-</section>
+    <header data-cy="accordion-header" (click)="accordionItem.toggle()">
+      <h4>{{ item.title }}</h4>
+      <i
+        class="fas fa-chevron-down"
+        [class.is-expanded]="accordionItem.expanded"
+      ></i>
+    </header>
+
+    <div
+      data-cy="accordion-content"
+      class="content"
+      [class.is-expanded]="accordionItem.expanded"
+    >
+      <p>{{ item.content }}</p>
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>
