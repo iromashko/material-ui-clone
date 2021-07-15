@@ -1,6 +1,117 @@
 {
   "version": 2,
   "projects": {
+    "material": {
+      "projectType": "application",
+      "root": "apps/material",
+      "sourceRoot": "apps/material/src",
+      "prefix": "mui",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/material",
+            "index": "apps/material/src/index.html",
+            "main": "apps/material/src/main.ts",
+            "polyfills": "apps/material/src/polyfills.ts",
+            "tsConfig": "apps/material/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/material/src/favicon.ico",
+              "apps/material/src/assets"
+            ],
+            "styles": ["apps/material/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/material/src/environments/environment.ts",
+                  "with": "apps/material/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "material:build:production"
+            },
+            "development": {
+              "browserTarget": "material:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "material:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/material/src/**/*.ts",
+              "apps/material/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "material-e2e": {
+      "root": "apps/material-e2e",
+      "sourceRoot": "apps/material-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/material-e2e/cypress.json",
+            "tsConfig": "apps/material-e2e/tsconfig.e2e.json",
+            "devServerTarget": "material:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "material:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "shared-ui-accordion": {
       "projectType": "library",
       "root": "libs/shared/ui-accordion",
@@ -9,9 +120,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-accordion"
-          ],
+          "outputs": ["dist/libs/shared/ui-accordion"],
           "options": {
             "project": "libs/shared/ui-accordion/ng-package.json"
           },
@@ -27,9 +136,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-accordion"
-          ],
+          "outputs": ["coverage/libs/shared/ui-accordion"],
           "options": {
             "jestConfig": "libs/shared/ui-accordion/jest.config.js",
             "passWithNoTests": true
@@ -54,9 +161,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-card"
-          ],
+          "outputs": ["dist/libs/shared/ui-card"],
           "options": {
             "project": "libs/shared/ui-card/ng-package.json"
           },
@@ -72,9 +177,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-card"
-          ],
+          "outputs": ["coverage/libs/shared/ui-card"],
           "options": {
             "jestConfig": "libs/shared/ui-card/jest.config.js",
             "passWithNoTests": true
@@ -99,9 +202,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-toolbar"
-          ],
+          "outputs": ["dist/libs/shared/ui-toolbar"],
           "options": {
             "project": "libs/shared/ui-toolbar/ng-package.json"
           },
@@ -117,9 +218,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-toolbar"
-          ],
+          "outputs": ["coverage/libs/shared/ui-toolbar"],
           "options": {
             "jestConfig": "libs/shared/ui-toolbar/jest.config.js",
             "passWithNoTests": true
@@ -131,95 +230,6 @@
             "lintFilePatterns": [
               "libs/shared/ui-toolbar/src/**/*.ts",
               "libs/shared/ui-toolbar/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "showcase": {
-      "projectType": "application",
-      "root": "apps/showcase",
-      "sourceRoot": "apps/showcase/src",
-      "prefix": "material-uiclone",
-      "targets": {
-        "build": {
-          "executor": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/apps/showcase",
-            "index": "apps/showcase/src/index.html",
-            "main": "apps/showcase/src/main.ts",
-            "polyfills": "apps/showcase/src/polyfills.ts",
-            "tsConfig": "apps/showcase/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "apps/showcase/src/favicon.ico",
-              "apps/showcase/src/assets"
-            ],
-            "styles": [
-              "apps/showcase/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "apps/showcase/src/environments/environment.ts",
-                  "with": "apps/showcase/src/environments/environment.prod.ts"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "showcase:build:production"
-            },
-            "development": {
-              "browserTarget": "showcase:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "showcase:build"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/showcase/src/**/*.ts",
-              "apps/showcase/src/**/*.html"
             ]
           }
         }
@@ -244,6 +254,5 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  },
-  "defaultProject": "showcase"
+  }
 }

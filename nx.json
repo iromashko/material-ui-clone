@@ -27,6 +27,13 @@
     ]
   },
   "projects": {
+    "material": {
+      "tags": []
+    },
+    "material-e2e": {
+      "tags": [],
+      "implicitDependencies": ["material"]
+    },
     "shared-ui-accordion": {
       "tags": ["domain:shared", "type:ui"]
     },
@@ -35,9 +42,6 @@
     },
     "shared-ui-toolbar": {
       "tags": ["domain:shared", "type:ui"]
-    },
-    "showcase": {
-      "tags": []
     }
   }
 }

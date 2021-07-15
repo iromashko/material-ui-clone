@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { AccordionItem } from '@material-uiclone/shared/ui-accordion';
 
 @Component({
-  selector: 'material-uiclone-root',
+  selector: 'mui-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'showcase';
+  title = 'material';
 
   accordionItems: AccordionItem[] = [
     {
