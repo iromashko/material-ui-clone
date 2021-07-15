@@ -1,13 +1,20 @@
-import { getGreeting } from '../support/app.po';
-
-describe('material', () => {
+describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('Accordion Component', () => {
+    cy.get('[data-cy=accordion-header]').should('have.length', 2);
+    cy.get('[data-cy=accordion-header] > i').should(
+      'not.have.class',
+      'is-expanded'
+    );
+    cy.get('[data-cy=accordion-content]').should('not.be.visible');
+    cy.get('[data-cy=accordion-header]').click({ multiple: true });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to material!');
+    cy.get('[data-cy=accordion-header] > i').should(
+      'have.class',
+      'is-expanded'
+    );
+    cy.get('[data-cy=accordion-content]').should('have.class', 'is-expanded');
+    cy.get('[data-cy=accordion-content]').should('be.visible');
   });
 });

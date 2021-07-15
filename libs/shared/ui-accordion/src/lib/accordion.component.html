@@ -1,10 +1,14 @@
 <section class="item" *ngFor="let item of items">
-  <header (click)="toggle(item)">
+  <header data-cy="accordion-header" (click)="toggle(item)">
     <h4>{{ item.title }}</h4>
     <i class="fas fa-chevron-down" [class.is-expanded]="item.isExpanded"></i>
   </header>
 
-  <div class="content" [class.is-expanded]="item.isExpanded">
+  <div
+    data-cy="accordion-content"
+    class="content"
+    [class.is-expanded]="item.isExpanded"
+  >
     <p>{{ item.content }}</p>
   </div>
 </section>
