@@ -7,6 +7,8 @@ import { AccordionItem } from '@material-uiclone/shared/ui-accordion';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  progressValue = 25;
+
   title = 'material';
 
   accordionItems: AccordionItem[] = [

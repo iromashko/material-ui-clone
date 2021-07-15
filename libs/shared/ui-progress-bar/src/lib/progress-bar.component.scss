@@ -1,0 +1,20 @@
+:host {
+  @apply grid items-center relative;
+
+  small {
+    @apply absolute text-white font-bold inset-x-1/2;
+  }
+
+  progress {
+    @apply w-full h-5 shadow rounded-3xl transition duration-1000 overflow-hidden;
+
+    &[value]::-webkit-progress-value {
+      @apply bg-yellow-400;
+      transition: all 3s;
+    }
+    &[value]::-webkit-progress-bar,
+    &[value]::-webkit-progress-value {
+      @apply rounded-3xl;
+    }
+  }
+}

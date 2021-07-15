@@ -9,7 +9,9 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/material",
             "index": "apps/material/src/index.html",
@@ -21,7 +23,9 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": ["apps/material/src/styles.scss"],
+            "styles": [
+              "apps/material/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -107,7 +111,9 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/material-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -120,7 +126,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/shared/ui-accordion"],
+          "outputs": [
+            "dist/libs/shared/ui-accordion"
+          ],
           "options": {
             "project": "libs/shared/ui-accordion/ng-package.json"
           },
@@ -136,7 +144,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui-accordion"],
+          "outputs": [
+            "coverage/libs/shared/ui-accordion"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui-accordion/jest.config.js",
             "passWithNoTests": true
@@ -161,7 +171,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/shared/ui-card"],
+          "outputs": [
+            "dist/libs/shared/ui-card"
+          ],
           "options": {
             "project": "libs/shared/ui-card/ng-package.json"
           },
@@ -177,7 +189,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui-card"],
+          "outputs": [
+            "coverage/libs/shared/ui-card"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui-card/jest.config.js",
             "passWithNoTests": true
@@ -194,6 +208,51 @@
         }
       }
     },
+    "shared-ui-progress-bar": {
+      "projectType": "library",
+      "root": "libs/shared/ui-progress-bar",
+      "sourceRoot": "libs/shared/ui-progress-bar/src",
+      "prefix": "progress-bar",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-progress-bar"
+          ],
+          "options": {
+            "project": "libs/shared/ui-progress-bar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-progress-bar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-progress-bar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-progress-bar"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-progress-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-progress-bar/src/**/*.ts",
+              "libs/shared/ui-progress-bar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-toolbar": {
       "projectType": "library",
       "root": "libs/shared/ui-toolbar",
@@ -202,7 +261,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/shared/ui-toolbar"],
+          "outputs": [
+            "dist/libs/shared/ui-toolbar"
+          ],
           "options": {
             "project": "libs/shared/ui-toolbar/ng-package.json"
           },
@@ -218,7 +279,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui-toolbar"],
+          "outputs": [
+            "coverage/libs/shared/ui-toolbar"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui-toolbar/jest.config.js",
             "passWithNoTests": true

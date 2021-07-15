@@ -11,6 +11,33 @@
 <main>
   <card-card
     iconClasses="fas fa-info-circle"
+    title="Progress Bar"
+    subTitle="Component"
+  >
+    <progress-bar-progress-bar
+      body
+      [value]="progressValue"
+    ></progress-bar-progress-bar>
+
+    <button
+      footer
+      (click)="progressValue = 100"
+      class="px-3 py-1 text-white bg-green-400 rounded"
+    >
+      Update
+    </button>
+
+    <button
+      footer
+      (click)="progressValue = 0"
+      class="px-3 py-1 ml-2 text-white bg-green-400 rounded"
+    >
+      Reset
+    </button>
+  </card-card>
+
+  <card-card
+    iconClasses="fas fa-info-circle"
     title="Accordion"
     subTitle="Component"
   >
