@@ -1,6 +1,51 @@
 {
   "version": 2,
   "projects": {
+    "shared-ui-toolbar": {
+      "projectType": "library",
+      "root": "libs/shared/ui-toolbar",
+      "sourceRoot": "libs/shared/ui-toolbar/src",
+      "prefix": "toolbar",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-toolbar"
+          ],
+          "options": {
+            "project": "libs/shared/ui-toolbar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-toolbar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-toolbar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-toolbar"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-toolbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-toolbar/src/**/*.ts",
+              "libs/shared/ui-toolbar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "showcase": {
       "projectType": "application",
       "root": "apps/showcase",
@@ -9,7 +54,9 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/showcase",
             "index": "apps/showcase/src/index.html",
@@ -21,7 +68,9 @@
               "apps/showcase/src/favicon.ico",
               "apps/showcase/src/assets"
             ],
-            "styles": ["apps/showcase/src/styles.scss"],
+            "styles": [
+              "apps/showcase/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
