@@ -1,6 +1,51 @@
 {
   "version": 2,
   "projects": {
+    "shared-ui-card": {
+      "projectType": "library",
+      "root": "libs/shared/ui-card",
+      "sourceRoot": "libs/shared/ui-card/src",
+      "prefix": "card",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-card"
+          ],
+          "options": {
+            "project": "libs/shared/ui-card/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-card/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-card/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-card"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-card/src/**/*.ts",
+              "libs/shared/ui-card/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-toolbar": {
       "projectType": "library",
       "root": "libs/shared/ui-toolbar",

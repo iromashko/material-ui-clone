@@ -1,5 +1,5 @@
 :host ::ng-deep {
-  @apply grid gap-3 p-3 bg-blue-500 text-white;
+  @apply grid gap-3 p-3 bg-blue-500 text-white shadow;
   grid-template-columns: 1fr auto;
 
   h3 {

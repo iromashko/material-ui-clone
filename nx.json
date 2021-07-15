@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "shared-ui-card": {
+      "tags": ["domain:shared", "type:ui"]
+    },
     "shared-ui-toolbar": {
       "tags": ["domain:shared", "type:ui"]
     },

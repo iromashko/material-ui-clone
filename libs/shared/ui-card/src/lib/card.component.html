@@ -1,0 +1,16 @@
+<section class="header">
+  <i *ngIf="iconClasses" [class]="iconClasses"></i>
+
+  <header>
+    <h5>{{ title }}</h5>
+    <h6>{{ subTitle }}</h6>
+  </header>
+</section>
+
+<section class="body">
+  <ng-content select="[body]"></ng-content>
+</section>
+
+<section class="footer">
+  <ng-content [select]="[footer]"></ng-content>
+</section>
