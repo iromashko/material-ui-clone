@@ -6,3 +6,4 @@ export * from './lib/card/card.module';
 export * from './lib/progress-bar/progress-bar.module';
 export * from './lib/toolbar/toolbar.module';
 export * from './lib/toolbar/toolbar.component';
+export * from './lib/loader/loader.module';

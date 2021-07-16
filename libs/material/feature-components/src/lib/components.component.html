@@ -1,5 +1,22 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Loader"
+  subTitle="Component"
+>
+  <material-loader [isLoading]="isLoading"></material-loader>
+
+  <button
+    data-cy="loader-button"
+    footer
+    (click)="load()"
+    class="px-3 py-1 text-white bg-green-400 rounded"
+  >
+    Load
+  </button>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Top of Page"
   subTitle="Component"
 >

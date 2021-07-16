@@ -2,7 +2,7 @@
   display: block;
 
   button {
-    @apply px-3 py-1 text-white rounded-full fixed z-50 border-none bg-red-400 bottom-3 right-3 shadow transition-all duration-300 invisible w-0 h-0;
+    @apply px-3 py-1 text-white rounded-full fixed z-40 border-none bg-red-400 bottom-3 right-3 shadow transition-all duration-300 invisible w-0 h-0;
 
     &.is-shown {
       @apply visible h-12 w-12;

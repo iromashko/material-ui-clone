@@ -9,6 +9,8 @@ import { AccordionItem } from '@material-uiclone/shared/ui-material';
 export class ComponentsComponent {
   progressValue = 25;
 
+  isLoading = false;
+
   title = 'material';
 
   accordionItems: AccordionItem[] = [
@@ -23,4 +25,11 @@ export class ComponentsComponent {
       isExpanded: false,
     },
   ];
+
+  load(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
+  }
 }

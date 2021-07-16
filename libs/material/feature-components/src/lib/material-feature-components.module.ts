@@ -9,6 +9,7 @@ import {
   CardModule,
   ProgressBarModule,
   ToolbarModule,
+  LoaderModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -56,6 +57,7 @@ import { RouterModule } from '@angular/router';
     ProgressBarModule,
     ToolbarModule,
     HttpClientModule,
+    LoaderModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

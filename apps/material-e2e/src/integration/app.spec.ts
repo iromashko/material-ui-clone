@@ -1,7 +1,14 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('Toolbar Routes', () => {
+  it.only('Loader', () => {
+    cy.get('[data-cy=loader-overlay]').should('not.be.visible');
+    cy.get('[data-cy=loader-button]').click();
+    cy.get('[data-cy=loader-overlay]').should('be.visible');
+    cy.get('[data-cy=loader-overlay]').should('not.be.visible');
+  });
+
+  it.skip('Toolbar Routes', () => {
     cy.visit('directives');
     cy.url().should('eq', 'http://localhost:4200/directives');
     cy.visit('services');

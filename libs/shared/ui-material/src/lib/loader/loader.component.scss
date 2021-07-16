@@ -1,0 +1,17 @@
+.loader-overlay {
+  @apply fixed inset-0 bg-gray-100 opacity-60 z-50;
+
+  .loader-container {
+    @apply grid;
+    place-content: center;
+
+    .loader {
+      @apply absolute right-1/2 top-1/2 transform translate-x-1/2;
+
+      .circular {
+        @apply border-8 border-gray-300 rounded-full w-24 h-24 animate-spin;
+        border-top: 10px solid #3498db;
+      }
+    }
+  }
+}
