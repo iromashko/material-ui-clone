@@ -16,6 +16,8 @@ describe('Material Components', () => {
     cy.get('[data-cy=go-to-top]').should('not.be.visible');
     cy.scrollTo('bottom');
     cy.get('[data-cy=go-to-top]').should('be.visible');
+    cy.get('[data-cy=go-to-top]').click();
+    cy.window().its('scrollY').should('equal', 0);
   });
 
   it('Progress Bar', () => {
