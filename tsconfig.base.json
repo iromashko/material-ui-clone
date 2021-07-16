@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@material-uiclone/material/domain": [
+        "libs/material/domain/src/index.ts"
+      ],
+      "@material-uiclone/material/feature-showcase": [
+        "libs/material/feature-showcase/src/index.ts"
+      ],
       "@material-uiclone/shared/ui-material": [
         "libs/shared/ui-material/src/index.ts"
       ]

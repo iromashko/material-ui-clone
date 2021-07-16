@@ -30,9 +30,15 @@
     "material": {
       "tags": []
     },
+    "material-domain": {
+      "tags": ["domain:material", "type:domain-logic"]
+    },
     "material-e2e": {
       "tags": [],
       "implicitDependencies": ["material"]
+    },
+    "material-feature-showcase": {
+      "tags": ["domain:material", "type:feature"]
     },
     "shared-ui-material": {
       "tags": ["domain:shared", "type:ui"]

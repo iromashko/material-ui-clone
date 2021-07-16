@@ -3,28 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import {
-  SharedUiMaterialModule,
-  StarRatingModule,
-  TopOfPageModule,
-  AccordionModule,
-  CardModule,
-  ProgressBarModule,
-  ToolbarModule,
-} from '@material-uiclone/shared/ui-material';
+import { MaterialFeatureShowcaseModule } from '@material-uiclone/material/feature-showcase';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
-    SharedUiMaterialModule,
-    StarRatingModule,
-    TopOfPageModule,
-    AccordionModule,
-    CardModule,
-    ProgressBarModule,
-    ToolbarModule,
+    MaterialFeatureShowcaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
