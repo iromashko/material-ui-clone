@@ -9,9 +9,7 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/material",
             "index": "apps/material/src/index.html",
@@ -23,9 +21,7 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": [
-              "apps/material/src/styles.scss"
-            ],
+            "styles": ["apps/material/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -111,99 +107,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/material-e2e/**/*.{js,ts}"
-            ]
-          }
-        }
-      }
-    },
-    "shared-ui-accordion": {
-      "projectType": "library",
-      "root": "libs/shared/ui-accordion",
-      "sourceRoot": "libs/shared/ui-accordion/src",
-      "prefix": "accordion",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-accordion"
-          ],
-          "options": {
-            "project": "libs/shared/ui-accordion/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/shared/ui-accordion/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/shared/ui-accordion/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-accordion"
-          ],
-          "options": {
-            "jestConfig": "libs/shared/ui-accordion/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/ui-accordion/src/**/*.ts",
-              "libs/shared/ui-accordion/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "shared-ui-card": {
-      "projectType": "library",
-      "root": "libs/shared/ui-card",
-      "sourceRoot": "libs/shared/ui-card/src",
-      "prefix": "card",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-card"
-          ],
-          "options": {
-            "project": "libs/shared/ui-card/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/shared/ui-card/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/shared/ui-card/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-card"
-          ],
-          "options": {
-            "jestConfig": "libs/shared/ui-card/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/ui-card/src/**/*.ts",
-              "libs/shared/ui-card/src/**/*.html"
-            ]
+            "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -216,9 +120,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-material"
-          ],
+          "outputs": ["dist/libs/shared/ui-material"],
           "options": {
             "project": "libs/shared/ui-material/ng-package.json"
           },
@@ -234,9 +136,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-material"
-          ],
+          "outputs": ["coverage/libs/shared/ui-material"],
           "options": {
             "jestConfig": "libs/shared/ui-material/jest.config.js",
             "passWithNoTests": true
@@ -248,96 +148,6 @@
             "lintFilePatterns": [
               "libs/shared/ui-material/src/**/*.ts",
               "libs/shared/ui-material/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "shared-ui-progress-bar": {
-      "projectType": "library",
-      "root": "libs/shared/ui-progress-bar",
-      "sourceRoot": "libs/shared/ui-progress-bar/src",
-      "prefix": "progress-bar",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-progress-bar"
-          ],
-          "options": {
-            "project": "libs/shared/ui-progress-bar/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/shared/ui-progress-bar/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/shared/ui-progress-bar/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-progress-bar"
-          ],
-          "options": {
-            "jestConfig": "libs/shared/ui-progress-bar/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/ui-progress-bar/src/**/*.ts",
-              "libs/shared/ui-progress-bar/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "shared-ui-toolbar": {
-      "projectType": "library",
-      "root": "libs/shared/ui-toolbar",
-      "sourceRoot": "libs/shared/ui-toolbar/src",
-      "prefix": "toolbar",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-toolbar"
-          ],
-          "options": {
-            "project": "libs/shared/ui-toolbar/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/shared/ui-toolbar/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/shared/ui-toolbar/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-toolbar"
-          ],
-          "options": {
-            "jestConfig": "libs/shared/ui-toolbar/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/ui-toolbar/src/**/*.ts",
-              "libs/shared/ui-toolbar/src/**/*.html"
             ]
           }
         }

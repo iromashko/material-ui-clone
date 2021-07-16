@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProgressBarComponent } from './progress-bar.component';
 
+
+
 @NgModule({
-  imports: [CommonModule],
   declarations: [
     ProgressBarComponent
   ],
+  imports: [
+    CommonModule
+  ],
   exports: [
     ProgressBarComponent
-  ],
+  ]
 })
-export class SharedUiProgressBarModule {}
+export class ProgressBarModule { }

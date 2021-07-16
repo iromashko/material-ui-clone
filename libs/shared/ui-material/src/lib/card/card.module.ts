@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card.component';
 
 @NgModule({
+  declarations: [CardComponent],
   imports: [CommonModule],
-  declarations: [
-    CardComponent
-  ],
-  exports: [
-    CardComponent
-  ],
+  exports: [CardComponent],
 })
-export class SharedUiCardModule {}
+export class CardModule {}

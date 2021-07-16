@@ -1,4 +1,4 @@
-<toolbar-toolbar title="100 Angular Challenge">
+<material-toolbar title="100 Angular Challenge">
   <ul>
     <li>Components</li>
     <li>Directives</li>
@@ -6,34 +6,31 @@
     <li>Pipes</li>
     <li>Other</li>
   </ul>
-</toolbar-toolbar>
+</material-toolbar>
 
 <main>
-  <card-card
+  <material-card
     iconClasses="fas fa-info-circle"
     title="Top of Page"
     subTitle="Component"
   >
     <p body>Scroll 400px down the page to render.</p>
-  </card-card>
+  </material-card>
 
-  <card-card
+  <material-card
     iconClasses="fas fa-info-circle"
     title="Accordion"
     subTitle="Component"
   >
     <material-star-rating body [rating]="3.6"></material-star-rating>
-  </card-card>
+  </material-card>
 
-  <card-card
+  <material-card
     iconClasses="fas fa-info-circle"
     title="Progress Bar"
     subTitle="Component"
   >
-    <progress-bar-progress-bar
-      body
-      [value]="progressValue"
-    ></progress-bar-progress-bar>
+    <material-progress-bar body [value]="progressValue"></material-progress-bar>
 
     <button
       data-cy="progress-update"
@@ -52,20 +49,24 @@
     >
       Reset
     </button>
-  </card-card>
+  </material-card>
 
-  <card-card
+  <material-card
     iconClasses="fas fa-info-circle"
     title="Accordion"
     subTitle="Component"
   >
-    <accordion-accordion body [items]="accordionItems"></accordion-accordion>
-  </card-card>
+    <material-accordion body [items]="accordionItems"></material-accordion>
+  </material-card>
 
-  <card-card iconClasses="fas fa-info-circle" title="Card" subTitle="Component">
+  <material-card
+    iconClasses="fas fa-info-circle"
+    title="Card"
+    subTitle="Component"
+  >
     <p body>Body Content</p>
     <p footer>Footer Content</p>
-  </card-card>
+  </material-card>
 </main>
 
 <material-top-of-page></material-top-of-page>

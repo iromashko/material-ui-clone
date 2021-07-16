@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AccordionItem } from '@material-uiclone/shared/ui-accordion';
+import { AccordionItem } from '@material-uiclone/shared/ui-material';
 
 @Component({
   selector: 'mui-root',
