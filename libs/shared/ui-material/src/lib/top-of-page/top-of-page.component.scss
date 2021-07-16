@@ -1,0 +1,20 @@
+:host {
+  display: block;
+
+  button {
+    @apply px-3 py-1 text-white rounded-full fixed z-50 border-none bg-red-400 bottom-3 right-3 shadow transition-all duration-300 invisible w-0 h-0;
+
+    &.is-shown {
+      @apply visible h-12 w-12;
+    }
+
+    i {
+      @apply text-white;
+      font-size: 0;
+
+      &.is-shown {
+        @apply text-base;
+      }
+    }
+  }
+}

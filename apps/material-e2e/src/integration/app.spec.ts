@@ -1,6 +1,12 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  it('Top of Page', () => {
+    cy.get('[data-cy=go-to-top]').should('not.be.visible');
+    cy.scrollTo('bottom');
+    cy.get('[data-cy=go-to-top]').should('be.visible');
+  });
+
   it('Progress Bar', () => {
     cy.get('[data-cy=progress-value]').contains(25);
     cy.get('[data-cy=progress-update]').click();

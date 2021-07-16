@@ -9,6 +9,7 @@ import { SharedUiAccordionModule } from '@material-uiclone/shared/ui-accordion';
 import {
   SharedUiMaterialModule,
   StarRatingModule,
+  TopOfPageModule,
 } from '@material-uiclone/shared/ui-material';
 import { SharedUiProgressBarModule } from '@material-uiclone/shared/ui-progress-bar';
 
@@ -23,6 +24,7 @@ import { SharedUiProgressBarModule } from '@material-uiclone/shared/ui-progress-
     SharedUiProgressBarModule,
     SharedUiMaterialModule,
     StarRatingModule,
+    TopOfPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
