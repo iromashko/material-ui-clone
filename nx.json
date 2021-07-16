@@ -40,6 +40,18 @@
     "material-feature-components": {
       "tags": ["domain:material", "type:feature"]
     },
+    "material-feature-directives": {
+      "tags": ["domain:material", "type:feature"]
+    },
+    "material-feature-other": {
+      "tags": ["domain:material", "type:feature"]
+    },
+    "material-feature-pipes": {
+      "tags": ["domain:material", "type:feature"]
+    },
+    "material-feature-services": {
+      "tags": ["domain:material", "type:feature"]
+    },
     "shared-ui-material": {
       "tags": ["domain:shared", "type:ui"]
     }

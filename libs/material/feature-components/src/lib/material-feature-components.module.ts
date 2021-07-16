@@ -18,7 +18,37 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     MaterialDomainModule,
-    RouterModule.forChild([{ path: '', component: ComponentsComponent }]),
+    RouterModule.forChild([
+      { path: '', component: ComponentsComponent },
+      {
+        path: 'directives',
+        loadChildren: () =>
+          import('@material-uiclone/material/feature-directives').then(
+            (m) => m.MaterialFeatureDirectivesModule
+          ),
+      },
+      {
+        path: 'services',
+        loadChildren: () =>
+          import('@material-uiclone/material/feature-services').then(
+            (m) => m.MaterialFeatureServicesModule
+          ),
+      },
+      {
+        path: 'pipes',
+        loadChildren: () =>
+          import('@material-uiclone/material/feature-pipes').then(
+            (m) => m.MaterialFeaturePipesModule
+          ),
+      },
+      {
+        path: 'other',
+        loadChildren: () =>
+          import('@material-uiclone/material/feature-other').then(
+            (m) => m.MaterialFeatureOtherModule
+          ),
+      },
+    ]),
     StarRatingModule,
     TopOfPageModule,
     AccordionModule,

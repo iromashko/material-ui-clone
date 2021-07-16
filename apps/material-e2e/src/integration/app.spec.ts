@@ -1,6 +1,17 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  it('Toolbar Routes', () => {
+    cy.visit('directives');
+    cy.url().should('eq', 'http://localhost:4200/directives');
+    cy.visit('services');
+    cy.url().should('eq', 'http://localhost:4200/services');
+    cy.visit('pipes');
+    cy.url().should('eq', 'http://localhost:4200/pipes');
+    cy.visit('other');
+    cy.url().should('eq', 'http://localhost:4200/other');
+  });
+
   it('Top of Page', () => {
     cy.get('[data-cy=go-to-top]').should('not.be.visible');
     cy.scrollTo('bottom');
