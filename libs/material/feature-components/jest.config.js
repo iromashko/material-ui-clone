@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'material-feature-showcase',
+  displayName: 'material-feature-components',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/material/feature-showcase',
+  coverageDirectory: '../../../coverage/libs/material/feature-components',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

@@ -3,6 +3,6 @@ module.exports = {
     ,
     '<rootDir>/libs/shared/ui-material',
     '<rootDir>/libs/material/domain',
-    '<rootDir>/libs/material/feature-showcase',
+    '<rootDir>/libs/material/feature-components',
   ],
 };

@@ -37,7 +37,7 @@
       "tags": [],
       "implicitDependencies": ["material"]
     },
-    "material-feature-showcase": {
+    "material-feature-components": {
       "tags": ["domain:material", "type:feature"]
     },
     "shared-ui-material": {

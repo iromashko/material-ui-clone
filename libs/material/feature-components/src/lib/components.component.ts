@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { AccordionItem } from '@material-uiclone/shared/ui-material';
 
 @Component({
-  selector: 'material-showcase',
-  templateUrl: './showcase.component.html',
-  styleUrls: ['./showcase.component.scss'],
+  selector: 'material-components',
+  templateUrl: './components.component.html',
+  styleUrls: ['./components.component.scss'],
 })
-export class ShowcaseComponent {
+export class ComponentsComponent {
   progressValue = 25;
 
   title = 'material';

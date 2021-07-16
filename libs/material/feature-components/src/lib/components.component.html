@@ -1,0 +1,58 @@
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Top of Page"
+  subTitle="Component"
+>
+  <p body>Scroll 400px down the page to render.</p>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Accordion"
+  subTitle="Component"
+>
+  <material-star-rating body [rating]="3.6"></material-star-rating>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Progress Bar"
+  subTitle="Component"
+>
+  <material-progress-bar body [value]="progressValue"></material-progress-bar>
+
+  <button
+    data-cy="progress-update"
+    footer
+    (click)="progressValue = 100"
+    class="px-3 py-1 text-white bg-green-400 rounded"
+  >
+    Update
+  </button>
+
+  <button
+    data-cy="progress-reset"
+    footer
+    (click)="progressValue = 0"
+    class="px-3 py-1 ml-2 text-white bg-green-400 rounded"
+  >
+    Reset
+  </button>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Accordion"
+  subTitle="Component"
+>
+  <material-accordion body [items]="accordionItems"></material-accordion>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Card"
+  subTitle="Component"
+>
+  <p body>Body Content</p>
+  <p footer>Footer Content</p>
+</material-card>

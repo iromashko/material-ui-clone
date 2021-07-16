@@ -1,1 +1,45 @@
-<router-outlet></router-outlet>
+<material-toolbar title="100 Angular Challenge">
+  <ul>
+    <li
+      routerLink="/"
+      routerLinkActive="border-b-2 border-white"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Components
+    </li>
+    <li
+      routerLink="directives"
+      routerLinkActive="border-b-2 border-white"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Directives
+    </li>
+    <li
+      routerLink="services"
+      routerLinkActive="border-b-2 border-white"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Services
+    </li>
+    <li
+      routerLink="pipes"
+      routerLinkActive="border-b-2 border-white"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Pipes
+    </li>
+    <li
+      routerLink="other"
+      routerLinkActive="border-b-2 border-white"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Other
+    </li>
+  </ul>
+</material-toolbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<material-top-of-page></material-top-of-page>

@@ -9,9 +9,7 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/material",
             "index": "apps/material/src/index.html",
@@ -23,9 +21,7 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": [
-              "apps/material/src/styles.scss"
-            ],
+            "styles": ["apps/material/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -98,9 +94,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/domain"
-          ],
+          "outputs": ["dist/libs/material/domain"],
           "options": {
             "project": "libs/material/domain/ng-package.json"
           },
@@ -116,9 +110,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/domain"
-          ],
+          "outputs": ["coverage/libs/material/domain"],
           "options": {
             "jestConfig": "libs/material/domain/jest.config.js",
             "passWithNoTests": true
@@ -156,44 +148,38 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/material-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
           }
         }
       }
     },
-    "material-feature-showcase": {
+    "material-feature-components": {
       "projectType": "library",
-      "root": "libs/material/feature-showcase",
-      "sourceRoot": "libs/material/feature-showcase/src",
+      "root": "libs/material/feature-components",
+      "sourceRoot": "libs/material/feature-components/src",
       "prefix": "material",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/feature-showcase"
-          ],
+          "outputs": ["dist/libs/material/feature-components"],
           "options": {
-            "project": "libs/material/feature-showcase/ng-package.json"
+            "project": "libs/material/feature-components/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/material/feature-showcase/tsconfig.lib.prod.json"
+              "tsConfig": "libs/material/feature-components/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "libs/material/feature-showcase/tsconfig.lib.json"
+              "tsConfig": "libs/material/feature-components/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/feature-showcase"
-          ],
+          "outputs": ["coverage/libs/material/feature-components"],
           "options": {
-            "jestConfig": "libs/material/feature-showcase/jest.config.js",
+            "jestConfig": "libs/material/feature-components/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -201,8 +187,8 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/material/feature-showcase/src/**/*.ts",
-              "libs/material/feature-showcase/src/**/*.html"
+              "libs/material/feature-components/src/**/*.ts",
+              "libs/material/feature-components/src/**/*.html"
             ]
           }
         }
@@ -216,9 +202,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-material"
-          ],
+          "outputs": ["dist/libs/shared/ui-material"],
           "options": {
             "project": "libs/shared/ui-material/ng-package.json"
           },
@@ -234,9 +218,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-material"
-          ],
+          "outputs": ["coverage/libs/shared/ui-material"],
           "options": {
             "jestConfig": "libs/shared/ui-material/jest.config.js",
             "passWithNoTests": true

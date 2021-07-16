@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialDomainModule } from '@material-uiclone/material/domain';
-import { ShowcaseComponent } from './showcase.component';
-import { RouterModule } from '@angular/router';
+import { ComponentsComponent } from './components.component';
 import {
   StarRatingModule,
   TopOfPageModule,
@@ -13,12 +12,13 @@ import {
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialDomainModule,
-    RouterModule.forChild([{ path: '', component: ShowcaseComponent }]),
+    RouterModule.forChild([{ path: '', component: ComponentsComponent }]),
     StarRatingModule,
     TopOfPageModule,
     AccordionModule,
@@ -27,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ToolbarModule,
     HttpClientModule,
   ],
-  declarations: [ShowcaseComponent],
-  exports: [ShowcaseComponent],
+  declarations: [ComponentsComponent],
+  exports: [ComponentsComponent],
 })
-export class MaterialFeatureShowcaseModule {}
+export class MaterialFeatureComponentsModule {}
