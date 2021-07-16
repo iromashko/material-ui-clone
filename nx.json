@@ -54,6 +54,9 @@
     },
     "shared-ui-material": {
       "tags": ["domain:shared", "type:ui"]
+    },
+    "shared-ui-pipes": {
+      "tags": ["domain:shared", "type:ui"]
     }
   }
 }

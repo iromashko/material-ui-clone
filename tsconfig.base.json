@@ -35,7 +35,8 @@
       ],
       "@material-uiclone/shared/ui-material": [
         "libs/shared/ui-material/src/index.ts"
-      ]
+      ],
+      "@material-uiclone/shared/ui-pipes": ["libs/shared/ui-pipes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
