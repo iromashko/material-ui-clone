@@ -1,3 +1,7 @@
 main {
   @apply grid gap-3 p-3;
 }
+
+.link-active {
+  @apply border-b-2 border-white;
+}

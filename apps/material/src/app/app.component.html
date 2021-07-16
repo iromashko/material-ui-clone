@@ -1,39 +1,12 @@
 <material-toolbar title="100 Angular Challenge">
   <ul>
     <li
-      routerLink="/"
-      routerLinkActive="border-b-2 border-white"
+      routerLink="{{ link.path }}"
+      routerLinkActive="link-active"
       [routerLinkActiveOptions]="{ exact: true }"
+      *ngFor="let link of links"
     >
-      Components
-    </li>
-    <li
-      routerLink="directives"
-      routerLinkActive="border-b-2 border-white"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Directives
-    </li>
-    <li
-      routerLink="services"
-      routerLinkActive="border-b-2 border-white"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Services
-    </li>
-    <li
-      routerLink="pipes"
-      routerLinkActive="border-b-2 border-white"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Pipes
-    </li>
-    <li
-      routerLink="other"
-      routerLinkActive="border-b-2 border-white"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Other
+      {{ link.title }}
     </li>
   </ul>
 </material-toolbar>
