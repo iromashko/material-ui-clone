@@ -1,5 +1,17 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Credit Card Formatter"
+  subTitle="Pipes"
+>
+  <section body>
+    <p>{{ '1111222233334444' | creditCardFormatter }}</p>
+    <p>{{ '1111111111111111111111' | creditCardFormatter }}</p>
+    <p>{{ 'a111222233334444' | creditCardFormatter }}</p>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Truncate"
   subTitle="Pipes"
 >

@@ -6,7 +6,7 @@
     place-content: center;
 
     .loader {
-      @apply absolute right-1/2 top-1/2 transform translate-x-1/2;
+      @apply absolute right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2;
 
       .circular {
         @apply border-8 border-gray-300 rounded-full w-24 h-24 animate-spin;
