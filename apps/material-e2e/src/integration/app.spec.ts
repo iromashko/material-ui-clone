@@ -1,8 +1,12 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Twitter Post', () => {
-    //
+  it('Twitter Post', () => {
+    cy.get('[data-cy=twitter-post]').invoke('removeAttr', 'target').click();
+    cy.url().should(
+      'eq',
+      'https://twitter.com/intent/tweet?hashtags=Angular%2CNest.js%2CTypescript%2CKubernetes&url=https://google.com&text=Check%20out%20Material%20and%20become%20a%20CODING%20GOD!!!'
+    );
   });
 
   it('Credit Card Input', () => {
