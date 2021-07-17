@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { AccordionItem } from '@material-uiclone/shared/ui-material';
+import {
+  AccordionItem,
+  LoaderType,
+} from '@material-uiclone/shared/ui-material';
 
 @Component({
   selector: 'material-components',
@@ -10,6 +13,7 @@ export class ComponentsComponent {
   progressValue = 25;
 
   isLoading = false;
+  loaderType = LoaderType.Loading;
 
   title = 'material';
 
@@ -26,10 +30,19 @@ export class ComponentsComponent {
     },
   ];
 
-  load(): void {
+  loadLoader(): void {
+    this.loaderType = LoaderType.Loading;
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-    }, 1000);
+    }, 2000);
+  }
+
+  loadCircular(): void {
+    this.loaderType = LoaderType.Circular;
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
   }
 }

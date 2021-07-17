@@ -23,10 +23,22 @@
   title="Loader"
   subTitle="Component"
 >
-  <material-loader [isLoading]="isLoading"></material-loader>
+  <material-loader
+    [isLoading]="isLoading"
+    [type]="loaderType"
+  ></material-loader>
 
-  <button data-cy="loader-button" footer (click)="load()" class="btn warning">
-    Load
+  <button data-cy="loader-text" footer (click)="loadLoader()" class="btn">
+    Text Loader
+  </button>
+
+  <button
+    data-cy="loader-circular"
+    footer
+    (click)="loadCircular()"
+    class="btn warning"
+  >
+    Load Circular
   </button>
 </material-card>
 

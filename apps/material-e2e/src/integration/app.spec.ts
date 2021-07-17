@@ -30,7 +30,10 @@ describe('Material Components', () => {
 
   it('Loader', () => {
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
-    cy.get('[data-cy=loader-button]').click();
+    cy.get('[data-cy=loader-text]').click();
+    cy.get('h1').contains('Loading');
+    cy.get('[data-cy=loader-circular]').click();
+    cy.get('.circular').should('be.visible');
     cy.get('[data-cy=loader-overlay]').should('be.visible');
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
   });

@@ -7,4 +7,5 @@ export * from './lib/progress-bar/progress-bar.module';
 export * from './lib/toolbar/toolbar.module';
 export * from './lib/toolbar/toolbar.component';
 export * from './lib/loader/loader.module';
+export * from './lib/loader/loader-type.enum';
 export * from './lib/credit-card-input/credit-card-input.module';

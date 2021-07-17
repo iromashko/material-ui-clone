@@ -5,7 +5,10 @@
 >
   <div class="loader-container">
     <div class="loader">
-      <div class="circular"></div>
+      <ng-container [ngSwitch]="type">
+        <h1 *ngSwitchCase="loaderType.Loading">{{ loadingText }}</h1>
+        <div class="circular" *ngSwitchCase="loaderType.Circular"></div>
+      </ng-container>
     </div>
   </div>
 </div>
