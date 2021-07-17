@@ -11,6 +11,7 @@ import {
   ToolbarModule,
   LoaderModule,
   CreditCardInputModule,
+  TwitterPostModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -60,6 +61,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     LoaderModule,
     CreditCardInputModule,
+    TwitterPostModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],
