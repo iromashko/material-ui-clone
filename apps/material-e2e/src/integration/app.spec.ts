@@ -1,6 +1,33 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  it.only('Credit Card Input', () => {
+    cy.get('[data-cy=credit-card-readonly]')
+      .find('input')
+      .should('have.value', 'xxxx-xxxx-xxxx-4321')
+      .should('have.attr', 'readonly');
+    cy.get('[data-cy=credit-card-editable]').find('input').clear().type('3');
+    cy.get('[data-cy=credit-card-editable]')
+      .find('i')
+      .should('have.class', 'fa-cc-amex');
+    cy.get('[data-cy=credit-card-editable]').find('input').clear().type('4');
+    cy.get('[data-cy=credit-card-editable]')
+      .find('i')
+      .should('have.class', 'fa-cc-visa');
+    cy.get('[data-cy=credit-card-editable]').find('input').clear().type('5');
+    cy.get('[data-cy=credit-card-editable]')
+      .find('i')
+      .should('have.class', 'fa-cc-mastercard');
+    cy.get('[data-cy=credit-card-editable]').find('input').clear().type('6');
+    cy.get('[data-cy=credit-card-editable]')
+      .find('i')
+      .should('have.class', 'fa-cc-discover');
+    cy.get('[data-cy=credit-card-editable]').find('input').clear().type('1');
+    cy.get('[data-cy=credit-card-editable]')
+      .find('i')
+      .should('have.class', 'fa-credit-card');
+  });
+
   it('Loader', () => {
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
     cy.get('[data-cy=loader-button]').click();

@@ -1,5 +1,25 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Credit Card Input"
+  subTitle="Component"
+>
+  <section body>
+    <material-credit-card-input
+      data-cy="credit-card-editable"
+      [creditCardNumber]="'3321432143214321'"
+      [isReadonly]="false"
+    ></material-credit-card-input>
+
+    <material-credit-card-input
+      data-cy="credit-card-readonly"
+      [creditCardNumber]="'4321432143214321'"
+      [isReadonly]="true"
+    ></material-credit-card-input>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Loader"
   subTitle="Component"
 >
