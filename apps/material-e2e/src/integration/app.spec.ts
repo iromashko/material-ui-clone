@@ -1,7 +1,7 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Credit Card Input', () => {
+  it('Credit Card Input', () => {
     cy.get('[data-cy=credit-card-readonly]')
       .find('input')
       .should('have.value', 'xxxx-xxxx-xxxx-4321')
