@@ -5,12 +5,7 @@
 >
   <material-loader [isLoading]="isLoading"></material-loader>
 
-  <button
-    data-cy="loader-button"
-    footer
-    (click)="load()"
-    class="px-3 py-1 text-white bg-green-400 rounded"
-  >
+  <button data-cy="loader-button" footer (click)="load()" class="btn warning">
     Load
   </button>
 </material-card>
@@ -42,7 +37,7 @@
     data-cy="progress-update"
     footer
     (click)="progressValue = 100"
-    class="px-3 py-1 text-white bg-green-400 rounded"
+    class="btn"
   >
     Update
   </button>
@@ -51,7 +46,7 @@
     data-cy="progress-reset"
     footer
     (click)="progressValue = 0"
-    class="px-3 py-1 ml-2 text-white bg-green-400 rounded"
+    class="btn danger"
   >
     Reset
   </button>

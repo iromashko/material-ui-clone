@@ -10,3 +10,15 @@
 body {
   overflow: scroll; /* Show scrollbars */
 }
+
+.btn {
+  @apply px-3 py-1 text-white bg-green-400 rounded mr-2 hover:opacity-70 transition duration-300;
+
+  &.danger {
+    @apply bg-red-400;
+  }
+
+  &.warning {
+    @apply bg-yellow-400;
+  }
+}
