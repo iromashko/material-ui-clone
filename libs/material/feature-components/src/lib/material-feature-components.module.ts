@@ -13,6 +13,7 @@ import {
   CreditCardInputModule,
   TwitterPostModule,
   LinkedinPostModule,
+  ModalModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -64,6 +65,7 @@ import { RouterModule } from '@angular/router';
     CreditCardInputModule,
     TwitterPostModule,
     LinkedinPostModule,
+    ModalModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

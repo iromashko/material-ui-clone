@@ -1,0 +1,28 @@
+.modal-container {
+  @apply grid fixed bg-white shadow top-2.5 left-1/2 transform -translate-x-1/2 translate-y-3 p-5 gap-3 duration-500;
+  transition: display;
+  min-width: 250px;
+  max-height: 100vh;
+  z-index: 5;
+
+  header {
+    @apply grid items-center;
+    grid-template-columns: 1fr auto;
+  }
+
+  &.is-hidden {
+    @apply hidden;
+  }
+}
+
+.overlay {
+  @apply fixed inset-0  transition-opacity duration-300;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+
+  &.is-hidden {
+    @apply opacity-0;
+    z-index: -1;
+  }
+}

@@ -1,8 +1,15 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('New test', () => {
-    cy.visit('pipes');
+  it.only('Modal Window', () => {
+    cy.get('[data-cy=modal-content]').should('not.be.visible');
+    cy.get('[data-cy=open-modal]').click();
+    cy.get('[data-cy=modal-content]').should('be.visible');
+    cy.get('[data-cy=modal-close]').click();
+    cy.get('[data-cy=modal-content]').should('not.be.visible');
+    cy.get('[data-cy=open-modal]').click();
+    cy.get('[data-cy=modal-overlay]').click();
+    cy.get('[data-cy=modal-content]').should('not.be.visible');
   });
 
   it('Twitter Post', () => {

@@ -1,5 +1,24 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Modal"
+  subTitle="Component"
+>
+  <material-modal body #modal title="Modal Example">
+    <p data-cy="modal-content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eos
+      tempore, assumenda sequi cumque molestias quaerat quos blanditiis fuga
+      praesentium earum temporibus, similique doloremque veritatis perferendis
+      iste deserunt doloribus inventore?
+    </p>
+  </material-modal>
+
+  <button data-cy="open-modal" footer (click)="modal.open()" class="btn">
+    Open Modal
+  </button>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Twitter Post"
   subTitle="Component"
 >

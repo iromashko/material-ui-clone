@@ -1,0 +1,17 @@
+<div class="modal-container" [class.is-hidden]="isHidden">
+  <header>
+    <h5>{{ title }}</h5>
+    <i data-cy="modal-close" class="fas fa-times" (click)="close()"></i>
+  </header>
+
+  <section>
+    <ng-content></ng-content>
+  </section>
+</div>
+
+<div
+  class="overlay"
+  data-cy="modal-overlay"
+  (click)="close()"
+  [class.is-hidden]="isHidden"
+></div>
