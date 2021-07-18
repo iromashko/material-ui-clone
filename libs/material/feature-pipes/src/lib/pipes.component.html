@@ -1,5 +1,16 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Filter Term"
+  subTitle="Pipes"
+>
+  <section body>
+    {{ ['Hello', 'world', 'Hello world'] | filterTerm: 'Hello' }} <br />
+    {{ ['Hello', 'world', 'Hello world'] | filterTerm: 'World' }}
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Flatten"
   subTitle="Pipes"
 >

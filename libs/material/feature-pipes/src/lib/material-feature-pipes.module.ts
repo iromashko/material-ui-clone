@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CardModule } from '@material-uiclone/shared/ui-material';
 import {
   CreditCardFormatterPipe,
+  FilterTermPipe,
   FlattenPipe,
   TruncatePipe,
 } from '@material-uiclone/shared/ui-pipes';
@@ -22,6 +23,7 @@ import {
     TruncatePipe,
     CreditCardFormatterPipe,
     FlattenPipe,
+    FilterTermPipe,
   ],
   exports: [PipesComponent],
 })

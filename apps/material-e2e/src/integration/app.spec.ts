@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Toggle Button', () => {
+  it.only('New', () => {
+    cy.visit('pipes');
+  });
+
+  it('Toggle Button', () => {
     cy.get('[data-cy=toggle-button]')
       .should('not.have.class', 'is-on')
       .click()
