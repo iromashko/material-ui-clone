@@ -16,6 +16,7 @@ import {
   ModalModule,
   QuoteModule,
   ToggleModule,
+  RichTextViewerModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -70,6 +71,7 @@ import { RouterModule } from '@angular/router';
     ModalModule,
     QuoteModule,
     ToggleModule,
+    RichTextViewerModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

@@ -1,5 +1,26 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Rich Text Viewer"
+  subTitle="Component"
+>
+  <section body>
+    <h1 class="text-2xl font-bold">Good Example</h1>
+    <material-rich-text-viewer
+      htmlText="<p>Hello World</p>"
+    ></material-rich-text-viewer>
+
+    <h3 class="text-2xl font-bold">Empty Example</h3>
+    <material-rich-text-viewer htmlText="..."></material-rich-text-viewer>
+
+    <h3 class="text-2xl font-bold">Bad HTML Example</h3>
+    <material-rich-text-viewer
+      htmlText="<p> Hello World"
+    ></material-rich-text-viewer>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Toggle"
   subTitle="Component"
 >

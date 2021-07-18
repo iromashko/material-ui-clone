@@ -2,7 +2,7 @@ describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
   it.only('New', () => {
-    cy.visit('pipes');
+    // cy.visit('pipes');
   });
 
   it('Toggle Button', () => {
