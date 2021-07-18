@@ -11,11 +11,9 @@ export class ModalComponent {
 
   close(): void {
     this.isHidden = true;
-    console.log(this.isHidden);
   }
 
   open(): void {
     this.isHidden = false;
-    console.log(this.isHidden);
   }
 }
