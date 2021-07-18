@@ -13,3 +13,4 @@ export * from './lib/twitter-post/twitter-post.module';
 export * from './lib/linkedin-post/linkedin-post.module';
 export * from './lib/modal/modal.module';
 export * from './lib/quote/quote.module';
+export * from './lib/toggle/toggle.module';

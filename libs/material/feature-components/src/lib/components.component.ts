@@ -17,6 +17,8 @@ export class ComponentsComponent {
 
   title = 'material';
 
+  toggleValue = false;
+
   accordionItems: AccordionItem[] = [
     {
       title: 'Example 1',

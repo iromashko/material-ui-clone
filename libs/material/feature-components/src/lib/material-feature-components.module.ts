@@ -15,6 +15,7 @@ import {
   LinkedinPostModule,
   ModalModule,
   QuoteModule,
+  ToggleModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -68,6 +69,7 @@ import { RouterModule } from '@angular/router';
     LinkedinPostModule,
     ModalModule,
     QuoteModule,
+    ToggleModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

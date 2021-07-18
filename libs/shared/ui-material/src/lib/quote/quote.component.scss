@@ -13,7 +13,7 @@
   }
 
   footer {
-    @apply p-2 text-right;
+    @apply p-2 text-right px-4;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     justify-self: end;

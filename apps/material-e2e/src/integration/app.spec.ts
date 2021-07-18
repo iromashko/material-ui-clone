@@ -1,8 +1,13 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Quote', () => {
-    //
+  it.only('Toggle Button', () => {
+    cy.get('[data-cy=toggle-button]')
+      .should('not.have.class', 'is-on')
+      .click()
+      .should('have.class', 'is-on')
+      .click()
+      .should('not.have.class', 'is-on');
   });
 
   it('Modal Window', () => {
