@@ -1,6 +1,10 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  it.only('New test', () => {
+    cy.visit('pipes');
+  });
+
   it('Twitter Post', () => {
     cy.get('[data-cy=twitter-post]').invoke('removeAttr', 'target').click();
     cy.url().should(

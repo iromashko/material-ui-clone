@@ -1,5 +1,20 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Flatten"
+  subTitle="Pipes"
+>
+  <section body>
+    <p>{{ flattenData | flatten }}</p>
+  </section>
+
+  <section footer>
+    <button class="btn" (click)="modifyFlatten()">Modify</button>
+    <button class="btn warning" (click)="reassignFlatten()">Reassign</button>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Credit Card Formatter"
   subTitle="Pipes"
 >

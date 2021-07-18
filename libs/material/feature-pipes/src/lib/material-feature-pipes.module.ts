@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CardModule } from '@material-uiclone/shared/ui-material';
 import {
   CreditCardFormatterPipe,
+  FlattenPipe,
   TruncatePipe,
 } from '@material-uiclone/shared/ui-pipes';
 
@@ -16,7 +17,12 @@ import {
     RouterModule.forChild([{ path: '', component: PipesComponent }]),
     CardModule,
   ],
-  declarations: [PipesComponent, TruncatePipe, CreditCardFormatterPipe],
+  declarations: [
+    PipesComponent,
+    TruncatePipe,
+    CreditCardFormatterPipe,
+    FlattenPipe,
+  ],
   exports: [PipesComponent],
 })
 export class MaterialFeaturePipesModule {}
