@@ -1,0 +1,29 @@
+:host {
+  @apply bg-blue-500 grid gap-4 border-l-8 border-blue-400 text-white;
+  grid-template-columns: auto max-content;
+  grid-template-rows: auto 1fr;
+
+  blockquote {
+    @apply p-4;
+    grid-row: 1 / 2;
+
+    i {
+      @apply text-3xl px-3 pb-3;
+    }
+  }
+
+  footer {
+    @apply p-2 text-right;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: end;
+
+    .author {
+      @apply font-bold uppercase;
+    }
+
+    .occupation {
+      @apply italic;
+    }
+  }
+}

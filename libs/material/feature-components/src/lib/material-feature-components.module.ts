@@ -14,6 +14,7 @@ import {
   TwitterPostModule,
   LinkedinPostModule,
   ModalModule,
+  QuoteModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -66,6 +67,7 @@ import { RouterModule } from '@angular/router';
     TwitterPostModule,
     LinkedinPostModule,
     ModalModule,
+    QuoteModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

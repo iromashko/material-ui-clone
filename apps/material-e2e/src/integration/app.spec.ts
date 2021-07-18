@@ -1,8 +1,8 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Directives', () => {
-    cy.visit('directives');
+  it.only('Quote', () => {
+    //
   });
 
   it('Modal Window', () => {
