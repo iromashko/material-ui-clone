@@ -33,6 +33,9 @@
       "@material-uiclone/material/feature-services": [
         "libs/material/feature-services/src/index.ts"
       ],
+      "@material-uiclone/shared/ui-directives": [
+        "libs/shared/ui-directives/src/index.ts"
+      ],
       "@material-uiclone/shared/ui-material": [
         "libs/shared/ui-material/src/index.ts"
       ],

@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Modal Window', () => {
+  it.only('Directives', () => {
+    cy.visit('directives');
+  });
+
+  it('Modal Window', () => {
     cy.get('[data-cy=modal-content]').should('not.be.visible');
     cy.get('[data-cy=open-modal]').click();
     cy.get('[data-cy=modal-content]').should('be.visible');

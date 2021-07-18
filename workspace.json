@@ -388,6 +388,51 @@
         }
       }
     },
+    "shared-ui-directives": {
+      "projectType": "library",
+      "root": "libs/shared/ui-directives",
+      "sourceRoot": "libs/shared/ui-directives/src",
+      "prefix": "directives",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-directives"
+          ],
+          "options": {
+            "project": "libs/shared/ui-directives/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-directives/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-directives/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-directives"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-directives/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-directives/src/**/*.ts",
+              "libs/shared/ui-directives/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-material": {
       "projectType": "library",
       "root": "libs/shared/ui-material",

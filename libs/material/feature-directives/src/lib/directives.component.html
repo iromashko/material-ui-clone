@@ -1,2 +1,11 @@
-<h1>material-directives</h1>
-
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Debounce Click"
+  subTitle="Component"
+>
+  <section footer>
+    <button class="btn" (debounceClick)="log()" directivesDebounceClick>
+      Log
+    </button>
+  </section>
+</material-card>

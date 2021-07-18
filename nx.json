@@ -52,6 +52,9 @@
     "material-feature-services": {
       "tags": ["domain:material", "type:feature"]
     },
+    "shared-ui-directives": {
+      "tags": ["domain:shared", "type:ui"]
+    },
     "shared-ui-material": {
       "tags": ["domain:shared", "type:ui"]
     },

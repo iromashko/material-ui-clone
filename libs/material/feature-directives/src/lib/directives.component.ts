@@ -1,21 +1,12 @@
-import { Component, OnInit} from '@angular/core';
-import { DirectivesFacade } from '@material-uiclone/material/domain';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'material-directives',
   templateUrl: './directives.component.html',
-  styleUrls: ['./directives.component.scss']
+  styleUrls: ['./directives.component.scss'],
 })
-export class DirectivesComponent implements OnInit {
-    
-
-
-    constructor(private directivesFacade: DirectivesFacade) {
-    }
-
-
-    ngOnInit() {
-    }
-
+export class DirectivesComponent {
+  log(): void {
+    console.log(`debounce directive`);
+  }
 }
-
