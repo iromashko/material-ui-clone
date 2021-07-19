@@ -1,0 +1,7 @@
+:host {
+  display: block;
+
+  input {
+    @apply focus:ring-1 ring-gray-600 placeholder-gray-400 text-gray-600 text-xl;
+  }
+}

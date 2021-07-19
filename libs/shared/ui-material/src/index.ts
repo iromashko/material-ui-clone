@@ -15,3 +15,4 @@ export * from './lib/modal/modal.module';
 export * from './lib/quote/quote.module';
 export * from './lib/toggle/toggle.module';
 export * from './lib/rich-text-viewer/rich-text-viewer.module';
+export * from './lib/debounce-search/debounce-search.module';

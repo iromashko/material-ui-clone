@@ -17,6 +17,7 @@ import {
   QuoteModule,
   ToggleModule,
   RichTextViewerModule,
+  DebounceSearchModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -72,6 +73,7 @@ import { RouterModule } from '@angular/router';
     QuoteModule,
     ToggleModule,
     RichTextViewerModule,
+    DebounceSearchModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

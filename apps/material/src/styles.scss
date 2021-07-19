@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -5,13 +7,14 @@
 
 * {
   scroll-behavior: smooth;
+  font-family: Raleway, sans-serif;
 }
 
 body {
   overflow: scroll; /* Show scrollbars */
 }
 
-.btn {
+.mui-btn {
   @apply px-3 py-1 text-white bg-green-400 rounded mr-2 hover:opacity-70 transition duration-300;
 
   &.danger {
@@ -21,4 +24,8 @@ body {
   &.warning {
     @apply bg-yellow-400;
   }
+}
+
+.mui-form-input {
+  @apply block w-60 px-3 py-2 text-gray-900 placeholder-gray-400 bg-white rounded border appearance-none focus:outline-none;
 }

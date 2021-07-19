@@ -47,4 +47,8 @@ export class ComponentsComponent {
       this.isLoading = false;
     }, 2000);
   }
+
+  debounceExampleMethod(value: string): void {
+    console.log(`Debounce search`, value);
+  }
 }

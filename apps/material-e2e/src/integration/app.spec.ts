@@ -1,7 +1,7 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('New', () => {
+  it.only('Debounce search', () => {
     // cy.visit('pipes');
   });
 

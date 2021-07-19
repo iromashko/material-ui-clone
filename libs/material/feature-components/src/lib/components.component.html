@@ -1,5 +1,17 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Debounce Search"
+  subTitle="Component"
+>
+  <section body>
+    <material-debounce-search
+      (searchUpdate)="debounceExampleMethod($event)"
+    ></material-debounce-search>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Rich Text Viewer"
   subTitle="Component"
 >
@@ -54,7 +66,7 @@
     </p>
   </material-modal>
 
-  <button data-cy="open-modal" footer (click)="modal.open()" class="btn">
+  <button data-cy="open-modal" footer (click)="modal.open()" class="mui-btn">
     Open Modal
   </button>
 </material-card>
@@ -105,7 +117,7 @@
     [type]="loaderType"
   ></material-loader>
 
-  <button data-cy="loader-text" footer (click)="loadLoader()" class="btn">
+  <button data-cy="loader-text" footer (click)="loadLoader()" class="mui-btn">
     Text Loader
   </button>
 
@@ -113,7 +125,7 @@
     data-cy="loader-circular"
     footer
     (click)="loadCircular()"
-    class="btn warning"
+    class="mui-btn warning"
   >
     Load Circular
   </button>
@@ -138,7 +150,7 @@
     data-cy="progress-update"
     footer
     (click)="progressValue = 100"
-    class="btn"
+    class="mui-btn"
   >
     Update
   </button>
@@ -147,7 +159,7 @@
     data-cy="progress-reset"
     footer
     (click)="progressValue = 0"
-    class="btn danger"
+    class="mui-btn danger"
   >
     Reset
   </button>
