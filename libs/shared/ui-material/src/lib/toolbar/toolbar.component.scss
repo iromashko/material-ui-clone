@@ -1,5 +1,5 @@
 :host ::ng-deep {
-  @apply grid gap-3 p-3 bg-blue-500 dark:bg-blue-900 items-center text-white shadow;
+  @apply grid gap-3 p-3 bg-blue-500 dark:bg-blue-900 items-center text-white shadow transition-colors duration-300;
   grid-template-columns: 1fr auto;
 
   nav {

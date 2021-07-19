@@ -1,6 +1,5 @@
 :host {
-  @apply bg-blue-500 grid gap-4 border-l-8 border-blue-400 text-white;
-  grid-template-columns: auto max-content;
+  @apply bg-blue-500  grid gap-4 border-l-8 border-blue-400  text-white dark:bg-blue-900 dark:border-blue-800;
   grid-template-rows: auto 1fr;
 
   blockquote {
