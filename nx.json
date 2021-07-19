@@ -60,6 +60,9 @@
     },
     "shared-ui-pipes": {
       "tags": ["domain:shared", "type:ui"]
+    },
+    "shared-util-services": {
+      "tags": ["domain:shared", "type:util"]
     }
   }
 }

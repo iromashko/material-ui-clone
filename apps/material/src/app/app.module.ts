@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import {
   TopOfPageModule,
   ToolbarModule,
+  ToggleModule,
 } from '@material-uiclone/shared/ui-material';
 import { MaterialFeatureComponentsModule } from '@material-uiclone/material/feature-components';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     ToolbarModule,
     MaterialFeatureComponentsModule,
     HttpClientModule,
+    ToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

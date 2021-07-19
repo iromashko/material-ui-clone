@@ -1,14 +1,17 @@
 :host ::ng-deep {
-  @apply grid gap-3 p-3 bg-blue-500 text-white shadow;
+  @apply grid gap-3 p-3 bg-blue-500 dark:bg-blue-900 items-center text-white shadow;
   grid-template-columns: 1fr auto;
 
-  h3 {
-    @apply font-bold;
+  nav {
+    @apply grid grid-flow-col items-center p-2;
+  }
+
+  h1 {
+    @apply font-bold text-xl;
   }
 
   ul {
-    @apply grid gap-3 grid-flow-col;
-
+    @apply space-x-2 text-xl mr-3;
     li {
       @apply inline;
     }

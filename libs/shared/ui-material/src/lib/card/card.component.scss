@@ -2,7 +2,7 @@
   @apply grid gap-3 shadow rounded;
 
   .header {
-    @apply grid gap-3 items-center p-3 bg-green-400 text-white rounded-t;
+    @apply grid gap-3 items-center p-3 bg-green-400 dark:bg-yellow-600 text-white rounded-t;
     grid-template-columns: auto 1fr;
 
     header {

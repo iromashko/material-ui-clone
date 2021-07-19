@@ -1,14 +1,21 @@
 <material-toolbar title="100 Angular Challenge">
-  <ul>
-    <li
-      routerLink="{{ link.path }}"
-      routerLinkActive="link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      *ngFor="let link of links"
+  <nav>
+    <ul>
+      <li
+        routerLink="{{ link.path }}"
+        routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        *ngFor="let link of links"
+      >
+        {{ link.title }}
+      </li>
+    </ul>
+    <material-toggle
+      data-cy="theme-switcher"
+      (click)="themeService.toggleDarkMode()"
+      >{{ themeService.darkMode }}</material-toggle
     >
-      {{ link.title }}
-    </li>
-  </ul>
+  </nav>
 </material-toolbar>
 
 <main>

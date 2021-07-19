@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/material/feature-other',
     '<rootDir>/libs/shared/ui-pipes',
     '<rootDir>/libs/shared/ui-directives',
+    '<rootDir>/libs/shared/util-services',
   ],
 };

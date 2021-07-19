@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { ToolbarLink } from '@material-uiclone/shared/ui-material';
+import { ThemeService } from '@material-uiclone/shared/util-services';
 
 @Component({
   selector: 'mui-root',
@@ -14,4 +15,11 @@ export class AppComponent {
     { path: 'pipes', title: 'Pipes' },
     { path: 'other', title: 'Other' },
   ];
+
+  @HostBinding('class.dark')
+  get themeMode() {
+    return this.themeService.darkMode;
+  }
+
+  constructor(public themeService: ThemeService) {}
 }

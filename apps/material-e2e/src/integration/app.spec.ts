@@ -1,7 +1,15 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Search List', () => {
+  it('Toggle Dark Mode', () => {
+    cy.get('mui-root').should('not.have.class', 'dark');
+    cy.get('[data-cy=theme-switcher]').click();
+    cy.get('mui-root').should('have.class', 'dark');
+    cy.get('[data-cy=theme-switcher]').click();
+    cy.get('mui-root').should('not.have.class', 'dark');
+  });
+
+  it('Search List', () => {
     cy.get('[data-cy=search-list]').find('input').type('Rus');
     cy.get('[data-cy=search-list-item]')
       .should('have.length', 4)
@@ -15,9 +23,9 @@ describe('Material Components', () => {
   it('Toggle Button', () => {
     cy.get('[data-cy=toggle-button]')
       .should('not.have.class', 'is-on')
-      .click()
+      .click({ multiple: true })
       .should('have.class', 'is-on')
-      .click()
+      .click({ multiple: true })
       .should('not.have.class', 'is-on');
   });
 

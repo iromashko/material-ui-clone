@@ -522,6 +522,51 @@
           }
         }
       }
+    },
+    "shared-util-services": {
+      "projectType": "library",
+      "root": "libs/shared/util-services",
+      "sourceRoot": "libs/shared/util-services/src",
+      "prefix": "services",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/util-services"
+          ],
+          "options": {
+            "project": "libs/shared/util-services/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-services/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/util-services/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/util-services"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/util-services/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/util-services/src/**/*.ts",
+              "libs/shared/util-services/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
