@@ -1,0 +1,14 @@
+<material-debounce-search
+  [searchTerm]="searchTerm"
+  (searchUpdate)="updateSearchTerm($event)"
+></material-debounce-search>
+
+<ul *ngIf="searchTerm && !hasBeenSelected">
+  <li
+    *ngFor="let item of items | filterTerm: searchTerm"
+    (click)="selectSearchTerm(item)"
+    data-cy="search-list-item"
+  >
+    {{ item }}
+  </li>
+</ul>

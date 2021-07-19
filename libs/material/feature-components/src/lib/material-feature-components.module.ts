@@ -18,6 +18,7 @@ import {
   ToggleModule,
   RichTextViewerModule,
   DebounceSearchModule,
+  SearchListModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -74,6 +75,7 @@ import { RouterModule } from '@angular/router';
     ToggleModule,
     RichTextViewerModule,
     DebounceSearchModule,
+    SearchListModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

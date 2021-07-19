@@ -4,12 +4,7 @@ import { MaterialDomainModule } from '@material-uiclone/material/domain';
 import { PipesComponent } from './pipes.component';
 import { RouterModule } from '@angular/router';
 import { CardModule } from '@material-uiclone/shared/ui-material';
-import {
-  CreditCardFormatterPipe,
-  FilterTermPipe,
-  FlattenPipe,
-  TruncatePipe,
-} from '@material-uiclone/shared/ui-pipes';
+import { MaterialPipesModule } from '@material-uiclone/shared/ui-pipes';
 
 @NgModule({
   imports: [
@@ -17,14 +12,9 @@ import {
     MaterialDomainModule,
     RouterModule.forChild([{ path: '', component: PipesComponent }]),
     CardModule,
+    MaterialPipesModule,
   ],
-  declarations: [
-    PipesComponent,
-    TruncatePipe,
-    CreditCardFormatterPipe,
-    FlattenPipe,
-    FilterTermPipe,
-  ],
+  declarations: [PipesComponent],
   exports: [PipesComponent],
 })
 export class MaterialFeaturePipesModule {}

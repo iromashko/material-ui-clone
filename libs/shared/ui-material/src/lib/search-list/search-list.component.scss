@@ -1,0 +1,10 @@
+:host {
+  @apply w-56 relative;
+
+  ul {
+    @apply mt-2  space-y-1 absolute bg-white w-96 p-2 ring-1 ring-gray-400 rounded z-40;
+    li {
+      @apply bg-white p-2 hover:bg-blue-500 hover:text-white rounded w-full cursor-pointer;
+    }
+  }
+}

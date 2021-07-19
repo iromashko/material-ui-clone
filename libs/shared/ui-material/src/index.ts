@@ -16,3 +16,4 @@ export * from './lib/quote/quote.module';
 export * from './lib/toggle/toggle.module';
 export * from './lib/rich-text-viewer/rich-text-viewer.module';
 export * from './lib/debounce-search/debounce-search.module';
+export * from './lib/search-list/search-list.module';

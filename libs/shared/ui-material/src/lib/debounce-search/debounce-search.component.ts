@@ -15,7 +15,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DebounceSearchComponent {
-  searchTerm = '';
+  @Input() searchTerm = '';
 
   @Input() placeholder = 'Search';
   @Output() searchUpdate = new EventEmitter<string>();

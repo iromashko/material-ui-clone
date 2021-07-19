@@ -1,8 +1,15 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Debounce search', () => {
-    // cy.visit('pipes');
+  it.only('Search List', () => {
+    cy.get('[data-cy=search-list]').find('input').type('Rus');
+    cy.get('[data-cy=search-list-item]')
+      .should('have.length', 4)
+      .last()
+      .click();
+    cy.get('[data-cy=search-list]')
+      .find('input')
+      .should('have.value', 'Russian Federation');
   });
 
   it('Toggle Button', () => {
