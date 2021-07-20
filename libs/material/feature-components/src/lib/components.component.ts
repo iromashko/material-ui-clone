@@ -3,6 +3,7 @@ import {
   AccordionItem,
   LoaderType,
 } from '@material-uiclone/shared/ui-material';
+import { TabItem } from '@material-uiclone/shared/ui-material';
 
 @Component({
   selector: 'material-components',
@@ -283,6 +284,15 @@ export class ComponentsComponent {
       content: 'Example Content 2',
       isExpanded: false,
     },
+  ];
+
+  selectedTab = 0;
+
+  tabs: TabItem[] = [
+    { title: 'Tab 1', active: true },
+    { title: 'Tab 2', active: false },
+    { title: 'Tab 3', active: false },
+    { title: 'Tab 4', active: false },
   ];
 
   loadLoader(): void {

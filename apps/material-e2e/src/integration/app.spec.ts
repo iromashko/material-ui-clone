@@ -1,7 +1,29 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Pagination', () => {
+  it.only('Tab Component', () => {
+    cy.get('[data-cy=tab-item]')
+      .first()
+      .should('have.class', 'active')
+      .contains('Tab 1');
+    cy.get('[data-cy=tab-item]')
+      .last()
+      .should('not.have.class', 'active')
+      .contains('Tab 4');
+    cy.get('[data-cy=tab-item]')
+      .first()
+      .next()
+      .should('not.have.class', 'active')
+      .contains('Tab 2')
+      .click();
+    cy.get('[data-cy=tab-item]')
+      .first()
+      .should('not.have.class', 'active')
+      .next()
+      .should('have.class', 'active');
+  });
+
+  it('Pagination', () => {
     cy.get('[data-cy=paginator-prev]').should('have.attr', 'disabled');
     cy.get('[data-cy=paginator-next]').should('not.have.attr', 'disabled');
     cy.get('[data-cy=paginator-button]').first().contains(1);

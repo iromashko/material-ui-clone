@@ -1,0 +1,16 @@
+<ul>
+  <li
+    data-cy="tab-item"
+    *ngFor="let tab of tabs; let i = index"
+    (click)="selectTab(tab, i)"
+    [class.active]="tab.active"
+  >
+    <h6>
+      {{ tab.title }}
+    </h6>
+  </li>
+</ul>
+
+<div class="content" data-cy="tab-content">
+  <ng-content></ng-content>
+</div>

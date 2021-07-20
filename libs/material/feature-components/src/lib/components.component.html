@@ -1,5 +1,37 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Tab"
+  subTitle="Component"
+>
+  <section body>
+    <material-tab [tabs]="tabs" (selectedTabIndex)="selectedTab = $any($event)">
+      <p *ngIf="selectedTab === 0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        ipsum, consequatur obcaecati neque in voluptatibus eos explicabo dolorum
+        corporis, natus cupiditate sapiente fugit dolor fugiat temporibus illo
+        numquam omnis unde?
+      </p>
+      <p *ngIf="selectedTab === 1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae
+        voluptates sit inventore eum quis quibusdam soluta, explicabo officia
+        quia?
+      </p>
+      <p *ngIf="selectedTab === 2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae
+        voluptates sit inventore eum quis quibusdam soluta, explicabo officia
+        quia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+        non?
+      </p>
+      <p *ngIf="selectedTab === 3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae
+        voluptates sit inventore
+      </p>
+    </material-tab>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Pagination"
   subTitle="Component"
 >
