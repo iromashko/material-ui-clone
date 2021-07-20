@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Counter Buttons', () => {
+  it.only('New', () => {
+    //
+  });
+
+  it('Counter Buttons', () => {
     cy.get('[data-cy=counter]').should('have.value', 0);
     cy.get('[data-cy=decrement-button]').click();
     cy.get('[data-cy=counter]').should('have.value', 0);

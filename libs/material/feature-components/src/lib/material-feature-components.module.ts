@@ -20,6 +20,7 @@ import {
   DebounceSearchModule,
   SearchListModule,
   CounterModule,
+  SimpleTableModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -78,6 +79,7 @@ import { RouterModule } from '@angular/router';
     DebounceSearchModule,
     SearchListModule,
     CounterModule,
+    SimpleTableModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

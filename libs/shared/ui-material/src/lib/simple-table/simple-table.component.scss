@@ -1,0 +1,19 @@
+table {
+  @apply w-full border-collapse;
+
+  thead {
+    th {
+      @apply uppercase py-1 px-3 text-left border-b-2 border-gray-100;
+    }
+  }
+
+  tbody {
+    tr {
+      @apply hover:bg-gray-100;
+
+      td {
+        @apply border-b pl-3;
+      }
+    }
+  }
+}
