@@ -1,0 +1,26 @@
+:host {
+  @apply grid w-4;
+  grid-template-columns: auto auto auto;
+
+  input {
+    @apply text-right border border-gray-300 text-2xl pr-2 outline-none;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  button {
+    @apply px-4 py-3 transition-colors duration-300;
+
+    &.increment {
+      @apply bg-green-400 dark:bg-blue-700 text-white rounded-r-md;
+    }
+
+    &.decrement {
+      @apply bg-red-400 dark:bg-red-700 text-white rounded-l-md;
+    }
+  }
+}

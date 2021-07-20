@@ -1,6 +1,16 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  it.only('Counter Buttons', () => {
+    cy.get('[data-cy=counter]').should('have.value', 0);
+    cy.get('[data-cy=decrement-button]').click();
+    cy.get('[data-cy=counter]').should('have.value', 0);
+    cy.get('[data-cy=increment-button]').click();
+    cy.get('[data-cy=counter]').should('have.value', 1);
+    cy.get('[data-cy=decrement-button]').click();
+    cy.get('[data-cy=counter]').should('have.value', 0);
+  });
+
   it('Toggle Dark Mode', () => {
     cy.get('mui-root').should('not.have.class', 'dark');
     cy.get('[data-cy=theme-switcher]').click();

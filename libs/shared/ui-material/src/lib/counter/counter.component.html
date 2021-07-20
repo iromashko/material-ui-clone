@@ -1,0 +1,15 @@
+<button data-cy="decrement-button" class="decrement" (click)="decrement()">
+  <i class="fas fa-minus"></i>
+</button>
+
+<input
+  data-cy="counter"
+  type="number"
+  [min]="min"
+  [max]="max"
+  [(ngModel)]="counter"
+/>
+
+<button data-cy="increment-button" class="increment" (click)="increment()">
+  <i class="fas fa-plus"></i>
+</button>
