@@ -523,6 +523,51 @@
         }
       }
     },
+    "shared-util-helpers": {
+      "projectType": "library",
+      "root": "libs/shared/util-helpers",
+      "sourceRoot": "libs/shared/util-helpers/src",
+      "prefix": "helpers",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/util-helpers"
+          ],
+          "options": {
+            "project": "libs/shared/util-helpers/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-helpers/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/util-helpers/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/util-helpers"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/util-helpers/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/util-helpers/src/**/*.ts",
+              "libs/shared/util-helpers/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-util-services": {
       "projectType": "library",
       "root": "libs/shared/util-services",

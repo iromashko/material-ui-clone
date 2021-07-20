@@ -21,6 +21,7 @@ import {
   SearchListModule,
   CounterModule,
   SimpleTableModule,
+  PaginationModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -80,6 +81,7 @@ import { RouterModule } from '@angular/router';
     SearchListModule,
     CounterModule,
     SimpleTableModule,
+    PaginationModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

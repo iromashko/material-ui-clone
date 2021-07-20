@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { Chance as generateRandom } from 'chance';
+import { generateUsers } from '@material-uiclone/shared/util-helpers';
 
-interface User {
+export interface User {
   first: string;
   last: string;
   dob: string;
@@ -14,9 +14,5 @@ interface User {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SimpleTableComponent {
-  @Input() tableData: User[] = Array.from({ length: 10 }).map(() => ({
-    first: generateRandom().first(),
-    last: generateRandom().last(),
-    dob: generateRandom().birthday({ string: true }) as string,
-  }));
+  @Input() tableData: User[] = generateUsers();
 }

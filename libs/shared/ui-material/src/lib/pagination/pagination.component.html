@@ -1,0 +1,31 @@
+<ul>
+  <li>
+    <button
+      data-cy="paginator-prev"
+      [disabled]="isPrevDisabled"
+      (click)="setPage(currentPage - step)"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </li>
+
+  <li *ngFor="let page of pages">
+    <button
+      data-cy="paginator-button"
+      (click)="setPage(page)"
+      [class.current-page]="currentPage === page"
+    >
+      {{ page }}
+    </button>
+  </li>
+
+  <li>
+    <button
+      data-cy="paginator-next"
+      [disabled]="isNextDisabled"
+      (click)="setPage(currentPage + step)"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </li>
+</ul>

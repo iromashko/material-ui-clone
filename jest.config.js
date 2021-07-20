@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/shared/ui-pipes',
     '<rootDir>/libs/shared/ui-directives',
     '<rootDir>/libs/shared/util-services',
+    '<rootDir>/libs/shared/util-helpers',
   ],
 };

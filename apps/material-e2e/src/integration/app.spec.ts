@@ -1,8 +1,14 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('New', () => {
-    //
+  it.only('Pagination', () => {
+    cy.get('[data-cy=paginator-prev]').should('have.attr', 'disabled');
+    cy.get('[data-cy=paginator-next]').should('not.have.attr', 'disabled');
+    cy.get('[data-cy=paginator-button]').first().contains(1);
+    cy.get('[data-cy=paginator-button]').contains(3).click().contains(3);
+    cy.get('[data-cy=paginator-prev]').should('not.have.attr', 'disabled');
+    cy.get('[data-cy=paginator-next]').click().click();
+    cy.get('[data-cy=paginator-next]').should('have.attr', 'disabled');
   });
 
   it('Counter Buttons', () => {

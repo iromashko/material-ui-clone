@@ -42,6 +42,9 @@
       "@material-uiclone/shared/ui-pipes": [
         "libs/shared/ui-pipes/src/index.ts"
       ],
+      "@material-uiclone/shared/util-helpers": [
+        "libs/shared/util-helpers/src/index.ts"
+      ],
       "@material-uiclone/shared/util-services": [
         "libs/shared/util-services/src/index.ts"
       ]
