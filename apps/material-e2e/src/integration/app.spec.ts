@@ -2,7 +2,7 @@ describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
   it.only('new', () => {
-    cy.visit('');
+    cy.visit('other');
   });
 
   it('Tab Component', () => {

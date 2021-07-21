@@ -1,2 +1,16 @@
-<h1>material-other</h1>
+<material-card
+  iconClasses="fas fa-info-circle"
+  title="Fade In Out"
+  subTitle="Other - Animation"
+>
+  <section body>
+    <h1 [@fadeInOutAnimation] *ngIf="isInDOM">Hello World!</h1>
+    <h1 [@fadeInOutAnimation] *ngIf="!isInDOM">Lorem Ipsum</h1>
+  </section>
 
+  <div footer>
+    <button class="mui-btn" (click)="isInDOM = !isInDOM">
+      Toggle Animation
+    </button>
+  </div>
+</material-card>

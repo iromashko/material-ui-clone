@@ -1,21 +1,12 @@
-import { Component, OnInit} from '@angular/core';
-import { OtherFacade } from '@material-uiclone/material/domain';
+import { Component } from '@angular/core';
+import { fadeInOutAnimation } from '@material-uiclone/shared/ui-animations';
 
 @Component({
   selector: 'material-other',
   templateUrl: './other.component.html',
-  styleUrls: ['./other.component.scss']
+  styleUrls: ['./other.component.scss'],
+  animations: [fadeInOutAnimation],
 })
-export class OtherComponent implements OnInit {
-    
-
-
-    constructor(private otherFacade: OtherFacade) {
-    }
-
-
-    ngOnInit() {
-    }
-
+export class OtherComponent {
+  isInDOM = true;
 }
-

@@ -12,5 +12,6 @@ module.exports = {
     '<rootDir>/libs/shared/ui-directives',
     '<rootDir>/libs/shared/util-services',
     '<rootDir>/libs/shared/util-helpers',
+    '<rootDir>/libs/shared/ui-animations',
   ],
 };

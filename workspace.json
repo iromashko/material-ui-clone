@@ -388,6 +388,51 @@
         }
       }
     },
+    "shared-ui-animations": {
+      "projectType": "library",
+      "root": "libs/shared/ui-animations",
+      "sourceRoot": "libs/shared/ui-animations/src",
+      "prefix": "animations",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:ng-packagr-lite",
+          "outputs": [
+            "dist/libs/shared/ui-animations"
+          ],
+          "options": {
+            "project": "libs/shared/ui-animations/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-animations/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui-animations/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-animations"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-animations/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-animations/src/**/*.ts",
+              "libs/shared/ui-animations/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-directives": {
       "projectType": "library",
       "root": "libs/shared/ui-directives",
