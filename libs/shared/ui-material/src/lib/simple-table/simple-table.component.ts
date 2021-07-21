@@ -1,11 +1,10 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { generateUsers } from '@material-uiclone/shared/util-helpers';
-
-export interface User {
-  first: string;
-  last: string;
-  dob: string;
-}
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 @Component({
   selector: 'material-simple-table',
@@ -14,5 +13,11 @@ export interface User {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SimpleTableComponent {
-  @Input() tableData: User[] = generateUsers();
+  @Input() tableData: any[] = [];
+
+  @Output() headerSelected = new EventEmitter<{ key: unknown; value: any }>();
+
+  headerSelection(key: unknown, value: any): void {
+    this.headerSelected.emit({ value, key });
+  }
 }

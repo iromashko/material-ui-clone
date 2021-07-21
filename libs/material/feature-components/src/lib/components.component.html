@@ -1,5 +1,15 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Sort Table"
+  subTitle="Component"
+>
+  <section body>
+    <material-sort-table [tableData]="sortTableData"></material-sort-table>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Tab"
   subTitle="Component"
 >
@@ -46,7 +56,7 @@
   subTitle="Component"
 >
   <section body>
-    <material-simple-table></material-simple-table>
+    <material-simple-table [tableData]="tableDataUsers"></material-simple-table>
   </section>
 </material-card>
 

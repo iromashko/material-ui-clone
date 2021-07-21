@@ -19,6 +19,7 @@ export * from './lib/debounce-search/debounce-search.module';
 export * from './lib/search-list/search-list.module';
 export * from './lib/counter/counter.module';
 export * from './lib/simple-table/simple-table.module';
+export * from './lib/sort-table/sort-table.module';
 export * from './lib/pagination/pagination.module';
 export * from './lib/tab/tab.module';
 export * from './lib/tab/tab.component';

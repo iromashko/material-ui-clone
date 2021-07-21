@@ -4,6 +4,16 @@ import {
   LoaderType,
 } from '@material-uiclone/shared/ui-material';
 import { TabItem } from '@material-uiclone/shared/ui-material';
+import {
+  generateUsers,
+  generateSortTableUsers,
+} from '@material-uiclone/shared/util-helpers';
+
+export interface User {
+  first: string;
+  last: string;
+  dob: string;
+}
 
 @Component({
   selector: 'material-components',
@@ -285,6 +295,9 @@ export class ComponentsComponent {
       isExpanded: false,
     },
   ];
+
+  tableDataUsers = generateUsers();
+  sortTableData = generateSortTableUsers();
 
   selectedTab = 0;
 

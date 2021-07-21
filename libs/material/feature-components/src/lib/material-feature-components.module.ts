@@ -23,6 +23,7 @@ import {
   SimpleTableModule,
   PaginationModule,
   TabModule,
+  SortTableModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -84,6 +85,7 @@ import { RouterModule } from '@angular/router';
     SimpleTableModule,
     PaginationModule,
     TabModule,
+    SortTableModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

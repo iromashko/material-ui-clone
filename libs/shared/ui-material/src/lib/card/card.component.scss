@@ -1,5 +1,5 @@
 :host {
-  @apply grid gap-3 shadow rounded;
+  @apply grid gap-3 shadow rounded mb-3;
 
   .header {
     @apply grid gap-3 items-center p-3 bg-green-400 dark:bg-yellow-600 transition-colors duration-300 text-white rounded-t;
