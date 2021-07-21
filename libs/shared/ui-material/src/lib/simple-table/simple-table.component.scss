@@ -1,5 +1,5 @@
 table {
-  @apply w-full border-collapse;
+  @apply w-full border-collapse table-auto;
 
   thead {
     th {
@@ -9,7 +9,7 @@ table {
 
   tbody {
     tr {
-      @apply hover:bg-gray-100;
+      @apply hover:bg-gray-100 h-10;
 
       td {
         @apply border-b pl-3;
