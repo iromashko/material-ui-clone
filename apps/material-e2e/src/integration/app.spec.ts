@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Tab Component', () => {
+  it.only('new', () => {
+    cy.visit('');
+  });
+
+  it('Tab Component', () => {
     cy.get('[data-cy=tab-item]')
       .first()
       .should('have.class', 'active')

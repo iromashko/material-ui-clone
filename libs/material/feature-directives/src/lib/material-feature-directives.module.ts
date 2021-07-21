@@ -4,7 +4,10 @@ import { MaterialDomainModule } from '@material-uiclone/material/domain';
 import { DirectivesComponent } from './directives.component';
 import { RouterModule } from '@angular/router';
 import { CardModule } from '@material-uiclone/shared/ui-material';
-import { DebounceClickDirective } from '@material-uiclone/shared/ui-directives';
+import {
+  DebounceClickDirective,
+  RippleDirective,
+} from '@material-uiclone/shared/ui-directives';
 
 @NgModule({
   imports: [
@@ -13,7 +16,7 @@ import { DebounceClickDirective } from '@material-uiclone/shared/ui-directives';
     RouterModule.forChild([{ path: '', component: DirectivesComponent }]),
     CardModule,
   ],
-  declarations: [DirectivesComponent, DebounceClickDirective],
+  declarations: [DirectivesComponent, DebounceClickDirective, RippleDirective],
   exports: [DirectivesComponent],
 })
 export class MaterialFeatureDirectivesModule {}

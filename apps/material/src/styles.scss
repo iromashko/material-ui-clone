@@ -24,8 +24,34 @@ body {
   &.warning {
     @apply bg-yellow-400;
   }
+
+  &.basic {
+    @apply bg-transparent text-blue-800 ring-1 outline-none;
+  }
+
+  &.lg {
+    @apply px-6 py-4;
+  }
 }
 
 .mui-form-input {
   @apply block w-60 px-3 py-2 text-gray-900 placeholder-gray-400 bg-white rounded border appearance-none focus:outline-none;
+}
+
+.ripple {
+  background-position: center;
+  transition: all 0.4s;
+
+  &:hover {
+    color: white;
+    transition: background 0.4s;
+    background: #1485e2 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+      center/15000%;
+  }
+
+  &:active {
+    background-color: #2497f5;
+    background-size: 100%;
+    transition: background 0s;
+  }
 }

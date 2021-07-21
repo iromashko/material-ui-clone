@@ -1,7 +1,19 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Ripple "
+  subTitle="Directive"
+>
+  <section body>
+    <button class="mui-btn basic lg" directivesRipple="ripple">
+      Ripple Button
+    </button>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Debounce Click"
-  subTitle="Component"
+  subTitle="Directive"
 >
   <section footer>
     <button class="mui-btn" (debounceClick)="log()" directivesDebounceClick>
