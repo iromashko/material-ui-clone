@@ -1,6 +1,24 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  context.only('Form Guard', () => {
+    it('Form Dirty', () => {
+      cy.on('window:confirm', () => false);
+      cy.visit('other').url().should('include', 'other');
+      cy.get('[data-cy=form-dirty-input]').type('1337');
+      cy.get('.link-active').siblings().first().click();
+      cy.url().should('include', 'other');
+    });
+
+    it('Confirm exit', () => {
+      cy.on('window:confirm', () => true);
+      cy.visit('other').url().should('include', 'other');
+      cy.get('[data-cy=form-dirty-input]').type('1337');
+      cy.get('.link-active').siblings().last().click();
+      cy.url().should('include', 'pipes');
+    });
+  });
+
   context('Email Form', () => {
     it('Initial form disabled', () => {
       cy.get('[data-cy=form-submit]').should('have.attr', 'disabled');

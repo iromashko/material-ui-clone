@@ -1,5 +1,27 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Dirty Form"
+  subTitle="Other - Router Guard"
+>
+  <section body>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <input
+        data-cy="form-dirty-input"
+        type="text"
+        formControlName="name"
+        class="mui-form-input"
+      />
+    </form>
+  </section>
+  <section footer>
+    <button data-cy="form-dirty-submit" class="mui-btn" type="submit">
+      Submit
+    </button>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Fade In Out"
   subTitle="Other - Animation"
 >
