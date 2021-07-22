@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialDomainModule } from '@material-uiclone/material/domain';
+import {
+  FormDirtyGuard,
+  MaterialDomainModule,
+} from '@material-uiclone/material/domain';
 import { OtherComponent } from './other.component';
 import { RouterModule } from '@angular/router';
 import { CardModule } from '@material-uiclone/shared/ui-material';
-import { FormDirtyGuard } from '@material-uiclone/shared/util-services';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
