@@ -13,5 +13,6 @@ module.exports = {
     '<rootDir>/libs/shared/util-services',
     '<rootDir>/libs/shared/util-helpers',
     '<rootDir>/libs/shared/ui-animations',
+    '<rootDir>/libs/shared/util-guards',
   ],
 };

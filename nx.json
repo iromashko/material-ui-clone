@@ -64,6 +64,9 @@
     "shared-ui-pipes": {
       "tags": ["domain:shared", "type:ui"]
     },
+    "shared-util-guards": {
+      "tags": ["domain:shared", "type:util"]
+    },
     "shared-util-helpers": {
       "tags": ["domain:shared", "type:util"]
     },
