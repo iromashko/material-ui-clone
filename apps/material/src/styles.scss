@@ -15,7 +15,7 @@ body {
 }
 
 .mui-btn {
-  @apply px-3 py-1 text-white bg-green-400 dark:bg-blue-900 rounded mr-2 hover:opacity-70 transition duration-300;
+  @apply px-3 py-1 text-white bg-green-400 dark:bg-blue-900 rounded transition duration-300;
 
   &.danger {
     @apply bg-red-400;
@@ -30,7 +30,11 @@ body {
   }
 
   &.lg {
-    @apply px-6 py-4;
+    @apply px-3 py-3;
+  }
+
+  &.md {
+    @apply px-8 py-3;
   }
 }
 

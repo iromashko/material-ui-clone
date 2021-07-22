@@ -1,0 +1,66 @@
+<form [formGroup]="form" (ngSubmit)="submitMessage()">
+  <h1>Get In Touch</h1>
+
+  <fieldset class="name">
+    <i class="fas fa-user"></i>
+    <input
+      data-cy="form-name"
+      formControlName="name"
+      type="text"
+      placeholder="Name"
+      [ngClass]="{
+        'bg-red-50': form.controls.name.errors && form.controls.name.touched
+      }"
+    />
+    <small
+      data-cy="form-invalid-name"
+      *ngIf="form.controls.name.errors && form.controls.name.touched"
+      >Name is to short</small
+    >
+  </fieldset>
+
+  <fieldset class="email">
+    <i class="fas fa-envelope"></i>
+    <input
+      data-cy="form-email"
+      formControlName="email"
+      type="text"
+      placeholder="Email"
+      [ngClass]="{
+        'bg-red-50': form.controls.email.errors && form.controls.email.touched
+      }"
+    />
+    <small
+      data-cy="form-invalid-email"
+      *ngIf="form.controls.email.errors && form.controls.email.touched"
+      >Invalid Email</small
+    >
+  </fieldset>
+
+  <fieldset class="message">
+    <i class="fas fa-comment"></i>
+    <textarea
+      data-cy="form-message"
+      formControlName="message"
+      placeholder="Your Message"
+      [ngClass]="{
+        'bg-red-50':
+          form.controls.message.errors && form.controls.message.touched
+      }"
+    ></textarea>
+
+    <small
+      data-cy="form-invalid-message"
+      *ngIf="form.controls.message.errors && form.controls.message.touched"
+      >Message Requred</small
+    >
+  </fieldset>
+
+  <input
+    type="submit"
+    data-cy="form-submit"
+    value="Submit"
+    [disabled]="form.invalid"
+    class="mui-btn md"
+  />
+</form>

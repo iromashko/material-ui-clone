@@ -1,8 +1,28 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('new', () => {
-    cy.visit('other');
+  context('Email Form', () => {
+    it('Initial form disabled', () => {
+      cy.get('[data-cy=form-submit]').should('have.attr', 'disabled');
+      cy.get('[data-cy=form-name]').type('Username');
+      cy.get('[data-cy=form-email]').type('username@email.com');
+      cy.get('[data-cy=form-message]').type('Lorem Ipsum');
+      cy.get('[data-cy=form-submit]').should('not.have.attr', 'disabled');
+    });
+    it('Invalid Form', () => {
+      cy.get('[data-cy=form-invalid-email]').should('not.exist');
+      cy.get('[data-cy=form-invalid-message]').should('not.exist');
+      cy.get('[data-cy=form-invalid-name]').should('not.exist');
+      cy.get('[data-cy=form-submit]').should('have.attr', 'disabled');
+      cy.get('[data-cy=form-name]').type('7');
+      cy.get('[data-cy=form-email]').type('notemail');
+      cy.get('[data-cy=form-message]').type('1').clear();
+      cy.get('[data-cy=form-name]').focus();
+      cy.get('[data-cy=form-submit]').should('have.attr', 'disabled');
+      cy.get('[data-cy=form-invalid-email]').should('be.visible');
+      cy.get('[data-cy=form-invalid-message]').should('be.visible');
+      cy.get('[data-cy=form-invalid-name]').should('be.visible');
+    });
   });
 
   it('Tab Component', () => {

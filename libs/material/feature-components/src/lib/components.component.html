@@ -1,5 +1,15 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Email Form"
+  subTitle="Component"
+>
+  <section body>
+    <material-email-form></material-email-form>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Sort Table"
   subTitle="Component"
 >
@@ -210,7 +220,7 @@
     data-cy="loader-circular"
     footer
     (click)="loadCircular()"
-    class="mui-btn warning"
+    class="ml-2 mui-btn warning"
   >
     Load Circular
   </button>
@@ -244,7 +254,7 @@
     data-cy="progress-reset"
     footer
     (click)="progressValue = 0"
-    class="mui-btn danger"
+    class="ml-2 mui-btn danger"
   >
     Reset
   </button>

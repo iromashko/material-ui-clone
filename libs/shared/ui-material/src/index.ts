@@ -23,3 +23,4 @@ export * from './lib/sort-table/sort-table.module';
 export * from './lib/pagination/pagination.module';
 export * from './lib/tab/tab.module';
 export * from './lib/tab/tab.component';
+export * from './lib/email-form/email-form.module';
