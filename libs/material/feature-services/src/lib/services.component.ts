@@ -1,21 +1,13 @@
-import { Component, OnInit} from '@angular/core';
-import { ServicesFacade } from '@material-uiclone/material/domain';
+import { Component } from '@angular/core';
+import { UserService } from '@material-uiclone/shared/util-services';
 
 @Component({
   selector: 'material-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  styleUrls: ['./services.component.scss'],
 })
-export class ServicesComponent implements OnInit {
-    
+export class ServicesComponent {
+  user$ = this.userService.user$;
 
-
-    constructor(private servicesFacade: ServicesFacade) {
-    }
-
-
-    ngOnInit() {
-    }
-
+  constructor(private userService: UserService) {}
 }
-

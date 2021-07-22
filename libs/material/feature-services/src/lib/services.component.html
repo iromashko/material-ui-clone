@@ -1,2 +1,9 @@
-<h1>material-services</h1>
-
+<material-card iconClasses="fas fa-info-circle" title="User" subTitle="Service">
+  <section body>
+    <ng-container *ngIf="user$ | async as user">
+      <p>{{ user.name }}</p>
+      <p>{{ user.username }}</p>
+      <p>{{ user.email }}</p>
+    </ng-container>
+  </section>
+</material-card>

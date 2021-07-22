@@ -1,7 +1,10 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  context.only('Form Guard', () => {
+  it.only('new', () => {
+    cy.visit('services');
+  });
+  context('Form Guard', () => {
     it('Form Dirty', () => {
       cy.on('window:confirm', () => false);
       cy.visit('other').url().should('include', 'other');
