@@ -1,0 +1,12 @@
+:host {
+  @apply mb-4 block;
+
+  header {
+    @apply bg-cover h-80 relative text-center;
+
+    h1 {
+      @apply bg-white text-black text-6xl font-extrabold uppercase absolute mx-auto top-1/2 left-1/2 mix-blend-screen p-5;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

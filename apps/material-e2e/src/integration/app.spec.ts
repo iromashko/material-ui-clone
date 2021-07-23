@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Button Group', () => {
+  it.only('new', () => {
+    //
+  });
+
+  it('Button Group', () => {
     cy.get('[data-cy=button-group-item]')
       .should('not.have.class', 'active')
       .first()

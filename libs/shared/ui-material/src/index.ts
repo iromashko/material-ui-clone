@@ -29,3 +29,4 @@ export * from './lib/ribbon/ribbon.enum';
 export * from './lib/ribbon/ribbon-location.enum';
 export * from './lib/button-group/button-group.module';
 export * from './lib/button-group/button-meta.model';
+export * from './lib/banner/banner.module';

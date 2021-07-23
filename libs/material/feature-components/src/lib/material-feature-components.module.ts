@@ -27,6 +27,7 @@ import {
   EmailFormModule,
   RibbonModule,
   ButtonGroupModule,
+  BannerModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -92,6 +93,7 @@ import { RouterModule } from '@angular/router';
     EmailFormModule,
     RibbonModule,
     ButtonGroupModule,
+    BannerModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

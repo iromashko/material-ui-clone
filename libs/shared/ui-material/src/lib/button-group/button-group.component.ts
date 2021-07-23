@@ -19,7 +19,7 @@ export class ButtonGroupComponent {
 
   selected(selectedOption: ButtonMeta): void {
     this.options.forEach((option) => {
-      option.isActive = selectedOption === option;
+      option.isActive = Object.is(selectedOption, option);
     });
 
     this.selection.emit(selectedOption);
