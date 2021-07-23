@@ -1,8 +1,16 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('new', () => {
-    //
+  it('Scale Directive', () => {
+    cy.visit('directives');
+    cy.get('[data-cy=square]')
+      .trigger('mouseover')
+      .should('have.attr', 'style')
+      .should('contain', 'transform: scale(1.25)');
+    cy.get('[data-cy=square]')
+      .trigger('mouseleave')
+      .should('have.attr', 'style')
+      .should('contain', 'transform: scale(1)');
   });
 
   it('Button Group', () => {
@@ -149,21 +157,21 @@ describe('Material Components', () => {
   it('Toggle Button', () => {
     cy.get('[data-cy=toggle-button]')
       .should('not.have.class', 'is-on')
-      .click({ multiple: true })
+      .click({ multiple: true, force: true })
       .should('have.class', 'is-on')
-      .click({ multiple: true })
+      .click({ multiple: true, force: true })
       .should('not.have.class', 'is-on');
   });
 
   it('Modal Window', () => {
     cy.get('[data-cy=modal-content]').should('not.be.visible');
-    cy.get('[data-cy=open-modal]').click();
+    cy.get('[data-cy=open-modal]').click({ force: true });
     cy.get('[data-cy=modal-content]').should('be.visible');
-    cy.get('[data-cy=modal-close]').click();
+    cy.get('[data-cy=modal-close]').click({ force: true });
     cy.get('[data-cy=modal-content]').should('not.be.visible');
-    cy.get('[data-cy=open-modal]').click();
+    cy.get('[data-cy=open-modal]').click({ force: true });
     cy.get('[data-cy=modal-content]').should('be.visible');
-    cy.get('[data-cy=modal-overlay]').click();
+    cy.get('[data-cy=modal-overlay]').click({ force: true });
     cy.get('[data-cy=modal-content]').should('not.be.visible');
   });
 
@@ -204,9 +212,9 @@ describe('Material Components', () => {
 
   it('Loader', () => {
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
-    cy.get('[data-cy=loader-text]').click();
+    cy.get('[data-cy=loader-text]').click({ force: true });
     cy.get('h1').contains('Loading');
-    cy.get('[data-cy=loader-circular]').click();
+    cy.get('[data-cy=loader-circular]').click({ force: true });
     cy.get('.circular').should('be.visible');
     cy.get('[data-cy=loader-overlay]').should('be.visible');
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
@@ -233,9 +241,9 @@ describe('Material Components', () => {
 
   it('Progress Bar', () => {
     cy.get('[data-cy=progress-value]').contains(25);
-    cy.get('[data-cy=progress-update]').click();
+    cy.get('[data-cy=progress-update]').click({ force: true });
     cy.get('[data-cy=progress-value]').contains(100);
-    cy.get('[data-cy=progress-reset]').click();
+    cy.get('[data-cy=progress-reset]').click({ force: true });
     cy.get('[data-cy=progress-value]').contains(0);
   });
 
