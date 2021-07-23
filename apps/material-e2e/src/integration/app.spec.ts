@@ -1,7 +1,23 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Ribbon Component', () => {
+  it.only('Button Group', () => {
+    cy.get('[data-cy=button-group-item]')
+      .should('not.have.class', 'active')
+      .first()
+      .click()
+      .should('have.class', 'active')
+      .next()
+      .click()
+      .should('have.class', 'active')
+      .next()
+      .click()
+      .should('have.class', 'active')
+      .prevAll()
+      .should('not.have.class', 'active');
+  });
+
+  it('Ribbon Component', () => {
     cy.get('[data-cy=ribbon]')
       .should('have.class', 'bottom-left')
       .should('have.class', 'info');

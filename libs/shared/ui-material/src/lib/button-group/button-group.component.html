@@ -1,0 +1,8 @@
+<button
+  *ngFor="let option of options"
+  [class.active]="option.isActive"
+  (click)="selected(option)"
+  data-cy="button-group-item"
+>
+  {{ option.title }}
+</button>

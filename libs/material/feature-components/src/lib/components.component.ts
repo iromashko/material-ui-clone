@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
   AccordionItem,
+  ButtonMeta,
   LoaderType,
   RibbonLocation,
   RibbonType,
@@ -26,6 +27,12 @@ export class ComponentsComponent {
   RibbonType = RibbonType;
   RibbonLocation = RibbonLocation;
   ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.BottomLeft };
+
+  buttonToggleOptions: ButtonMeta[] = [
+    new ButtonMeta({ id: 1, title: 'Bold' }),
+    new ButtonMeta({ id: 2, title: 'Italic' }),
+    new ButtonMeta({ id: 3, title: 'Underline' }),
+  ];
 
   progressValue = 25;
 

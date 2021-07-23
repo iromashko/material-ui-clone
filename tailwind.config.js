@@ -11,7 +11,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['first', 'last'],
+      borderRadius: ['first', 'last'],
+    },
   },
   plugins: [],
 };
