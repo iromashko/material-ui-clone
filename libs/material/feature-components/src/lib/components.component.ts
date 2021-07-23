@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {
   AccordionItem,
   ButtonMeta,
   LoaderType,
   RibbonLocation,
   RibbonType,
+  SnackbarComponent,
 } from '@material-uiclone/shared/ui-material';
 import { TabItem } from '@material-uiclone/shared/ui-material';
 import {
@@ -35,6 +36,8 @@ export class ComponentsComponent {
   ];
 
   progressValue = 25;
+
+  @ViewChild(SnackbarComponent) snackbar!: SnackbarComponent;
 
   isLoading = false;
   loaderType = LoaderType.Loading;
@@ -320,6 +323,10 @@ export class ComponentsComponent {
     { title: 'Tab 3', active: false },
     { title: 'Tab 4', active: false },
   ];
+
+  snackbarShow(): void {
+    this.snackbar.show();
+  }
 
   loadLoader(): void {
     this.loaderType = LoaderType.Loading;

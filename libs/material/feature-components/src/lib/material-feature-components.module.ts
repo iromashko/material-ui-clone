@@ -28,6 +28,7 @@ import {
   RibbonModule,
   ButtonGroupModule,
   BannerModule,
+  SnackbarModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -94,6 +95,7 @@ import { RouterModule } from '@angular/router';
     RibbonModule,
     ButtonGroupModule,
     BannerModule,
+    SnackbarModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

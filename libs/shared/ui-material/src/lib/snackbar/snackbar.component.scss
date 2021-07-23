@@ -1,0 +1,35 @@
+.snackbar {
+  @apply mx-auto bg-gray-500 text-white text-center rounded p-4 fixed text-lg z-10  left-1/2 hidden;
+  bottom: 30px;
+  min-width: 250px;
+  transform: translate(-50%, -50%);
+
+  &.show {
+    @apply block;
+    animation: fadeUp 0.5s, fadeDown 0.5s 2.5s;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

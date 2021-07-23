@@ -1,29 +1,36 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
+  it.only('Snackbar Component', () => {
+    cy.get('[data-cy=snackbar]').should('not.be.visible');
+    cy.get('[data-cy=snackbar-toggle]').click();
+    cy.get('[data-cy=snackbar]').should('be.visible');
+    cy.get('[data-cy=snackbar]').should('not.be.visible');
+  });
+
   it('Scale Directive', () => {
     cy.visit('directives');
     cy.get('[data-cy=square]')
       .trigger('mouseover')
       .should('have.attr', 'style')
-      .should('contain', 'transform: scale(1.25)');
+      .and('contain', 'transform: scale(1.25)');
     cy.get('[data-cy=square]')
       .trigger('mouseleave')
       .should('have.attr', 'style')
-      .should('contain', 'transform: scale(1)');
+      .and('contain', 'transform: scale(1)');
   });
 
   it('Button Group', () => {
     cy.get('[data-cy=button-group-item]')
       .should('not.have.class', 'active')
       .first()
-      .click()
+      .click({ force: true })
       .should('have.class', 'active')
       .next()
-      .click()
+      .click({ force: true })
       .should('have.class', 'active')
       .next()
-      .click()
+      .click({ force: true })
       .should('have.class', 'active')
       .prevAll()
       .should('not.have.class', 'active');
