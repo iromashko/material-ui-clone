@@ -12,11 +12,13 @@
         'bg-red-50': form.controls.name.errors && form.controls.name.touched
       }"
     />
-    <small
-      data-cy="form-invalid-name"
-      *ngIf="form.controls.name.errors && form.controls.name.touched"
-      >Name is to short</small
-    >
+    <div class="error">
+      <small
+        data-cy="form-invalid-name"
+        *ngIf="form.controls.name.errors && form.controls.name.touched"
+        >Name is to short</small
+      >
+    </div>
   </fieldset>
 
   <fieldset class="email">
@@ -30,11 +32,13 @@
         'bg-red-50': form.controls.email.errors && form.controls.email.touched
       }"
     />
-    <small
-      data-cy="form-invalid-email"
-      *ngIf="form.controls.email.errors && form.controls.email.touched"
-      >Invalid Email</small
-    >
+    <div class="error">
+      <small
+        data-cy="form-invalid-email"
+        *ngIf="form.controls.email.errors && form.controls.email.touched"
+        >Invalid Email</small
+      >
+    </div>
   </fieldset>
 
   <fieldset class="message">
@@ -49,11 +53,13 @@
       }"
     ></textarea>
 
-    <small
-      data-cy="form-invalid-message"
-      *ngIf="form.controls.message.errors && form.controls.message.touched"
-      >Message Requred</small
-    >
+    <div class="error">
+      <small
+        data-cy="form-invalid-message"
+        *ngIf="form.controls.message.errors && form.controls.message.touched"
+        >Message Requred</small
+      >
+    </div>
   </fieldset>
 
   <input

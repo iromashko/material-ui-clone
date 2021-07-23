@@ -1,5 +1,78 @@
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Ribbon"
+  subTitle="Component"
+>
+  <section body>
+    <material-ribbon
+      [content]="'Angular Challenge'"
+      [location]="ribbonStyle.location"
+      [type]="ribbonStyle.type"
+    ></material-ribbon>
+  </section>
+
+  <section footer>
+    <button
+      data-cy="ribbon-button-top-right"
+      (click)="ribbonStyle.location = RibbonLocation.TopRight"
+      class="mui-btn"
+    >
+      Top-right
+    </button>
+    <button
+      data-cy="ribbon-button-top-left"
+      (click)="ribbonStyle.location = RibbonLocation.TopLeft"
+      class="mui-btn"
+    >
+      Top-left
+    </button>
+    <button
+      data-cy="ribbon-button-bottom-right"
+      (click)="ribbonStyle.location = RibbonLocation.BottomRight"
+      class="mui-btn"
+    >
+      Bottom-right
+    </button>
+    <button
+      data-cy="ribbon-button-bottom-left"
+      (click)="ribbonStyle.location = RibbonLocation.BottomLeft"
+      class="mui-btn"
+    >
+      Bottom-left
+    </button>
+    <button
+      data-cy="ribbon-button-info"
+      (click)="ribbonStyle.type = RibbonType.Info"
+      class="mui-btn"
+    >
+      Info
+    </button>
+    <button
+      data-cy="ribbon-button-error"
+      (click)="ribbonStyle.type = RibbonType.Error"
+      class="mui-btn"
+    >
+      Error
+    </button>
+    <button
+      data-cy="ribbon-button-success"
+      (click)="ribbonStyle.type = RibbonType.Success"
+      class="mui-btn"
+    >
+      Success
+    </button>
+    <button
+      data-cy="ribbon-button-warning"
+      (click)="ribbonStyle.type = RibbonType.Warning"
+      class="mui-btn"
+    >
+      Warning
+    </button>
+  </section>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Email Form"
   subTitle="Component"
 >
@@ -220,7 +293,7 @@
     data-cy="loader-circular"
     footer
     (click)="loadCircular()"
-    class="ml-2 mui-btn warning"
+    class="mui-btn warning"
   >
     Load Circular
   </button>
@@ -254,7 +327,7 @@
     data-cy="progress-reset"
     footer
     (click)="progressValue = 0"
-    class="ml-2 mui-btn danger"
+    class="mui-btn danger"
   >
     Reset
   </button>

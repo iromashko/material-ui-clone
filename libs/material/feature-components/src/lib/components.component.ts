@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {
   AccordionItem,
   LoaderType,
+  RibbonLocation,
+  RibbonType,
 } from '@material-uiclone/shared/ui-material';
 import { TabItem } from '@material-uiclone/shared/ui-material';
 import {
@@ -21,6 +23,10 @@ export interface User {
   styleUrls: ['./components.component.scss'],
 })
 export class ComponentsComponent {
+  RibbonType = RibbonType;
+  RibbonLocation = RibbonLocation;
+  ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.BottomLeft };
+
   progressValue = 25;
 
   isLoading = false;

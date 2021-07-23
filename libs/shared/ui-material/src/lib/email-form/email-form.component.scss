@@ -66,3 +66,7 @@ form {
 input:disabled {
   @apply bg-gray-200;
 }
+
+.error {
+  min-height: 1.5rem;
+}

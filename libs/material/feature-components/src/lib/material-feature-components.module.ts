@@ -25,6 +25,7 @@ import {
   TabModule,
   SortTableModule,
   EmailFormModule,
+  RibbonModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -88,6 +89,7 @@ import { RouterModule } from '@angular/router';
     TabModule,
     SortTableModule,
     EmailFormModule,
+    RibbonModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

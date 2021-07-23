@@ -1,8 +1,27 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('new', () => {
-    cy.visit('services');
+  it.only('Ribbon Component', () => {
+    cy.get('[data-cy=ribbon]')
+      .should('have.class', 'bottom-left')
+      .should('have.class', 'info');
+    cy.get('[data-cy=ribbon-button-top-left]').click();
+    cy.get('[data-cy=ribbon-button-warning]').click();
+    cy.get('[data-cy=ribbon]')
+      .should('have.class', 'top-left')
+      .should('have.class', 'warning');
+
+    cy.get('[data-cy=ribbon-button-top-right]').click();
+    cy.get('[data-cy=ribbon-button-error]').click();
+    cy.get('[data-cy=ribbon]')
+      .should('have.class', 'top-right')
+      .should('have.class', 'error');
+
+    cy.get('[data-cy=ribbon-button-bottom-right]').click();
+    cy.get('[data-cy=ribbon-button-success]').click();
+    cy.get('[data-cy=ribbon]')
+      .should('have.class', 'bottom-right')
+      .should('have.class', 'success');
   });
   context('Form Guard', () => {
     it('Form Dirty', () => {

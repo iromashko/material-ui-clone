@@ -1,0 +1,42 @@
+:host {
+  .ribbon {
+    @apply w-56 p-4 fixed text-center text-white z-10;
+
+    &.bottom-left {
+      left: -55px;
+      bottom: 30px;
+      transform: rotate(45deg);
+    }
+    &.bottom-right {
+      right: -55px;
+      bottom: 30px;
+      transform: rotate(-45deg);
+    }
+    &.top-left {
+      left: -55px;
+      top: 30px;
+      transform: rotate(-45deg);
+    }
+    &.top-right {
+      right: -55px;
+      top: 30px;
+      transform: rotate(45deg);
+    }
+
+    &.success {
+      @apply bg-green-500;
+    }
+
+    &.info {
+      @apply bg-blue-500;
+    }
+
+    &.error {
+      @apply bg-red-500;
+    }
+
+    &.warning {
+      @apply bg-gray-500;
+    }
+  }
+}

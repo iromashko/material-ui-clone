@@ -24,3 +24,6 @@ export * from './lib/pagination/pagination.module';
 export * from './lib/tab/tab.module';
 export * from './lib/tab/tab.component';
 export * from './lib/email-form/email-form.module';
+export * from './lib/ribbon/ribbon.module';
+export * from './lib/ribbon/ribbon.enum';
+export * from './lib/ribbon/ribbon-location.enum';
