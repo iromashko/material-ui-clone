@@ -16,11 +16,11 @@
     @apply px-4 py-3 transition-colors duration-300;
 
     &.increment {
-      @apply bg-green-400 dark:bg-blue-700 text-white rounded-r-md;
+      @apply bg-green-400 dark:bg-blue-900 text-white rounded-r-md;
     }
 
     &.decrement {
-      @apply bg-red-400 dark:bg-red-700 text-white rounded-l-md;
+      @apply bg-red-400 dark:bg-red-900 text-white rounded-l-md;
     }
   }
 }

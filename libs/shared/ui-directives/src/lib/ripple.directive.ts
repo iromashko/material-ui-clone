@@ -12,10 +12,10 @@ import {
 export class RippleDirective {
   @Input() directivesRipple = 'ripple';
 
-  constructor(private el: ElementRef, private rd: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('mouseenter')
   onHover() {
-    this.rd.addClass(this.el.nativeElement, this.directivesRipple);
+    this.renderer.addClass(this.el.nativeElement, this.directivesRipple);
   }
 }

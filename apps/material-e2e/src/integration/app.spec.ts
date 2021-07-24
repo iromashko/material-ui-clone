@@ -3,7 +3,7 @@ describe('Material Components', () => {
     cy.visit('/');
   });
 
-  it('New', () => {
+  it.only('New', () => {
     //
   });
 

@@ -1,4 +1,10 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+  ViewEncapsulation,
+} from '@angular/core';
 import { of, Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { SnackbarService } from '@material-uiclone/shared/util-services';
@@ -7,6 +13,7 @@ import { SnackbarService } from '@material-uiclone/shared/util-services';
   selector: 'material-snackbar',
   templateUrl: './snackbar.component.html',
   styleUrls: ['./snackbar.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SnackbarComponent implements OnInit, OnDestroy {
   @Input() message = '';

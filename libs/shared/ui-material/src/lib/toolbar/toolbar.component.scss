@@ -3,7 +3,7 @@
   grid-template-columns: 1fr auto;
 
   nav {
-    @apply grid grid-flow-col items-center p-2;
+    @apply grid grid-flow-col items-center place-content-center p-2;
   }
 
   h1 {

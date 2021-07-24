@@ -4,6 +4,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  ViewEncapsulation,
 } from '@angular/core';
 
 @Component({
@@ -11,6 +12,7 @@ import {
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
 })
 export class PaginationComponent {
   @Input() totalItems = 1;

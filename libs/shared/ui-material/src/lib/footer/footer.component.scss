@@ -1,6 +1,6 @@
 footer {
   nav {
-    @apply grid gap-3 items-center bg-blue-500 dark:bg-blue-800 text-white p-3 mt-2;
+    @apply grid gap-3 items-center bg-blue-500 dark:bg-blue-900 text-white p-3 mt-2;
     grid-template-columns: 1fr auto;
 
     h2 {
@@ -11,7 +11,7 @@ footer {
       @apply grid gap-5 grid-flow-col justify-center;
 
       li {
-        @apply text-3xl p-2 rounded-full h-12 w-12 grid content-center justify-center transition-all duration-300 hover:bg-white hover:text-blue-500;
+        @apply text-3xl p-2 rounded-full h-12 w-12 grid content-center justify-center transition-all duration-300 hover:bg-white hover:text-blue-500 dark:hover:text-blue-900;
       }
     }
 
