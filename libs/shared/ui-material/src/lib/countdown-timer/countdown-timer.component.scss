@@ -6,11 +6,15 @@
       @apply inline-block bg-blue-500 dark:bg-blue-800 transition-colors duration-300 p-5 rounded;
 
       h1 {
-        @apply text-4xl;
+        @apply text-4xl font-sans;
       }
 
       .time {
-        @apply inline-grid items-center bg-white w-20 h-20 rounded uppercase font-bold m-3;
+        @apply inline-grid items-center bg-white w-20 h-20 rounded uppercase m-3;
+
+        h3 {
+          @apply font-bold;
+        }
       }
     }
   }

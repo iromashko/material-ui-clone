@@ -1,8 +1,10 @@
 describe('Material Components', () => {
-  beforeEach(() => cy.visit('/'));
+  beforeEach(() => {
+    cy.visit('/');
+  });
 
   it.only('New', () => {
-    cy.scrollTo('bottom');
+    //
   });
 
   it('Lazy Load Directive', () => {
