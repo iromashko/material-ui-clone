@@ -1,8 +1,12 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('new', () => {
-    //
+  it.only('Copy Directive', () => {
+    cy.visit('directives');
+    cy.get('[data-cy=copy-directive-button]').click();
+    cy.get('[data-cy=snackbar]')
+      .should('be.visible')
+      .and('contain', 'Copied Successfully');
   });
 
   it('Simple Popup', () => {
@@ -13,7 +17,7 @@ describe('Material Components', () => {
     cy.get('[data-cy=popup-message]').should('not.exist');
   });
 
-  it.only('Snackbar Component', () => {
+  it('Snackbar Component', () => {
     cy.visit('services');
     cy.get('[data-cy=snackbar]').should('not.be.visible');
     cy.get('[data-cy=snackbar-toggle]').click();

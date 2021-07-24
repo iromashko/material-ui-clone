@@ -5,6 +5,7 @@ import { DirectivesComponent } from './directives.component';
 import { RouterModule } from '@angular/router';
 import { CardModule } from '@material-uiclone/shared/ui-material';
 import {
+  CopyDirective,
   DebounceClickDirective,
   RippleDirective,
   ScaleDirective,
@@ -22,6 +23,17 @@ import {
     DebounceClickDirective,
     RippleDirective,
     ScaleDirective,
+    CopyDirective,
+  ],
+  providers: [
+    {
+      provide: 'Navigator',
+      useValue: navigator,
+    },
+    {
+      provide: 'Document',
+      useValue: document,
+    },
   ],
   exports: [DirectivesComponent],
 })
