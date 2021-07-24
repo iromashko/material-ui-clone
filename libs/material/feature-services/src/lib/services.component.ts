@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { UserService } from '@material-uiclone/shared/util-services';
+import {
+  SnackbarService,
+  UserService,
+} from '@material-uiclone/shared/util-services';
 
 @Component({
   selector: 'material-services',
@@ -9,5 +12,12 @@ import { UserService } from '@material-uiclone/shared/util-services';
 export class ServicesComponent {
   user$ = this.userService.user$;
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    public snackbarService: SnackbarService
+  ) {}
+
+  snackbarShow(): void {
+    this.snackbarService.callSnackbar('Snackbar Service');
+  }
 }

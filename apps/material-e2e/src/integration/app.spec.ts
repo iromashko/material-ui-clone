@@ -13,7 +13,8 @@ describe('Material Components', () => {
     cy.get('[data-cy=popup-message]').should('not.exist');
   });
 
-  it('Snackbar Component', () => {
+  it.only('Snackbar Component', () => {
+    cy.visit('services');
     cy.get('[data-cy=snackbar]').should('not.be.visible');
     cy.get('[data-cy=snackbar-toggle]').click();
     cy.get('[data-cy=snackbar]').should('be.visible');

@@ -8,6 +8,7 @@ import {
   TopOfPageModule,
   ToolbarModule,
   ToggleModule,
+  SnackbarModule,
 } from '@material-uiclone/shared/ui-material';
 import { MaterialFeatureComponentsModule } from '@material-uiclone/material/feature-components';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialFeatureComponentsModule,
     HttpClientModule,
     ToggleModule,
+    SnackbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

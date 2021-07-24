@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { MaterialDomainModule } from '@material-uiclone/material/domain';
 import { ServicesComponent } from './services.component';
 import { RouterModule } from '@angular/router';
-import { CardModule } from '@material-uiclone/shared/ui-material';
+import {
+  CardModule,
+  SnackbarModule,
+} from '@material-uiclone/shared/ui-material';
 import { UserService } from '@material-uiclone/shared/util-services';
 
 @NgModule({
@@ -12,6 +15,7 @@ import { UserService } from '@material-uiclone/shared/util-services';
     MaterialDomainModule,
     RouterModule.forChild([{ path: '', component: ServicesComponent }]),
     CardModule,
+    SnackbarModule,
   ],
   declarations: [ServicesComponent],
   exports: [ServicesComponent],
