@@ -10,9 +10,10 @@
     @apply font-bold text-xl;
   }
 
-  ul {
+  .toolbar-nav {
     @apply space-x-2 text-xl mr-3;
-    li {
+
+    .toolbar-item {
       @apply inline;
     }
   }

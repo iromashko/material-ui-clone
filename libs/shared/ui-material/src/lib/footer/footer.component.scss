@@ -7,10 +7,10 @@ footer {
       @apply text-2xl ml-2;
     }
 
-    ul {
+    .footer-nav {
       @apply grid gap-5 grid-flow-col justify-center;
 
-      li {
+      &-item {
         @apply text-3xl p-2 rounded-full h-12 w-12 grid content-center justify-center transition-all duration-300 hover:bg-white hover:text-blue-500 dark:hover:text-blue-900;
       }
     }
