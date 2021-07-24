@@ -7,6 +7,7 @@ import { CardModule } from '@material-uiclone/shared/ui-material';
 import {
   CopyDirective,
   DebounceClickDirective,
+  LazyLoadDirective,
   RippleDirective,
   ScaleDirective,
 } from '@material-uiclone/shared/ui-directives';
@@ -24,6 +25,7 @@ import {
     RippleDirective,
     ScaleDirective,
     CopyDirective,
+    LazyLoadDirective,
   ],
   providers: [
     {
@@ -33,6 +35,10 @@ import {
     {
       provide: 'Document',
       useValue: document,
+    },
+    {
+      provide: 'Window',
+      useValue: window,
     },
   ],
   exports: [DirectivesComponent],

@@ -1,7 +1,15 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Copy Directive', () => {
+  it.only('Lazy Load Directive', () => {
+    cy.visit('directives');
+    cy.get('[data-cy=lazy-image]')
+      .should('not.be.visible')
+      .scrollIntoView()
+      .should('be.visible');
+  });
+
+  it('Copy Directive', () => {
     cy.visit('directives');
     cy.get('[data-cy=copy-directive-button]').click();
     cy.get('[data-cy=snackbar]')
