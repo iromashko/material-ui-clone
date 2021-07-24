@@ -30,6 +30,7 @@ import {
   BannerModule,
   SnackbarModule,
   SimplePopupModule,
+  CountdownTimerModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -98,6 +99,7 @@ import { RouterModule } from '@angular/router';
     BannerModule,
     SnackbarModule,
     SimplePopupModule,
+    CountdownTimerModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

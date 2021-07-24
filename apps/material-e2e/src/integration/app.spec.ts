@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Simple Popup', () => {
+  it.only('new', () => {
+    //
+  });
+
+  it('Simple Popup', () => {
     cy.get('[data-cy=popup-content]')
       .should('be.visible')
       .click({ force: true });
