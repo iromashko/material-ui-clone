@@ -1,6 +1,7 @@
-<ul>
+<ul class="paginator">
   <li>
     <button
+      class="paginator-button"
       data-cy="paginator-prev"
       [disabled]="isPrevDisabled"
       (click)="setPage(currentPage - step)"
@@ -11,6 +12,7 @@
 
   <li *ngFor="let page of pages">
     <button
+      class="paginator-button"
       data-cy="paginator-button"
       (click)="setPage(page)"
       [class.current-page]="currentPage === page"
@@ -21,6 +23,7 @@
 
   <li>
     <button
+      class="paginator-button"
       data-cy="paginator-next"
       [disabled]="isNextDisabled"
       (click)="setPage(currentPage + step)"

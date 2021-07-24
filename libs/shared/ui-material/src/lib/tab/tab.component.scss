@@ -5,7 +5,7 @@
     @apply border-b cursor-pointer pb-2 text-lg;
 
     &.active {
-      @apply border-b-2 border-blue-700 transition-colors duration-300;
+      @apply border-b-2 border-blue-700 dark:border-blue-900 transition-colors duration-300;
     }
   }
 }

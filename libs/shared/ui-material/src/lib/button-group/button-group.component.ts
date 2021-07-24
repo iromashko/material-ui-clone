@@ -4,6 +4,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  ViewEncapsulation,
 } from '@angular/core';
 import { ButtonMeta } from './button-meta.model';
 
@@ -12,6 +13,7 @@ import { ButtonMeta } from './button-meta.model';
   templateUrl: './button-group.component.html',
   styleUrls: ['./button-group.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
 })
 export class ButtonGroupComponent {
   @Input() options: ButtonMeta[] = [];
