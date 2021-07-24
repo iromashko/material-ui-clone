@@ -174,11 +174,11 @@ describe('Material Components', () => {
   });
 
   it('Toggle Dark Mode', () => {
-    cy.get('body').should('not.have.class', 'dark');
-    cy.get('[data-cy=theme-switcher]').click();
     cy.get('body').should('have.class', 'dark');
     cy.get('[data-cy=theme-switcher]').click();
     cy.get('body').should('not.have.class', 'dark');
+    cy.get('[data-cy=theme-switcher]').click();
+    cy.get('body').should('have.class', 'dark');
   });
 
   it('Search List', () => {
@@ -194,10 +194,9 @@ describe('Material Components', () => {
 
   it('Toggle Button', () => {
     cy.get('[data-cy=toggle-button]')
-      .should('not.have.class', 'is-on')
-      .click({ multiple: true, force: true })
       .should('have.class', 'is-on')
-      .click({ multiple: true, force: true })
+      .first()
+      .click({ force: true })
       .should('not.have.class', 'is-on');
   });
 
