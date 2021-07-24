@@ -11,10 +11,10 @@
       </li>
     </ul>
     <material-toggle
+      [isOn]="darkMode$ | async"
       data-cy="theme-switcher"
       (click)="themeService.toggleDarkMode()"
-      >{{ themeService.darkMode }}</material-toggle
-    >
+    ></material-toggle>
   </nav>
 </material-toolbar>
 

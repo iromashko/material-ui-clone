@@ -3,7 +3,7 @@ describe('Material Components', () => {
     cy.visit('/');
   });
 
-  it.only('New', () => {
+  it('New', () => {
     //
   });
 
@@ -174,11 +174,11 @@ describe('Material Components', () => {
   });
 
   it('Toggle Dark Mode', () => {
-    cy.get('mui-root').should('not.have.class', 'dark');
+    cy.get('body').should('not.have.class', 'dark');
     cy.get('[data-cy=theme-switcher]').click();
-    cy.get('mui-root').should('have.class', 'dark');
+    cy.get('body').should('have.class', 'dark');
     cy.get('[data-cy=theme-switcher]').click();
-    cy.get('mui-root').should('not.have.class', 'dark');
+    cy.get('body').should('not.have.class', 'dark');
   });
 
   it('Search List', () => {

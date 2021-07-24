@@ -6,7 +6,7 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrls: ['./toggle.component.scss'],
 })
 export class ToggleComponent {
-  @Input() isOn = false;
+  @Input() isOn: boolean | null = false;
 
   @HostListener('click')
   toggleOn(): void {

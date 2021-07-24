@@ -28,7 +28,12 @@ import { HttpClientModule } from '@angular/common/http';
     SnackbarModule,
     FooterModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'Document',
+      useValue: document,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
