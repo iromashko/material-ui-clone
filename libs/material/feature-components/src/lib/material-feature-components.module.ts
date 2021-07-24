@@ -29,6 +29,7 @@ import {
   ButtonGroupModule,
   BannerModule,
   SnackbarModule,
+  SimplePopupModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -96,6 +97,7 @@ import { RouterModule } from '@angular/router';
     ButtonGroupModule,
     BannerModule,
     SnackbarModule,
+    SimplePopupModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

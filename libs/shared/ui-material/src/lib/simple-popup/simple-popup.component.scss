@@ -1,0 +1,23 @@
+:host {
+  .popup-container {
+    @apply relative inline-block cursor-pointer;
+
+    .popup-text {
+      @apply text-white text-center rounded p-2 absolute z-10 w-40 -ml-20;
+      background-color: gray;
+      bottom: 125%;
+      left: 50%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border: 5px;
+        border-style: solid;
+        border-color: gray transparent transparent transparent;
+      }
+    }
+  }
+}

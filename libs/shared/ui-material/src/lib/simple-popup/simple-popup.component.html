@@ -1,0 +1,11 @@
+<div class="popup-container" data-cy="popup-content" (click)="show()">
+  <ng-content></ng-content>
+
+  <span
+    data-cy="popup-message"
+    [@fadeInOutAnimation]
+    *ngIf="isShown"
+    class="popup-text"
+    >{{ message }}</span
+  >
+</div>

@@ -32,3 +32,4 @@ export * from './lib/button-group/button-meta.model';
 export * from './lib/banner/banner.module';
 export * from './lib/snackbar/snackbar.module';
 export * from './lib/snackbar/snackbar.component';
+export * from './lib/simple-popup/simple-popup.module';

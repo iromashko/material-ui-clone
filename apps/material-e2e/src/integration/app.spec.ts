@@ -1,7 +1,15 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Snackbar Component', () => {
+  it.only('Simple Popup', () => {
+    cy.get('[data-cy=popup-content]')
+      .should('be.visible')
+      .click({ force: true });
+    cy.get('[data-cy=popup-message]').should('be.visible');
+    cy.get('[data-cy=popup-message]').should('not.exist');
+  });
+
+  it('Snackbar Component', () => {
     cy.get('[data-cy=snackbar]').should('not.be.visible');
     cy.get('[data-cy=snackbar-toggle]').click();
     cy.get('[data-cy=snackbar]').should('be.visible');
