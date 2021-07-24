@@ -1,7 +1,11 @@
 describe('Material Components', () => {
   beforeEach(() => cy.visit('/'));
 
-  it.only('Lazy Load Directive', () => {
+  it.only('New', () => {
+    cy.scrollTo('bottom');
+  });
+
+  it('Lazy Load Directive', () => {
     cy.visit('directives');
     cy.get('[data-cy=lazy-image]')
       .should('not.be.visible')

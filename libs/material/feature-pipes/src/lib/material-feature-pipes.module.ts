@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialDomainModule } from '@material-uiclone/material/domain';
 import { PipesComponent } from './pipes.component';
 import { RouterModule } from '@angular/router';
-import { CardModule } from '@material-uiclone/shared/ui-material';
+import { BannerModule, CardModule } from '@material-uiclone/shared/ui-material';
 import { MaterialPipesModule } from '@material-uiclone/shared/ui-pipes';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { MaterialPipesModule } from '@material-uiclone/shared/ui-pipes';
     RouterModule.forChild([{ path: '', component: PipesComponent }]),
     CardModule,
     MaterialPipesModule,
+    BannerModule,
   ],
   declarations: [PipesComponent],
   exports: [PipesComponent],

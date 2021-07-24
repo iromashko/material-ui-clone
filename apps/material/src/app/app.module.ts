@@ -9,6 +9,7 @@ import {
   ToolbarModule,
   ToggleModule,
   SnackbarModule,
+  FooterModule,
 } from '@material-uiclone/shared/ui-material';
 import { MaterialFeatureComponentsModule } from '@material-uiclone/material/feature-components';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ToggleModule,
     SnackbarModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

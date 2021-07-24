@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialDomainModule } from '@material-uiclone/material/domain';
 import { DirectivesComponent } from './directives.component';
 import { RouterModule } from '@angular/router';
-import { CardModule } from '@material-uiclone/shared/ui-material';
+import { BannerModule, CardModule } from '@material-uiclone/shared/ui-material';
 import {
   CopyDirective,
   DebounceClickDirective,
@@ -18,6 +18,7 @@ import {
     MaterialDomainModule,
     RouterModule.forChild([{ path: '', component: DirectivesComponent }]),
     CardModule,
+    BannerModule,
   ],
   declarations: [
     DirectivesComponent,

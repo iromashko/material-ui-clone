@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialDomainModule } from '@material-uiclone/material/domain';
 import { OtherComponent } from './other.component';
 import { RouterModule } from '@angular/router';
-import { CardModule } from '@material-uiclone/shared/ui-material';
+import { BannerModule, CardModule } from '@material-uiclone/shared/ui-material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormDirtyGuard } from '@material-uiclone/shared/util-guards';
 
@@ -16,6 +16,7 @@ import { FormDirtyGuard } from '@material-uiclone/shared/util-guards';
     ]),
     CardModule,
     ReactiveFormsModule,
+    BannerModule,
   ],
   declarations: [OtherComponent],
   exports: [OtherComponent],

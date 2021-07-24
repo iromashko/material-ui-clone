@@ -1,0 +1,27 @@
+footer {
+  nav {
+    @apply grid gap-3 items-center bg-blue-500 dark:bg-blue-800 text-white p-3 mt-2;
+    grid-template-columns: 1fr auto;
+
+    h2 {
+      @apply text-2xl ml-2;
+    }
+
+    ul {
+      @apply grid gap-5 grid-flow-col justify-center;
+
+      li {
+        @apply text-3xl p-2 rounded-full h-12 w-12 grid content-center justify-center transition-all duration-300 hover:bg-white hover:text-blue-500;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      @apply text-center;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .copyright {
+    @apply text-center bg-gray-700 text-white;
+  }
+}
