@@ -298,9 +298,7 @@ export class ComponentsComponent {
     'Zimbabwe',
   ];
 
-  randomQuote$ = this.quoteService.randomQuote$.pipe(
-    map((response) => ({ quote: response[0][1], author: response[0][2] }))
-  );
+  randomQuote$ = this.quoteService.randomQuote$;
 
   accordionItems: AccordionItem[] = [
     {

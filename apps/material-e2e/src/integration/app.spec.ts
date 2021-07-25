@@ -3,13 +3,13 @@ describe('Material Components', () => {
     cy.visit('/');
   });
 
-  // after(() => {
-  //   cy.scrollTo('top');
-  // });
-
-  it.only('New', () => {
-    //
+  after(() => {
+    cy.scrollTo('top');
   });
+
+  // it.skip('New', () => {
+  //   //
+  // });
 
   it('Lazy Load Directive', () => {
     cy.visit('directives');
