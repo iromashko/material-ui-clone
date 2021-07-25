@@ -9,8 +9,8 @@
   subTitle="Other - Animation"
 >
   <material-tab body [tabs]="tabs" (selectedTabIndex)="selectedTab = $event">
-    <section *ngIf="selectedTab === 0">
-      <h1 @slideRightAnimation *ngIf="selectedTab === 0">Tab 1 Example</h1>
+    <section @slideRightAnimation *ngIf="selectedTab === 0">
+      <h1 class="text-xl font-bold" *ngIf="selectedTab === 0">Tab 1 Example</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quaerat
         alias ducimus minus ab tempora, esse sint dicta adipisci harum
@@ -19,7 +19,7 @@
       </p>
     </section>
     <section @slideRightAnimation *ngIf="selectedTab === 1">
-      <h1 @slideRightAnimation *ngIf="selectedTab === 1">Tab 2 Example</h1>
+      <h1 class="text-xl font-bold" *ngIf="selectedTab === 1">Tab 2 Example</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
         rerum, beatae laudantium asperiores, possimus unde iusto assumenda

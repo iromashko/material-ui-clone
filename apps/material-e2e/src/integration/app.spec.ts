@@ -7,9 +7,9 @@ describe('Material Components', () => {
     cy.scrollTo('top');
   });
 
-  // it.skip('New', () => {
-  //   //
-  // });
+  it.only('New', () => {
+    //
+  });
 
   it('Lazy Load Directive', () => {
     cy.visit('directives');

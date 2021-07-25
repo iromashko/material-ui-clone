@@ -5,7 +5,7 @@
     @apply border-b-4 cursor-pointer pb-2 text-lg;
 
     &.active {
-      @apply border-b-4 border-blue-700 dark:border-blue-900 transition-colors bg-gray-100 pt-2 rounded-t duration-300;
+      @apply border-b-4 border-green-500 dark:border-yellow-600 transition-colors bg-gray-100 pt-2 rounded-t duration-300;
     }
   }
 }
