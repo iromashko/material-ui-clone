@@ -10,7 +10,7 @@ form {
     '. button';
 
   h1 {
-    @apply text-xl font-bold text-gray-700 mb-4;
+    @apply text-3xl py-4 font-bold text-blue-900 mb-4;
     grid-column: 1 / -1;
   }
 
@@ -58,7 +58,7 @@ form {
     }
 
     small {
-      @apply text-red-400;
+      @apply text-red-400 dark:text-red-800 text-sm;
     }
   }
 }

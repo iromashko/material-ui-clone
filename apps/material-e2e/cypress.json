@@ -9,5 +9,5 @@
   "videosFolder": "../../dist/cypress/apps/material-e2e/videos",
   "screenshotsFolder": "../../dist/cypress/apps/material-e2e/screenshots",
   "chromeWebSecurity": false,
-  "scrollBehavior": "nearest"
+  "scrollBehavior": "center"
 }

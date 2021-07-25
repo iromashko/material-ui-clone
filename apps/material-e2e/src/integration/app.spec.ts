@@ -3,6 +3,10 @@ describe('Material Components', () => {
     cy.visit('/');
   });
 
+  // after(() => {
+  //   cy.scrollTo('top');
+  // });
+
   it.only('New', () => {
     //
   });
