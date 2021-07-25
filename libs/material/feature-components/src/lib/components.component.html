@@ -2,6 +2,25 @@
 
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Skeleton Loader"
+  subTitle="Component"
+>
+  <section body>
+    <material-skeleton-loader *ngIf="!loaded"></material-skeleton-loader>
+
+    <p *ngIf="loaded">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam sequi
+      ratione qui eveniet ipsum veniam dignissimos quaerat! Repudiandae,
+      pariatur magnam? Alias laboriosam obcaecati ea omnis debitis voluptate
+      dolor itaque incidunt?
+    </p>
+  </section>
+
+  <button class="mui-btn" footer (click)="loaded = !loaded">Toggle</button>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Countdown Timer"
   subTitle="Component"
 >

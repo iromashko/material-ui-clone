@@ -1,0 +1,26 @@
+.loader {
+  @apply relative bg-gray-500 opacity-75 rounded mb-1;
+  min-height: 50px;
+
+  &:after {
+    @keyframes loading {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    @apply block absolute w-full h-full;
+    content: '';
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
+    animation: loading 1.5s infinite;
+  }
+}

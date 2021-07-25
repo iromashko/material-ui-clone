@@ -31,6 +31,7 @@ import {
   SnackbarModule,
   SimplePopupModule,
   CountdownTimerModule,
+  SkeletonLoaderModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -100,6 +101,7 @@ import { RouterModule } from '@angular/router';
     SnackbarModule,
     SimplePopupModule,
     CountdownTimerModule,
+    SkeletonLoaderModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

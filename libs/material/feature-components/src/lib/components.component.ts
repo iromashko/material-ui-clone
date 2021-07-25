@@ -313,6 +313,8 @@ export class ComponentsComponent {
     },
   ];
 
+  loaded = true;
+
   tableDataUsers = generateUsers();
   sortTableData = generateSortTableUsers();
 
