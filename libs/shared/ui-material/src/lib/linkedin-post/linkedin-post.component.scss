@@ -1,3 +1,7 @@
-i {
-  @apply text-4xl text-blue-700;
+:host {
+  @apply block;
+
+  i {
+    @apply text-4xl text-blue-500 dark:text-blue-900;
+  }
 }

@@ -4,6 +4,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  ViewEncapsulation,
 } from '@angular/core';
 
 export interface TabItem {
@@ -16,6 +17,7 @@ export interface TabItem {
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
 })
 export class TabComponent {
   @Input() tabs: TabItem[] = [];

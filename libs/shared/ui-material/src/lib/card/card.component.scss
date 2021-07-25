@@ -14,5 +14,9 @@
   .body,
   .footer {
     @apply p-3;
+
+    &:empty {
+      @apply p-0;
+    }
   }
 }
