@@ -253,12 +253,13 @@
   title="Quote"
   subTitle="Component"
 >
-  <material-quote
-    body
-    quote="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cumque esse a consectetur aut vitae rerum eos molestiae eaque, qui dicta repellendus velit quaerat tempore, consequatur consequuntur voluptatem fuga ullam."
-    author="Ipsum Dolor"
-    occupation="Sit Amet"
-  ></material-quote>
+  <ng-container *ngIf="randomQuote$ | async as quote">
+    <material-quote
+      body
+      [quote]="quote.quote"
+      [author]="quote.author"
+    ></material-quote>
+  </ng-container>
 </material-card>
 
 <material-card

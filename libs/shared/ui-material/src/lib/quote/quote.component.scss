@@ -3,7 +3,7 @@
   grid-template-rows: auto 1fr;
 
   blockquote {
-    @apply p-4;
+    @apply p-4 text-2xl;
     grid-row: 1 / 2;
 
     i {
@@ -18,7 +18,7 @@
     justify-self: end;
 
     .author {
-      @apply font-bold uppercase;
+      @apply font-bold text-xl;
     }
 
     .occupation {

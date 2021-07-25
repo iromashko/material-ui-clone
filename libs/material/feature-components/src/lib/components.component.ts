@@ -1,17 +1,18 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   AccordionItem,
   ButtonMeta,
   LoaderType,
   RibbonLocation,
   RibbonType,
-  SnackbarComponent,
 } from '@material-uiclone/shared/ui-material';
 import { TabItem } from '@material-uiclone/shared/ui-material';
 import {
   generateUsers,
   generateSortTableUsers,
 } from '@material-uiclone/shared/util-helpers';
+import { QuoteService } from '@material-uiclone/shared/util-services';
+import { map } from 'rxjs/operators';
 
 export interface User {
   first: string;
@@ -297,6 +298,10 @@ export class ComponentsComponent {
     'Zimbabwe',
   ];
 
+  randomQuote$ = this.quoteService.randomQuote$.pipe(
+    map((response) => ({ quote: response[0][1], author: response[0][2] }))
+  );
+
   accordionItems: AccordionItem[] = [
     {
       title: 'Example 1',
@@ -341,4 +346,6 @@ export class ComponentsComponent {
   debounceExampleMethod(value: string): void {
     console.log(`Debounce search`, value);
   }
+
+  constructor(private quoteService: QuoteService) {}
 }
