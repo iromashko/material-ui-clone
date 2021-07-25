@@ -1,4 +1,6 @@
 footer {
+  max-height: 10vh;
+
   nav {
     @apply grid gap-3 items-center bg-blue-500 dark:bg-blue-900 text-white p-3 mt-2;
     grid-template-columns: 1fr auto;
@@ -22,6 +24,6 @@ footer {
   }
 
   .copyright {
-    @apply text-center bg-gray-700 text-white;
+    @apply text-center bg-gray-500 dark:bg-gray-800 transition-colors duration-300 text-white;
   }
 }
