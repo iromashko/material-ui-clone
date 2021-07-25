@@ -66,9 +66,6 @@
       [location]="ribbonStyle.location"
       [type]="ribbonStyle.type"
     ></material-ribbon>
-  </section>
-
-  <section footer>
     <button
       data-cy="ribbon-button-top-right"
       (click)="ribbonStyle.location = RibbonLocation.TopRight"
@@ -98,32 +95,32 @@
       Bottom-left
     </button>
     <button
-      data-cy="ribbon-button-info"
-      (click)="ribbonStyle.type = RibbonType.Info"
-      class="mui-btn"
-    >
-      Info
-    </button>
-    <button
       data-cy="ribbon-button-error"
       (click)="ribbonStyle.type = RibbonType.Error"
-      class="mui-btn"
+      class="mui-btn danger"
     >
-      Error
-    </button>
-    <button
-      data-cy="ribbon-button-success"
-      (click)="ribbonStyle.type = RibbonType.Success"
-      class="mui-btn"
-    >
-      Success
+      Danger
     </button>
     <button
       data-cy="ribbon-button-warning"
       (click)="ribbonStyle.type = RibbonType.Warning"
-      class="mui-btn"
+      class="mui-btn warning"
     >
       Warning
+    </button>
+    <button
+      data-cy="ribbon-button-info"
+      (click)="ribbonStyle.type = RibbonType.Info"
+      class="mui-btn info"
+    >
+      Info
+    </button>
+    <button
+      data-cy="ribbon-button-success"
+      (click)="ribbonStyle.type = RibbonType.Success"
+      class="mui-btn basic"
+    >
+      Success
     </button>
   </section>
 </material-card>
@@ -286,18 +283,20 @@
   title="Modal"
   subTitle="Component"
 >
-  <material-modal body #modal title="Modal Example">
-    <p data-cy="modal-content">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eos
-      tempore, assumenda sequi cumque molestias quaerat quos blanditiis fuga
-      praesentium earum temporibus, similique doloremque veritatis perferendis
-      iste deserunt doloribus inventore?
-    </p>
-  </material-modal>
+  <ng-container body>
+    <material-modal #modal title="Modal Example">
+      <p data-cy="modal-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eos
+        tempore, assumenda sequi cumque molestias quaerat quos blanditiis fuga
+        praesentium earum temporibus, similique doloremque veritatis perferendis
+        iste deserunt doloribus inventore?
+      </p>
+    </material-modal>
 
-  <button data-cy="open-modal" footer (click)="modal.open()" class="mui-btn">
-    Open Modal
-  </button>
+    <button data-cy="open-modal" (click)="modal.open()" class="mui-btn">
+      Open Modal
+    </button>
+  </ng-container>
 </material-card>
 
 <material-card

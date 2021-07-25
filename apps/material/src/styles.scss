@@ -22,15 +22,15 @@ body {
   }
 
   &.danger {
-    @apply bg-red-400;
+    @apply bg-red-400 dark:bg-red-900;
   }
 
   &.warning {
-    @apply bg-yellow-400;
+    @apply bg-yellow-400 dark:bg-yellow-900;
   }
 
   &.info {
-    @apply bg-blue-500;
+    @apply bg-blue-500 dark:bg-blue-900;
   }
 
   &.basic {
