@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<QuoteComponent>;
 
@@ -16,10 +16,9 @@ const Template: Story<QuoteComponent> = (args: QuoteComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-    quote:  '',
-    author:  '',
-    occupation:  '',
-}
+  quote: 'Do more of what makes you happy',
+  author: 'Author',
+  occupation: '',
+};
