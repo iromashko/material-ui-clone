@@ -4,6 +4,7 @@
 - NX + DDD plugin
 - Tailwind
 - Cypress
+- Storybook (WIP)
 
 [![Cypress Test](https://raw.githubusercontent.com/iromashko/material-ui-clone/master/screenshot.jpg)](https://www.youtube.com/embed/6L_VuhRTfFo)
 

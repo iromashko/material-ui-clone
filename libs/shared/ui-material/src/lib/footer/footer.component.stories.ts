@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<FooterComponent>;
 
@@ -16,7 +16,5 @@ const Template: Story<FooterComponent> = (args: FooterComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
-Primary.args = {
-}
+Primary.args = {};
