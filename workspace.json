@@ -21,7 +21,10 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": ["apps/material/src/styles.scss"],
+            "styles": [
+              "apps/material/src/styles.scss",
+              "@fortawesome/fontawesome-free/css/all.css"
+            ],
             "scripts": []
           },
           "configurations": {
