@@ -48,10 +48,21 @@
   title="Button Group"
   subTitle="Component"
 >
-  <section body>
-    <material-button-group
-      [options]="buttonToggleOptions"
-    ></material-button-group>
+  <section body class="grid grid-cols-2">
+    <div>
+      <h3 class="text-xl">Single</h3>
+      <material-button-group
+        [options]="buttonToggleOptions"
+      ></material-button-group>
+    </div>
+    <div>
+      <h3 class="text-xl">Multi</h3>
+
+      <material-button-group
+        [options]="buttonToggleOptionsMulti"
+        [multi]="true"
+      ></material-button-group>
+    </div>
   </section>
 </material-card>
 
@@ -340,13 +351,12 @@
   title="Loader"
   subTitle="Component"
 >
-  <material-loader
-    body
-    [isLoading]="isLoading"
-    [type]="loaderType"
-  ></material-loader>
-
-  <ng-container footer>
+  <ng-container body>
+    <material-loader
+      body
+      [isLoading]="isLoading"
+      [type]="loaderType"
+    ></material-loader>
     <button data-cy="loader-text" (click)="loadLoader()" class="mui-btn">
       Text Loader
     </button>

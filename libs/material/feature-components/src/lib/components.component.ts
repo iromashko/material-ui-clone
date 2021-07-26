@@ -36,6 +36,12 @@ export class ComponentsComponent {
     new ButtonMeta({ id: 3, title: 'Underline' }),
   ];
 
+  buttonToggleOptionsMulti: ButtonMeta[] = [
+    new ButtonMeta({ id: 1, title: 'Bold', isActive: true }),
+    new ButtonMeta({ id: 2, title: 'Italic' }),
+    new ButtonMeta({ id: 3, title: 'Underline' }),
+  ];
+
   progressValue = 25;
 
   isLoading = false;

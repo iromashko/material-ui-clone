@@ -18,11 +18,20 @@ import { ButtonMeta } from './button-meta.model';
 export class ButtonGroupComponent {
   @Input() options: ButtonMeta[] = [];
   @Output() selection = new EventEmitter<ButtonMeta>();
+  @Input() multi = false;
 
   selected(selectedOption: ButtonMeta): void {
-    this.options.forEach((option) => {
-      option.isActive = Object.is(selectedOption, option);
-    });
+    if (this.multi) {
+      this.options.forEach((option) => {
+        option.isActive = Object.is(selectedOption, option)
+          ? !option.isActive
+          : option.isActive;
+      });
+    } else {
+      this.options.forEach((option) => {
+        option.isActive = Object.is(selectedOption, option);
+      });
+    }
 
     this.selection.emit(selectedOption);
   }
