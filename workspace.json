@@ -9,9 +9,7 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/material",
             "index": "apps/material/src/index.html",
@@ -23,9 +21,7 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": [
-              "apps/material/src/styles.scss"
-            ],
+            "styles": ["apps/material/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -87,6 +83,37 @@
               "apps/material/src/**/*.html"
             ]
           }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "apps/material/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/material",
+            "config": {
+              "configFolder": "apps/material/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       }
     },
@@ -98,9 +125,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/domain"
-          ],
+          "outputs": ["dist/libs/material/domain"],
           "options": {
             "project": "libs/material/domain/ng-package.json"
           },
@@ -116,9 +141,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/domain"
-          ],
+          "outputs": ["coverage/libs/material/domain"],
           "options": {
             "jestConfig": "libs/material/domain/jest.config.js",
             "passWithNoTests": true
@@ -156,9 +179,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/material-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -171,9 +192,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/feature-components"
-          ],
+          "outputs": ["dist/libs/material/feature-components"],
           "options": {
             "project": "libs/material/feature-components/ng-package.json"
           },
@@ -189,9 +208,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/feature-components"
-          ],
+          "outputs": ["coverage/libs/material/feature-components"],
           "options": {
             "jestConfig": "libs/material/feature-components/jest.config.js",
             "passWithNoTests": true
@@ -216,9 +233,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/feature-directives"
-          ],
+          "outputs": ["dist/libs/material/feature-directives"],
           "options": {
             "project": "libs/material/feature-directives/ng-package.json"
           },
@@ -234,9 +249,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/feature-directives"
-          ],
+          "outputs": ["coverage/libs/material/feature-directives"],
           "options": {
             "jestConfig": "libs/material/feature-directives/jest.config.js",
             "passWithNoTests": true
@@ -261,9 +274,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/feature-other"
-          ],
+          "outputs": ["dist/libs/material/feature-other"],
           "options": {
             "project": "libs/material/feature-other/ng-package.json"
           },
@@ -279,9 +290,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/feature-other"
-          ],
+          "outputs": ["coverage/libs/material/feature-other"],
           "options": {
             "jestConfig": "libs/material/feature-other/jest.config.js",
             "passWithNoTests": true
@@ -306,9 +315,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/feature-pipes"
-          ],
+          "outputs": ["dist/libs/material/feature-pipes"],
           "options": {
             "project": "libs/material/feature-pipes/ng-package.json"
           },
@@ -324,9 +331,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/feature-pipes"
-          ],
+          "outputs": ["coverage/libs/material/feature-pipes"],
           "options": {
             "jestConfig": "libs/material/feature-pipes/jest.config.js",
             "passWithNoTests": true
@@ -351,9 +356,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/material/feature-services"
-          ],
+          "outputs": ["dist/libs/material/feature-services"],
           "options": {
             "project": "libs/material/feature-services/ng-package.json"
           },
@@ -369,9 +372,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/material/feature-services"
-          ],
+          "outputs": ["coverage/libs/material/feature-services"],
           "options": {
             "jestConfig": "libs/material/feature-services/jest.config.js",
             "passWithNoTests": true
@@ -396,9 +397,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-animations"
-          ],
+          "outputs": ["dist/libs/shared/ui-animations"],
           "options": {
             "project": "libs/shared/ui-animations/ng-package.json"
           },
@@ -414,9 +413,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-animations"
-          ],
+          "outputs": ["coverage/libs/shared/ui-animations"],
           "options": {
             "jestConfig": "libs/shared/ui-animations/jest.config.js",
             "passWithNoTests": true
@@ -441,9 +438,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-directives"
-          ],
+          "outputs": ["dist/libs/shared/ui-directives"],
           "options": {
             "project": "libs/shared/ui-directives/ng-package.json"
           },
@@ -459,9 +454,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-directives"
-          ],
+          "outputs": ["coverage/libs/shared/ui-directives"],
           "options": {
             "jestConfig": "libs/shared/ui-directives/jest.config.js",
             "passWithNoTests": true
@@ -486,9 +479,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-material"
-          ],
+          "outputs": ["dist/libs/shared/ui-material"],
           "options": {
             "project": "libs/shared/ui-material/ng-package.json"
           },
@@ -504,9 +495,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-material"
-          ],
+          "outputs": ["coverage/libs/shared/ui-material"],
           "options": {
             "jestConfig": "libs/shared/ui-material/jest.config.js",
             "passWithNoTests": true
@@ -520,6 +509,37 @@
               "libs/shared/ui-material/src/**/*.html"
             ]
           }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/shared/ui-material/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/shared-ui-material",
+            "config": {
+              "configFolder": "libs/shared/ui-material/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       }
     },
@@ -531,9 +551,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/ui-pipes"
-          ],
+          "outputs": ["dist/libs/shared/ui-pipes"],
           "options": {
             "project": "libs/shared/ui-pipes/ng-package.json"
           },
@@ -549,9 +567,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui-pipes"
-          ],
+          "outputs": ["coverage/libs/shared/ui-pipes"],
           "options": {
             "jestConfig": "libs/shared/ui-pipes/jest.config.js",
             "passWithNoTests": true
@@ -576,9 +592,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/util-guards"
-          ],
+          "outputs": ["dist/libs/shared/util-guards"],
           "options": {
             "project": "libs/shared/util-guards/ng-package.json"
           },
@@ -594,9 +608,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/util-guards"
-          ],
+          "outputs": ["coverage/libs/shared/util-guards"],
           "options": {
             "jestConfig": "libs/shared/util-guards/jest.config.js",
             "passWithNoTests": true
@@ -621,9 +633,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/util-helpers"
-          ],
+          "outputs": ["dist/libs/shared/util-helpers"],
           "options": {
             "project": "libs/shared/util-helpers/ng-package.json"
           },
@@ -639,9 +649,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/util-helpers"
-          ],
+          "outputs": ["coverage/libs/shared/util-helpers"],
           "options": {
             "jestConfig": "libs/shared/util-helpers/jest.config.js",
             "passWithNoTests": true
@@ -666,9 +674,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/angular:ng-packagr-lite",
-          "outputs": [
-            "dist/libs/shared/util-services"
-          ],
+          "outputs": ["dist/libs/shared/util-services"],
           "options": {
             "project": "libs/shared/util-services/ng-package.json"
           },
@@ -684,9 +690,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/util-services"
-          ],
+          "outputs": ["coverage/libs/shared/util-services"],
           "options": {
             "jestConfig": "libs/shared/util-services/jest.config.js",
             "passWithNoTests": true
