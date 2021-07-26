@@ -4,6 +4,10 @@
   max-height: 750px;
   visibility: none;
 
+  h1 {
+    @apply text-2xl;
+  }
+
   &.show {
     @apply transition-all duration-300 bottom-0;
     visibility: visible;

@@ -8,13 +8,19 @@ describe('Material Components', () => {
   // });
 
   it.only('Bottom Sheet', () => {
-    cy.get('[data-cy=bottom-sheet-container]').should('not.be.visible');
-    cy.get('[data-cy=bottom-sheet-overlay]').should('not.be.visible');
+    cy.get('[data-cy=bottom-sheet-container]').should('not.exist');
+    cy.get('[data-cy=bottom-sheet-overlay]').should('not.exist');
     cy.get('[data-cy=bottom-sheet-button]').click();
-    cy.get('[data-cy=bottom-sheet-container]').should('be.visible');
-    cy.get('[data-cy=bottom-sheet-overlay]').should('be.visible');
-    cy.get('[data-cy=bottom-sheet-overlay]').click().should('not.be.visible');
-    cy.get('[data-cy=bottom-sheet-container]').should('not.be.visible');
+    cy.get('[data-cy=material-bottom-sheet]')
+      .shadow()
+      .find('[data-cy=bottom-sheet-container]')
+      .should('be.visible');
+    cy.get('[data-cy=material-bottom-sheet]')
+      .shadow()
+      .find('[data-cy=bottom-sheet-overlay]')
+      .should('be.visible')
+      .click()
+      .should('not.be.visible');
   });
 
   it('Lazy Load Directive', () => {
