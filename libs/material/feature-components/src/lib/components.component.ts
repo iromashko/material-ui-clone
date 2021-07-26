@@ -3,6 +3,7 @@ import {
   AccordionItem,
   ButtonMeta,
   LoaderType,
+  PillType,
   RibbonLocation,
   RibbonType,
 } from '@material-uiclone/shared/ui-material';
@@ -302,6 +303,8 @@ export class ComponentsComponent {
     'Zambia',
     'Zimbabwe',
   ];
+
+  PillType = PillType;
 
   randomQuote$ = this.quoteService.randomQuote$;
 

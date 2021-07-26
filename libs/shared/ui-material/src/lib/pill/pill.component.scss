@@ -1,0 +1,16 @@
+.pill-container {
+  @apply py-1 px-4 rounded-2xl text-white m-1 cursor-pointer inline-grid grid-flow-col items-center gap-1;
+
+  &.error {
+    @apply bg-red-400;
+  }
+  &.info {
+    @apply bg-blue-400;
+  }
+  &.success {
+    @apply bg-yellow-400;
+  }
+  &.warning {
+    @apply bg-purple-400;
+  }
+}

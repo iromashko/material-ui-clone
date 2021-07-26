@@ -34,6 +34,7 @@ import {
   SkeletonLoaderModule,
   FieldsetModule,
   BottomSheetModule,
+  PillModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -106,6 +107,7 @@ import { RouterModule } from '@angular/router';
     SkeletonLoaderModule,
     BottomSheetModule,
     FieldsetModule,
+    PillModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

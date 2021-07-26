@@ -41,3 +41,5 @@ export * from './lib/social-media-bar/social-media-icon.interface';
 export * from './lib/social-media-bar/social-media-enum';
 export * from './lib/bottom-sheet/bottom-sheet.module';
 export * from './lib/fieldset/fieldset.module';
+export * from './lib/pill/pill.module';
+export * from './lib/pill/pill-type.enum';
