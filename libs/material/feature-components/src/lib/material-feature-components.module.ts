@@ -32,6 +32,7 @@ import {
   SimplePopupModule,
   CountdownTimerModule,
   SkeletonLoaderModule,
+  SocialMediaBarModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';

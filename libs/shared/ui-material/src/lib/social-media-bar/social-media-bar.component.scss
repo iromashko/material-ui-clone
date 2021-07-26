@@ -1,0 +1,23 @@
+.social-media-bar-container {
+  @apply fixed top-1/2 right-0 transform z-30 -translate-y-1/2;
+
+  a {
+    @apply block bg-white p-4 transition-all duration-300 text-center text-xl text-white;
+
+    &.facebook {
+      @apply bg-blue-600 hover:bg-black;
+    }
+    &.instagram {
+      @apply bg-purple-800 hover:bg-black;
+    }
+    &.linkedin {
+      @apply bg-indigo-600 hover:bg-black;
+    }
+    &.twitter {
+      @apply bg-blue-800 hover:bg-black;
+    }
+    &.youtube {
+      @apply bg-red-800 hover:bg-black;
+    }
+  }
+}

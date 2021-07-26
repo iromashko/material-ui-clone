@@ -12,7 +12,6 @@ import {
   generateSortTableUsers,
 } from '@material-uiclone/shared/util-helpers';
 import { QuoteService } from '@material-uiclone/shared/util-services';
-import { map } from 'rxjs/operators';
 
 export interface User {
   first: string;

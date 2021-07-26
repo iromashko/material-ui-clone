@@ -1,5 +1,9 @@
 import { Component, Inject, Renderer2 } from '@angular/core';
-import { ToolbarLink } from '@material-uiclone/shared/ui-material';
+import {
+  SocialMedia,
+  SocialMediaIcon,
+  ToolbarLink,
+} from '@material-uiclone/shared/ui-material';
 import { ThemeService } from '@material-uiclone/shared/util-services';
 import { tap } from 'rxjs/operators';
 
@@ -12,6 +16,29 @@ export class AppComponent {
   darkMode$ = this.themeService.darkModeAction$.pipe(
     tap((value) => this.toggleDarkMode(value))
   );
+
+  socialMedia: SocialMediaIcon[] = [
+    {
+      href: 'http://www.facebook.com',
+      type: SocialMedia.Facebook,
+    },
+    {
+      href: 'http://www.instagram.com',
+      type: SocialMedia.Instagram,
+    },
+    {
+      href: 'http://www.linkedin.com',
+      type: SocialMedia.LinkedIn,
+    },
+    {
+      href: 'http://www.twitter.com',
+      type: SocialMedia.Twitter,
+    },
+    {
+      href: 'http://www.youtube.com',
+      type: SocialMedia.YouTube,
+    },
+  ];
 
   links: ToolbarLink[] = [
     { path: '', title: 'Components' },

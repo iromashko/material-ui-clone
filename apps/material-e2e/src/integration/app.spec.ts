@@ -3,9 +3,9 @@ describe('Material Components', () => {
     cy.visit('/');
   });
 
-  after(() => {
-    cy.scrollTo('top');
-  });
+  // after(() => {
+  //   cy.scrollTo('top');
+  // });
 
   it.only('New', () => {
     //
@@ -55,20 +55,37 @@ describe('Material Components', () => {
       .and('contain', 'transform: scale(1)');
   });
 
-  it('Button Group', () => {
-    cy.get('[data-cy=button-group-item]')
-      .should('not.have.class', 'active')
-      .first()
-      .click({ force: true })
-      .should('have.class', 'active')
-      .next()
-      .click({ force: true })
-      .should('have.class', 'active')
-      .next()
-      .click({ force: true })
-      .should('have.class', 'active')
-      .prevAll()
-      .should('not.have.class', 'active');
+  context('Button Group', () => {
+    it('Single Button Group', () => {
+      cy.get('[data-cy=button-group-single]')
+        .find('[data-cy=button-group-item]')
+        .should('not.have.class', 'active')
+        .first()
+        .click({ force: true })
+        .should('have.class', 'active')
+        .next()
+        .click({ force: true })
+        .should('have.class', 'active')
+        .next()
+        .click({ force: true })
+        .should('have.class', 'active')
+        .prevAll()
+        .should('not.have.class', 'active');
+    });
+    it('Multi Button Group', () => {
+      cy.get('[data-cy=button-group-multi]')
+        .find('[data-cy=button-group-item]')
+        .first()
+        .should('have.class', 'active')
+        .next()
+        .click({ force: true })
+        .should('have.class', 'active')
+        .next()
+        .click({ force: true })
+        .should('have.class', 'active')
+        .prevAll()
+        .should('have.class', 'active');
+    });
   });
 
   it('Ribbon Component', () => {

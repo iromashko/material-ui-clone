@@ -10,6 +10,7 @@ import {
   ToggleModule,
   SnackbarModule,
   FooterModule,
+  SocialMediaBarModule,
 } from '@material-uiclone/shared/ui-material';
 import { MaterialFeatureComponentsModule } from '@material-uiclone/material/feature-components';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     ToggleModule,
     SnackbarModule,
     FooterModule,
+    SocialMediaBarModule,
   ],
   providers: [
     {

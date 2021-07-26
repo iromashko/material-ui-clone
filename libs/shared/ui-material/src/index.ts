@@ -36,3 +36,6 @@ export * from './lib/simple-popup/simple-popup.module';
 export * from './lib/countdown-timer/countdown-timer.module';
 export * from './lib/footer/footer.module';
 export * from './lib/skeleton-loader/skeleton-loader.module';
+export * from './lib/social-media-bar/social-media-bar.module';
+export * from './lib/social-media-bar/social-media-icon.interface';
+export * from './lib/social-media-bar/social-media-enum';
