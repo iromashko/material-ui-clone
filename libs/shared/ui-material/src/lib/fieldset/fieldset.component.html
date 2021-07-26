@@ -1,0 +1,10 @@
+<fieldset class="fieldset-container">
+  <legend data-cy="fieldset-toggle" class="fieldset-legend" (click)="toggle()">
+    <i [ngClass]="['fas', isOpen ? 'fa-minus' : 'fa-plus']"></i>
+    {{ legend }}
+  </legend>
+
+  <div data-cy="fieldset-content" *ngIf="isOpen">
+    <ng-content></ng-content>
+  </div>
+</fieldset>

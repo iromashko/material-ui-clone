@@ -7,7 +7,15 @@ describe('Material Components', () => {
   //   cy.scrollTo('top');
   // });
 
-  it.only('Bottom Sheet', () => {
+  it.only('Fieldset Component', () => {
+    cy.get('[data-cy=fieldset-content]').should('not.exist');
+    cy.get('[data-cy=fieldset-toggle]').click();
+    cy.get('[data-cy=fieldset-content]').should('be.visible');
+    cy.get('[data-cy=fieldset-toggle]').click();
+    cy.get('[data-cy=fieldset-content]').should('not.exist');
+  });
+
+  it('Bottom Sheet', () => {
     cy.get('[data-cy=bottom-sheet-container]').should('not.exist');
     cy.get('[data-cy=bottom-sheet-overlay]').should('not.exist');
     cy.get('[data-cy=bottom-sheet-button]').click();

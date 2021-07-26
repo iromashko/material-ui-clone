@@ -32,7 +32,7 @@ import {
   SimplePopupModule,
   CountdownTimerModule,
   SkeletonLoaderModule,
-  SocialMediaBarModule,
+  FieldsetModule,
   BottomSheetModule,
 } from '@material-uiclone/shared/ui-material';
 
@@ -105,6 +105,7 @@ import { RouterModule } from '@angular/router';
     CountdownTimerModule,
     SkeletonLoaderModule,
     BottomSheetModule,
+    FieldsetModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],
