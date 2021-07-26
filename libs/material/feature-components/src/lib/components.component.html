@@ -2,6 +2,27 @@
 
 <material-card
   iconClasses="fas fa-info-circle"
+  title="Bottom Sheet"
+  subTitle="Component"
+>
+  <ng-container body>
+    <button
+      data-cy="bottom-sheet-button"
+      class="mui-btn"
+      (click)="sheet.show()"
+    >
+      Show
+    </button>
+
+    <material-bottom-sheet #sheet>
+      <h1 class="text-2xl" (click)="sheet.hide()">Hello</h1>
+      <h1 class="text-2xl" (click)="sheet.hide()">World</h1>
+    </material-bottom-sheet>
+  </ng-container>
+</material-card>
+
+<material-card
+  iconClasses="fas fa-info-circle"
   title="Skeleton Loader"
   subTitle="Component"
 >

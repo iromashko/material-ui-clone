@@ -1,0 +1,22 @@
+.bottom-sheet-container {
+  @apply shadow bg-white border-t rounded-tl-md rounded-tr-md fixed left-1/2 p-5 z-50 transform -translate-x-1/2 sm:w-full md:w-1/2 -bottom-full;
+  min-width: 300px;
+  max-height: 750px;
+  visibility: none;
+
+  &.show {
+    @apply transition-all duration-300 bottom-0;
+    visibility: visible;
+  }
+}
+
+.bottom-sheet-overlay {
+  @apply fixed inset-0 transition-opacity duration-300 opacity-100;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+
+  &.is-hidden {
+    @apply opacity-0;
+    z-index: -1;
+  }
+}

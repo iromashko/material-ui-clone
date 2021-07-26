@@ -1,0 +1,14 @@
+<div
+  data-cy="bottom-sheet-container"
+  class="bottom-sheet-container"
+  [class.show]="isShown"
+>
+  <ng-content></ng-content>
+</div>
+
+<div
+  data-cy="bottom-sheet-overlay"
+  class="bottom-sheet-overlay"
+  (click)="hide()"
+  [class.is-hidden]="!isShown"
+></div>

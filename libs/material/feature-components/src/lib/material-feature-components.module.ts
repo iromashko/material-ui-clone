@@ -33,6 +33,7 @@ import {
   CountdownTimerModule,
   SkeletonLoaderModule,
   SocialMediaBarModule,
+  BottomSheetModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -103,6 +104,7 @@ import { RouterModule } from '@angular/router';
     SimplePopupModule,
     CountdownTimerModule,
     SkeletonLoaderModule,
+    BottomSheetModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

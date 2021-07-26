@@ -39,3 +39,4 @@ export * from './lib/skeleton-loader/skeleton-loader.module';
 export * from './lib/social-media-bar/social-media-bar.module';
 export * from './lib/social-media-bar/social-media-icon.interface';
 export * from './lib/social-media-bar/social-media-enum';
+export * from './lib/bottom-sheet/bottom-sheet.module';
