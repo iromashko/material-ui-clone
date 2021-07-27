@@ -43,3 +43,4 @@ export * from './lib/bottom-sheet/bottom-sheet.module';
 export * from './lib/fieldset/fieldset.module';
 export * from './lib/pill/pill.module';
 export * from './lib/pill/pill-type.enum';
+export * from './lib/pill-filter/pill-filter.module';

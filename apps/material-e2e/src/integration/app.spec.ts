@@ -7,8 +7,12 @@ describe('Material Components', () => {
   //   cy.scrollTo('top');
   // });
 
-  it.only('New', () => {
-    //
+  it.only('Pill Filter Component', () => {
+    cy.get('[data-cy=selected-pills]').should('have.length', 0);
+    cy.get('[data-cy=unselected-pills]').click({ multiple: true });
+    cy.get('[data-cy=selected-pills]').should('have.length', 7);
+    cy.get('[data-cy=selected-pills]').click({ multiple: true });
+    cy.get('[data-cy=selected-pills]').should('have.length', 0);
   });
 
   it('Fieldset Component', () => {

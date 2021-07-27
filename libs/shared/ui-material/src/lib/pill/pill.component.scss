@@ -1,16 +1,17 @@
 .pill-container {
-  @apply py-1 px-4 rounded-2xl text-white m-1 cursor-pointer inline-grid grid-flow-col items-center gap-1;
+  @apply py-1 px-4 rounded-2xl text-white m-1 cursor-pointer inline-grid grid-flow-col items-center gap-1 transition-colors duration-300;
+  user-select: none;
 
   &.error {
-    @apply bg-red-400;
+    @apply bg-red-400 dark:bg-red-900;
   }
   &.info {
-    @apply bg-blue-400;
+    @apply bg-blue-400 dark:bg-blue-900;
   }
   &.success {
-    @apply bg-yellow-400;
+    @apply bg-yellow-400 dark:bg-yellow-900;
   }
   &.warning {
-    @apply bg-purple-400;
+    @apply bg-purple-400 dark:bg-purple-900;
   }
 }
