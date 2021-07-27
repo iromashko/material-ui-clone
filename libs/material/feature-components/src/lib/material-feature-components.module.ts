@@ -38,6 +38,7 @@ import {
   PillFilterModule,
   NotFoundModule,
   NotFoundComponent,
+  PasswordModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -117,6 +118,7 @@ import { RouterModule } from '@angular/router';
     PillModule,
     PillFilterModule,
     NotFoundModule,
+    PasswordModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],

@@ -46,3 +46,4 @@ export * from './lib/pill/pill-type.enum';
 export * from './lib/pill-filter/pill-filter.module';
 export * from './lib/not-found/not-found.module';
 export * from './lib/not-found/not-found.component';
+export * from './lib/password/password.module';

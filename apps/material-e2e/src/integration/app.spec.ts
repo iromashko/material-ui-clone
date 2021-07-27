@@ -7,7 +7,28 @@ describe('Material Components', () => {
   //   cy.scrollTo('top');
   // });
 
-  it.only('404 Page', () => {
+  it.only('Password Component', () => {
+    cy.get('[data-cy=password]').should('be.empty');
+    cy.get('[data-cy=password-strength]').should('have.value', 0);
+    cy.get('[data-cy=password-hints]').should('have.length', 0);
+    cy.get('[data-cy=password]').focus();
+    cy.get('[data-cy=password-strength]').click();
+    cy.get('[data-cy=password-hints]').children().should('have.length', 4);
+    cy.get('[data-cy=password]').type('1234567');
+    cy.get('[data-cy=password-hints]').children().should('have.length', 3);
+    cy.get('[data-cy=password-strength]').should('have.value', 25);
+    cy.get('[data-cy=password]').type('1234567');
+    cy.get('[data-cy=password-hints]').children().should('have.length', 2);
+    cy.get('[data-cy=password-strength]').should('have.value', 50);
+    cy.get('[data-cy=password]').type('L');
+    cy.get('[data-cy=password-hints]').children().should('have.length', 1);
+    cy.get('[data-cy=password-strength]').should('have.value', 75);
+    cy.get('[data-cy=password]').type('!');
+    cy.get('[data-cy=password-hints]').children().should('have.length', 0);
+    cy.get('[data-cy=password-strength]').should('have.value', 100);
+  });
+
+  it('404 Page', () => {
     cy.get('[data-cy=go-to-unknown-page]').click();
     cy.get('[data-cy=not-found-container]').contains('404 - Page Not Found');
     cy.get('[data-cy=not-found-container]').contains(
