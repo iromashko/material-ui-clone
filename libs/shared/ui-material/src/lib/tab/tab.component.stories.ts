@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<TabComponent>;
 
@@ -16,8 +16,12 @@ const Template: Story<TabComponent> = (args: TabComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-    tabs:  [],
-}
+  tabs: [
+    { title: 'Tab 1', active: true },
+    { title: 'Tab 2', active: false },
+    { title: 'Tab 3', active: false },
+    { title: 'Tab 4', active: false },
+  ],
+};

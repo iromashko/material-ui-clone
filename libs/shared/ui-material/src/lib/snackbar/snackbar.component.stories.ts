@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<SnackbarComponent>;
 
@@ -16,8 +16,8 @@ const Template: Story<SnackbarComponent> = (args: SnackbarComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-    message:  '',
-}
+  message: 'Example Message',
+  isShown: true,
+};

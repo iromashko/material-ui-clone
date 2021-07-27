@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<BottomSheetComponent>;
 
@@ -16,7 +16,7 @@ const Template: Story<BottomSheetComponent> = (args: BottomSheetComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-}
+  isShown: true,
+};

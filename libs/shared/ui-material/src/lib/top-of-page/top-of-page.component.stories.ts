@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<TopOfPageComponent>;
 
@@ -16,7 +16,7 @@ const Template: Story<TopOfPageComponent> = (args: TopOfPageComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-}
+  isShown: true,
+};

@@ -17,8 +17,14 @@ const Template: Story<LoaderComponent> = (args: LoaderComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-  isLoading: false,
+export const Circular = Template.bind({});
+Circular.args = {
+  isLoading: true,
   type: LoaderType.Circular,
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  isLoading: true,
+  type: LoaderType.Loading,
 };

@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<PaginationComponent>;
 
@@ -16,11 +16,10 @@ const Template: Story<PaginationComponent> = (args: PaginationComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-    totalItems:  1,
-    pageSize:  25,
-    currentPage:  1,
-    step:  2,
-}
+  totalItems: 200,
+  pageSize: 25,
+  currentPage: 1,
+  step: 2,
+};

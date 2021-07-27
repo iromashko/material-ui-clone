@@ -7,7 +7,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-    })
+    }),
   ],
 } as Meta<ModalComponent>;
 
@@ -16,8 +16,8 @@ const Template: Story<ModalComponent> = (args: ModalComponent) => ({
   props: args,
 });
 
-
 export const Primary = Template.bind({});
 Primary.args = {
-    title:  '',
-}
+  title: 'Example Modal',
+  isHidden: false,
+};
