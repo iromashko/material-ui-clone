@@ -110,6 +110,8 @@ export class ComponentsComponent implements AfterViewInit {
   constructor(private quoteService: QuoteService) {}
 
   ngAfterViewInit(): void {
-    this.animationDisabled = false;
+    setTimeout(() => {
+      this.animationDisabled = false;
+    }, 100);
   }
 }
