@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import {
   AccordionItem,
   ButtonMeta,
@@ -26,10 +26,12 @@ export interface User {
   templateUrl: './components.component.html',
   styleUrls: ['./components.component.scss'],
 })
-export class ComponentsComponent {
+export class ComponentsComponent implements AfterViewInit {
   RibbonType = RibbonType;
   RibbonLocation = RibbonLocation;
   ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.BottomLeft };
+
+  animationDisabled = true;
 
   buttonToggleOptions: ButtonMeta[] = [
     new ButtonMeta({ id: 1, title: 'Bold' }),
@@ -106,4 +108,8 @@ export class ComponentsComponent {
   }
 
   constructor(private quoteService: QuoteService) {}
+
+  ngAfterViewInit(): void {
+    this.animationDisabled = false;
+  }
 }

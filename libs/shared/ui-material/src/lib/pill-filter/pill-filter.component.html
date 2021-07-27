@@ -1,4 +1,4 @@
-<div>
+<section class="pills">
   <material-pill
     data-cy="selected-pills"
     *ngFor="let pill of selectedPills"
@@ -7,9 +7,11 @@
     [isActive]="true"
     (selected)="removeFilter($event)"
   ></material-pill>
+</section>
 
-  <hr />
+<hr />
 
+<section class="pills">
   <material-pill
     data-cy="unselected-pills"
     *ngFor="let pill of unselectedPills"
@@ -17,4 +19,4 @@
     [canBeSelected]="true"
     (selected)="addFilter($event)"
   ></material-pill>
-</div>
+</section>

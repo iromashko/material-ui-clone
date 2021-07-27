@@ -28,4 +28,14 @@ Primary.args = {
     'NX',
     'Tailwind',
   ],
+  unselectedPills: [
+    'Angular',
+    'Nest',
+    'Cypress',
+    'Storybook',
+    'Kubernetes',
+    'NX',
+    'Tailwind',
+  ],
+  selectedPills: [],
 };
