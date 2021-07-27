@@ -44,3 +44,5 @@ export * from './lib/fieldset/fieldset.module';
 export * from './lib/pill/pill.module';
 export * from './lib/pill/pill-type.enum';
 export * from './lib/pill-filter/pill-filter.module';
+export * from './lib/not-found/not-found.module';
+export * from './lib/not-found/not-found.component';

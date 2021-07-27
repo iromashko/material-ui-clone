@@ -7,7 +7,18 @@ describe('Material Components', () => {
   //   cy.scrollTo('top');
   // });
 
-  it.only('Pill Filter Component', () => {
+  it.only('404 Page', () => {
+    cy.get('[data-cy=go-to-unknown-page]').click();
+    cy.get('[data-cy=not-found-container]').contains('404 - Page Not Found');
+    cy.get('[data-cy=not-found-container]').contains(
+      'Redirecting you to home page in'
+    );
+    cy.url().should('include', '404');
+    cy.go('back');
+    cy.url().should('not.include', '404');
+  });
+
+  it('Pill Filter Component', () => {
     cy.get('[data-cy=selected-pills]').should('have.length', 0);
     cy.get('[data-cy=unselected-pills]').click({ multiple: true });
     cy.get('[data-cy=selected-pills]').should('have.length', 7);

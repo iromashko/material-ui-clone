@@ -3,6 +3,19 @@
 <material-card
   [@.disabled]="animationDisabled"
   iconClasses="fas fa-info-circle"
+  title="Not Found"
+  subTitle="Component"
+>
+  <section body>
+    <a data-cy="go-to-unknown-page" routerLink="404" class="not-found-link">
+      Go to Unknown Page
+    </a>
+  </section>
+</material-card>
+
+<material-card
+  [@.disabled]="animationDisabled"
+  iconClasses="fas fa-info-circle"
   title="Fieldset"
   subTitle="Component"
 >

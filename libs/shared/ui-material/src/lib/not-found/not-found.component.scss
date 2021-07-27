@@ -1,0 +1,13 @@
+.not-found-container {
+  @apply grid gap-5 text-center;
+  place-content: center;
+  height: 75vh;
+
+  h1 {
+    @apply text-4xl uppercase;
+  }
+
+  i {
+    @apply text-blue-500 dark:text-blue-900 text-7xl transition-colors duration-300;
+  }
+}

@@ -36,6 +36,8 @@ import {
   BottomSheetModule,
   PillModule,
   PillFilterModule,
+  NotFoundModule,
+  NotFoundComponent,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -75,6 +77,10 @@ import { RouterModule } from '@angular/router';
             (m) => m.MaterialFeatureOtherModule
           ),
       },
+      {
+        path: '**',
+        component: NotFoundComponent,
+      },
     ]),
     StarRatingModule,
     TopOfPageModule,
@@ -110,6 +116,7 @@ import { RouterModule } from '@angular/router';
     FieldsetModule,
     PillModule,
     PillFilterModule,
+    NotFoundModule,
   ],
   declarations: [ComponentsComponent],
   exports: [ComponentsComponent],
