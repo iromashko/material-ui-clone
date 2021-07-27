@@ -6,6 +6,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { zoomInOutAnimation } from '@material-uiclone/shared/ui-animations';
 import { PillType } from './pill-type.enum';
 
 @Component({
@@ -14,6 +15,7 @@ import { PillType } from './pill-type.enum';
   styleUrls: ['./pill.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
+  animations: [zoomInOutAnimation],
 })
 export class PillComponent {
   @Input() type = PillType.Info;
