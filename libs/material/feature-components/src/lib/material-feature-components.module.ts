@@ -49,9 +49,14 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MaterialDomainModule,
     RouterModule.forChild([
-      { path: '', component: ComponentsComponent },
+      {
+        path: '',
+        data: { title: 'Components' },
+        component: ComponentsComponent,
+      },
       {
         path: 'directives',
+        data: { title: 'Directives' },
         loadChildren: () =>
           import('@material-uiclone/material/feature-directives').then(
             (m) => m.MaterialFeatureDirectivesModule
@@ -59,6 +64,7 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'services',
+        data: { title: 'Services' },
         loadChildren: () =>
           import('@material-uiclone/material/feature-services').then(
             (m) => m.MaterialFeatureServicesModule
@@ -66,6 +72,7 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'pipes',
+        data: { title: 'Pipes' },
         loadChildren: () =>
           import('@material-uiclone/material/feature-pipes').then(
             (m) => m.MaterialFeaturePipesModule
@@ -73,6 +80,7 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'other',
+        data: { title: 'Other' },
         loadChildren: () =>
           import('@material-uiclone/material/feature-other').then(
             (m) => m.MaterialFeatureOtherModule

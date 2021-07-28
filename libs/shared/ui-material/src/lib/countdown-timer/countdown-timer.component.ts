@@ -1,11 +1,16 @@
-import { Component, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  Input,
+} from '@angular/core';
 
 @Component({
   selector: 'material-countdown-timer',
   templateUrl: './countdown-timer.component.html',
   styleUrls: ['./countdown-timer.component.scss'],
 })
-export class CountdownTimerComponent {
+export class CountdownTimerComponent implements AfterViewInit {
   countDownTime!: number;
 
   timerNumerics = {
@@ -74,5 +79,11 @@ export class CountdownTimerComponent {
 
   private formatTime(value: number): string {
     return value < 10 ? `0${value}` : `${value}`;
+  }
+
+  constructor(private cd: ChangeDetectorRef) {}
+
+  ngAfterViewInit(): void {
+    this.cd.detectChanges();
   }
 }

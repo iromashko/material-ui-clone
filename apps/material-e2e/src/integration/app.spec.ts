@@ -3,11 +3,15 @@ describe('Material Components', () => {
     cy.visit('/');
   });
 
-  // after(() => {
-  //   cy.scrollTo('top');
-  // });
+  after(() => {
+    cy.scrollTo('top');
+  });
 
-  it.only('Password Component', () => {
+  it('New', () => {
+    //
+  });
+
+  it('Password Component', () => {
     cy.get('[data-cy=password]').should('be.empty');
     cy.get('[data-cy=password-strength]').should('have.value', 0);
     cy.get('[data-cy=password-hints]').should('have.length', 0);
@@ -338,15 +342,19 @@ describe('Material Components', () => {
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
   });
 
-  it('Toolbar Routes', () => {
+  it.only('Toolbar Routes', () => {
+    cy.title().should('contain', 'Components');
     cy.visit('directives');
     cy.url().should('eq', 'http://localhost:4200/directives');
+    cy.title().should('contain', 'Directives');
     cy.visit('services');
     cy.url().should('eq', 'http://localhost:4200/services');
+    cy.title().should('contain', 'Services');
     cy.visit('pipes');
     cy.url().should('eq', 'http://localhost:4200/pipes');
     cy.visit('other');
     cy.url().should('eq', 'http://localhost:4200/other');
+    cy.title().should('contain', 'Other');
   });
 
   it('Top of Page', () => {

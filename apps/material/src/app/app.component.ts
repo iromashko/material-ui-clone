@@ -1,10 +1,13 @@
-import { Component, Inject, Renderer2 } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import {
   SocialMedia,
   SocialMediaIcon,
   ToolbarLink,
 } from '@material-uiclone/shared/ui-material';
-import { ThemeService } from '@material-uiclone/shared/util-services';
+import {
+  ThemeService,
+  TitleService,
+} from '@material-uiclone/shared/util-services';
 import { tap } from 'rxjs/operators';
 
 @Component({
@@ -12,7 +15,7 @@ import { tap } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   darkMode$ = this.themeService.darkModeAction$.pipe(
     tap((value) => this.toggleDarkMode(value))
   );
@@ -59,6 +62,11 @@ export class AppComponent {
   constructor(
     public themeService: ThemeService,
     private renderer: Renderer2,
-    @Inject('Document') private document: Document
+    @Inject('Document') private document: Document,
+    public titleService: TitleService
   ) {}
+
+  ngOnInit(): void {
+    this.titleService.initializeTitleService();
+  }
 }
