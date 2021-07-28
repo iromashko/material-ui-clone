@@ -8,8 +8,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 export class PipesComponent {
   flattenData = [1, 2, [3], [4, [5, 6, [7]]]];
 
-  constructor(private cd: ChangeDetectorRef) {}
-
+  html = '<a href="https://www.youtube.com/" target="blank">YouTube </a>';
   modifyFlatten(): void {
     this.flattenData.push(3, 5);
     this.cd.detectChanges();
@@ -18,4 +17,6 @@ export class PipesComponent {
   reassignFlatten(): void {
     this.flattenData = [...this.flattenData];
   }
+
+  constructor(private cd: ChangeDetectorRef) {}
 }

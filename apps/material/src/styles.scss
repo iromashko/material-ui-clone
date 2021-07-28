@@ -71,3 +71,7 @@ body {
 .not-found-link {
   @apply text-blue-400 underline transition-colors duration-300  dark:text-blue-900;
 }
+
+a {
+  @apply underline text-blue-400 dark:text-blue-900;
+}

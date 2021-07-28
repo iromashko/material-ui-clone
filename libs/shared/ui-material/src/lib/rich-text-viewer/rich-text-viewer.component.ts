@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { htmlRegex } from './html-regex.data';
+import { htmlRegex } from '@material-uiclone/shared/util-helpers';
 
 @Component({
   selector: 'material-rich-text-viewer',

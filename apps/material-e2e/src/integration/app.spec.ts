@@ -7,8 +7,8 @@ describe('Material Components', () => {
     cy.scrollTo('top');
   });
 
-  it('New', () => {
-    //
+  it.only('Rich Text Pipe', () => {
+    cy.visit('pipes');
   });
 
   it('Password Component', () => {
@@ -342,7 +342,7 @@ describe('Material Components', () => {
     cy.get('[data-cy=loader-overlay]').should('not.be.visible');
   });
 
-  it.only('Toolbar Routes', () => {
+  it('Toolbar Routes', () => {
     cy.title().should('contain', 'Components');
     cy.visit('directives');
     cy.url().should('eq', 'http://localhost:4200/directives');

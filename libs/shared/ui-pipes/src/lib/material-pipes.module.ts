@@ -4,6 +4,7 @@ import { CreditCardFormatterPipe } from './credit-card-formatter.pipe';
 import { FilterTermPipe } from './filter-term.pipe';
 import { FlattenPipe } from './flatten.pipe';
 import { TruncatePipe } from './truncate.pipe';
+import { RichTextPipe } from './rich-text.pipe';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,15 @@ import { TruncatePipe } from './truncate.pipe';
     FilterTermPipe,
     FlattenPipe,
     TruncatePipe,
+    RichTextPipe,
   ],
   imports: [CommonModule],
-  exports: [CreditCardFormatterPipe, FilterTermPipe, FlattenPipe, TruncatePipe],
+  exports: [
+    CreditCardFormatterPipe,
+    FilterTermPipe,
+    FlattenPipe,
+    TruncatePipe,
+    RichTextPipe,
+  ],
 })
 export class MaterialPipesModule {}
