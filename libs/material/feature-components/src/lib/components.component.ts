@@ -1,4 +1,10 @@
-import { AfterViewInit, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ComponentFactoryResolver,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
 import {
   AccordionItem,
   ButtonMeta,
@@ -14,6 +20,8 @@ import {
   countryList,
 } from '@material-uiclone/shared/util-helpers';
 import { QuoteService } from '@material-uiclone/shared/util-services';
+import { ModalDynamicComponent } from '@material-uiclone/shared/ui-material';
+import { RefDirective } from '@material-uiclone/shared/ui-directives';
 
 export interface User {
   first: string;
@@ -31,6 +39,8 @@ export class ComponentsComponent implements AfterViewInit {
   RibbonLocation = RibbonLocation;
   ribbonStyle = { type: RibbonType.Info, location: RibbonLocation.BottomLeft };
 
+  @ViewChild(RefDirective) refDir!: RefDirective;
+
   animationDisabled = true;
 
   buttonToggleOptions: ButtonMeta[] = [
@@ -44,6 +54,8 @@ export class ComponentsComponent implements AfterViewInit {
     new ButtonMeta({ id: 2, title: 'Italic' }),
     new ButtonMeta({ id: 3, title: 'Underline' }),
   ];
+
+  dynamicModal = false;
 
   progressValue = 25;
 
@@ -107,7 +119,26 @@ export class ComponentsComponent implements AfterViewInit {
     console.log(`Debounce search`, value);
   }
 
-  constructor(private quoteService: QuoteService) {}
+  showModal(): void {
+    const modalFactory = this.factoryResolver.resolveComponentFactory(
+      ModalDynamicComponent
+    );
+    this.refDir.containerRef.clear();
+
+    const modal = this.refDir.containerRef.createComponent(modalFactory);
+
+    modal.instance.title = 'Modal Instance';
+
+    const sub = modal.instance.closeModal.subscribe(() => {
+      this.refDir.containerRef.clear();
+      sub.unsubscribe();
+    });
+  }
+
+  constructor(
+    private quoteService: QuoteService,
+    private factoryResolver: ComponentFactoryResolver
+  ) {}
 
   ngAfterViewInit(): void {
     setTimeout(() => {

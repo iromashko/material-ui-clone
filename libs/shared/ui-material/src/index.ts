@@ -12,6 +12,8 @@ export * from './lib/credit-card-input/credit-card-input.module';
 export * from './lib/twitter-post/twitter-post.module';
 export * from './lib/linkedin-post/linkedin-post.module';
 export * from './lib/modal/modal.module';
+export * from './lib/modal-dynamic/modal-dynamic.module';
+export * from './lib/modal-dynamic/modal-dynamic.component';
 export * from './lib/quote/quote.module';
 export * from './lib/toggle/toggle.module';
 export * from './lib/rich-text-viewer/rich-text-viewer.module';

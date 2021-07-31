@@ -39,10 +39,12 @@ import {
   NotFoundModule,
   NotFoundComponent,
   PasswordModule,
+  ModalDynamicModule,
 } from '@material-uiclone/shared/ui-material';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { RefDirective } from '@material-uiclone/shared/ui-directives';
 
 @NgModule({
   imports: [
@@ -127,8 +129,9 @@ import { RouterModule } from '@angular/router';
     PillFilterModule,
     NotFoundModule,
     PasswordModule,
+    ModalDynamicModule,
   ],
-  declarations: [ComponentsComponent],
+  declarations: [ComponentsComponent, RefDirective],
   exports: [ComponentsComponent],
 })
 export class MaterialFeatureComponentsModule {}

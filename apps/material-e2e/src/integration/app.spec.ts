@@ -7,8 +7,8 @@ describe('Material Components', () => {
     cy.scrollTo('top');
   });
 
-  it.only('Rich Text Pipe', () => {
-    cy.visit('pipes');
+  it.only('Dynamic Modal', () => {
+    //
   });
 
   it('Password Component', () => {

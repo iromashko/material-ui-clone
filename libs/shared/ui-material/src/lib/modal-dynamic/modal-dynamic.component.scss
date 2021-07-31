@@ -1,0 +1,7 @@
+.backdrop {
+  @apply fixed inset-0 bg-black opacity-30;
+}
+
+.modal {
+  @apply p-4 bg-white mt-12 absolute left-1/2 transform top-1/2 -translate-y-1/2  -translate-x-1/2;
+}
