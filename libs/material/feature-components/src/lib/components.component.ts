@@ -22,6 +22,8 @@ import {
 import { QuoteService } from '@material-uiclone/shared/util-services';
 import { ModalDynamicComponent } from '@material-uiclone/shared/ui-material';
 import { RefDirective } from '@material-uiclone/shared/ui-directives';
+import { delay, take } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 export interface User {
   first: string;
@@ -102,17 +104,23 @@ export class ComponentsComponent implements AfterViewInit {
   loadLoader(): void {
     this.loaderType = LoaderType.Loading;
     this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
+
+    of(null)
+      .pipe(take(1), delay(2000))
+      .subscribe(() => {
+        this.isLoading = false;
+      });
   }
 
   loadCircular(): void {
     this.loaderType = LoaderType.Circular;
     this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
+
+    of(null)
+      .pipe(take(1), delay(2000))
+      .subscribe(() => {
+        this.isLoading = false;
+      });
   }
 
   debounceExampleMethod(value: string): void {
@@ -129,9 +137,8 @@ export class ComponentsComponent implements AfterViewInit {
 
     modal.instance.title = 'Modal Instance';
 
-    const sub = modal.instance.closeModal.subscribe(() => {
+    modal.instance.closeModal.pipe(take(1)).subscribe(() => {
       this.refDir.containerRef.clear();
-      sub.unsubscribe();
     });
   }
 
@@ -141,8 +148,10 @@ export class ComponentsComponent implements AfterViewInit {
   ) {}
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.animationDisabled = false;
-    }, 100);
+    of(null)
+      .pipe(take(1), delay(100))
+      .subscribe(() => {
+        this.animationDisabled = false;
+      });
   }
 }
