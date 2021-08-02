@@ -8,8 +8,8 @@ export class QuoteService {
   randomQuote$ = this.http
     .get<string[][]>('http://www.famous-quotes.uk/api.php?id=random&minpop=80')
     .pipe(
-      map((response) => {
-        const [, quote, author] = response[0];
+      map(([response]) => {
+        const [, quote, author] = response;
         return { quote, author };
       }),
       catchError(() => of({ quote: 'Not found', author: 'Connection error' })),

@@ -24,7 +24,7 @@ export class SortTableComponent {
         this.sortNumber(key);
         break;
 
-      case this.isDate(key):
+      case this.isDate(value):
         this.sortDate(key);
         break;
 
