@@ -1,5 +1,5 @@
 {
-  "name": "@material-uiclone/shared-ui-animations",
+  "name": "@material-uiclone/shared/ui-animations",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^12.1.2",

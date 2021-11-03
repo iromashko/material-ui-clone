@@ -1,5 +1,5 @@
 {
-  "name": "@material-uiclone/shared-ui-material",
+  "name": "@material-uiclone/shared/ui-material",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^12.1.2",

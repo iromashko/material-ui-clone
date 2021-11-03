@@ -1,5 +1,5 @@
 {
-  "name": "@material-uiclone/material-feature-other",
+  "name": "@material-uiclone/material/feature-other",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^12.1.2",

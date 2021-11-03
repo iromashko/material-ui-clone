@@ -85,7 +85,8 @@
               "apps/material/src/**/*.ts",
               "apps/material/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "storybook": {
           "executor": "@nrwl/storybook:storybook",
@@ -118,7 +119,8 @@
             }
           }
         }
-      }
+      },
+      "tags": []
     },
     "material-domain": {
       "projectType": "library",
@@ -157,9 +159,11 @@
               "libs/material/domain/src/**/*.ts",
               "libs/material/domain/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:material", "type:domain-logic"]
     },
     "material-e2e": {
       "root": "apps/material-e2e",
@@ -183,9 +187,12 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["material"]
     },
     "material-feature-components": {
       "projectType": "library",
@@ -224,9 +231,11 @@
               "libs/material/feature-components/src/**/*.ts",
               "libs/material/feature-components/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:material", "type:feature"]
     },
     "material-feature-directives": {
       "projectType": "library",
@@ -265,9 +274,11 @@
               "libs/material/feature-directives/src/**/*.ts",
               "libs/material/feature-directives/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:material", "type:feature"]
     },
     "material-feature-other": {
       "projectType": "library",
@@ -306,9 +317,11 @@
               "libs/material/feature-other/src/**/*.ts",
               "libs/material/feature-other/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:material", "type:feature"]
     },
     "material-feature-pipes": {
       "projectType": "library",
@@ -347,9 +360,11 @@
               "libs/material/feature-pipes/src/**/*.ts",
               "libs/material/feature-pipes/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:material", "type:feature"]
     },
     "material-feature-services": {
       "projectType": "library",
@@ -388,9 +403,11 @@
               "libs/material/feature-services/src/**/*.ts",
               "libs/material/feature-services/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:material", "type:feature"]
     },
     "shared-ui-animations": {
       "projectType": "library",
@@ -429,9 +446,11 @@
               "libs/shared/ui-animations/src/**/*.ts",
               "libs/shared/ui-animations/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:shared", "type:ui"]
     },
     "shared-ui-directives": {
       "projectType": "library",
@@ -470,9 +489,11 @@
               "libs/shared/ui-directives/src/**/*.ts",
               "libs/shared/ui-directives/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:shared", "type:ui"]
     },
     "shared-ui-material": {
       "projectType": "library",
@@ -511,7 +532,8 @@
               "libs/shared/ui-material/src/**/*.ts",
               "libs/shared/ui-material/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "storybook": {
           "executor": "@nrwl/storybook:storybook",
@@ -544,7 +566,8 @@
             }
           }
         }
-      }
+      },
+      "tags": ["domain:shared", "type:ui"]
     },
     "shared-ui-pipes": {
       "projectType": "library",
@@ -583,9 +606,11 @@
               "libs/shared/ui-pipes/src/**/*.ts",
               "libs/shared/ui-pipes/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:shared", "type:ui"]
     },
     "shared-util-guards": {
       "projectType": "library",
@@ -624,9 +649,11 @@
               "libs/shared/util-guards/src/**/*.ts",
               "libs/shared/util-guards/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:shared", "type:util"]
     },
     "shared-util-helpers": {
       "projectType": "library",
@@ -665,9 +692,11 @@
               "libs/shared/util-helpers/src/**/*.ts",
               "libs/shared/util-helpers/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": ["domain:shared", "type:util"]
     },
     "shared-util-services": {
       "projectType": "library",
@@ -706,28 +735,11 @@
               "libs/shared/util-services/src/**/*.ts",
               "libs/shared/util-services/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "generators": {
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "none",
-      "e2eTestRunner": "none"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "none"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
+      },
+      "tags": ["domain:shared", "type:util"]
     }
   }
 }

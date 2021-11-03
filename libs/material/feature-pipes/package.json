@@ -1,5 +1,5 @@
 {
-  "name": "@material-uiclone/material-feature-pipes",
+  "name": "@material-uiclone/material/feature-pipes",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^12.1.2",

@@ -67,33 +67,33 @@ export class SortTableComponent {
     });
   }
   private sortNumber(key: string): void {
-    this.tableData.sort((value1: any, value2: any) => {
+    this.tableData.sort((leftValue: any, rightValue: any) => {
       if (this.sortDirection) {
-        return Number(value1[key]) - Number(value2[key]);
+        return Number(leftValue[key]) - Number(rightValue[key]);
       } else {
-        return Number(value2[key]) - Number(value1[key]);
+        return Number(rightValue[key]) - Number(leftValue[key]);
       }
     });
   }
   private sortString(key: string): void {
-    this.tableData.sort((value1: any, value2: any) => {
-      const value1UpperCased = value1[key].toUpperCase();
-      const value2UpperCased = value2[key].toUpperCase();
+    this.tableData.sort((leftValue: any, rightValue: any) => {
+      const leftValueUpperCased = leftValue[key].toUpperCase();
+      const rightValueUpperCased = rightValue[key].toUpperCase();
 
       if (this.sortDirection) {
-        if (value1UpperCased > value2UpperCased) {
+        if (leftValueUpperCased > rightValueUpperCased) {
           return -1;
         }
-        if (value2UpperCased > value1UpperCased) {
+        if (rightValueUpperCased > leftValueUpperCased) {
           return 1;
         }
 
         return 0;
       } else {
-        if (value2UpperCased > value1UpperCased) {
+        if (rightValueUpperCased > leftValueUpperCased) {
           return -1;
         }
-        if (value1UpperCased > value2UpperCased) {
+        if (leftValueUpperCased > rightValueUpperCased) {
           return 1;
         }
 

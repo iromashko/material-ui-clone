@@ -32,52 +32,23 @@
       }
     ]
   },
-  "projects": {
-    "material": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "none",
+      "e2eTestRunner": "none"
     },
-    "material-domain": {
-      "tags": ["domain:material", "type:domain-logic"]
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "none"
     },
-    "material-e2e": {
-      "tags": [],
-      "implicitDependencies": ["material"]
-    },
-    "material-feature-components": {
-      "tags": ["domain:material", "type:feature"]
-    },
-    "material-feature-directives": {
-      "tags": ["domain:material", "type:feature"]
-    },
-    "material-feature-other": {
-      "tags": ["domain:material", "type:feature"]
-    },
-    "material-feature-pipes": {
-      "tags": ["domain:material", "type:feature"]
-    },
-    "material-feature-services": {
-      "tags": ["domain:material", "type:feature"]
-    },
-    "shared-ui-animations": {
-      "tags": ["domain:shared", "type:ui"]
-    },
-    "shared-ui-directives": {
-      "tags": ["domain:shared", "type:ui"]
-    },
-    "shared-ui-material": {
-      "tags": ["domain:shared", "type:ui"]
-    },
-    "shared-ui-pipes": {
-      "tags": ["domain:shared", "type:ui"]
-    },
-    "shared-util-guards": {
-      "tags": ["domain:shared", "type:util"]
-    },
-    "shared-util-helpers": {
-      "tags": ["domain:shared", "type:util"]
-    },
-    "shared-util-services": {
-      "tags": ["domain:shared", "type:util"]
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   }
 }
