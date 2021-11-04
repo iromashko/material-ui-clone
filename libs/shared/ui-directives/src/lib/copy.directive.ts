@@ -5,6 +5,12 @@ import { SnackbarService } from '@material-uiclone/shared/util-services';
   selector: '[directivesCopy]',
 })
 export class CopyDirective {
+  constructor(
+    @Inject('Navigator') public navigator: Navigator,
+    @Inject('Document') public document: Document,
+    public snackbarService: SnackbarService
+  ) {}
+
   @Input() directivesCopy = '';
 
   @HostListener('click')
@@ -17,10 +23,4 @@ export class CopyDirective {
       this.snackbarService.callSnackbar('Copied Failed');
     }
   }
-
-  constructor(
-    @Inject('Navigator') public navigator: Navigator,
-    @Inject('Document') public document: Document,
-    public snackbarService: SnackbarService
-  ) {}
 }
